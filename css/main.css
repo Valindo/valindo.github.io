@@ -1,0 +1,550 @@
+
+/* Globally used */
+@font-face {
+font-family: Quinfo;
+src: url("/fonts/Quinfo.otf") format("opentype");
+}
+
+@font-face {
+	font-family: sinkinsans;
+	src: url("/fonts/SinkinSans.otf") format("opentype");
+}
+
+.btn-primary{
+	border: 2px solid white;
+	border-radius: 5px;
+	background-color: transparent;
+}
+
+.grey-btn{
+	border: 2px solid #2C3E50;
+	color: #2C3E50;
+}
+
+@media only screen and (min-width: 768px) {
+	body { 
+		padding-top: 40px;
+		overflow-x: hidden;
+		font-family: sinkinsans;
+	}
+
+	/* Stuff that is used throught the desktop view */
+
+	.plug_font{
+		font-family: 'Quinfo';
+	}
+
+	.normal_fixed {
+		height: 625px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	.normal_scrolls {
+		height: 625px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: default;
+	}
+
+	.center {
+		display: table;
+		margin: 0 auto;
+	}
+
+	.white_text {
+		color: #ffffff;
+	}
+
+	.black_text {
+		color: #000000;
+	}
+
+	.blue_text {
+		color: blue;
+	}
+
+	.btn {
+		width: 200px;
+		font-size: 20px;
+	}
+
+	/* END of stuff that is used throught the desktop view */
+
+	/* These are placed in order as used in index.html */
+
+	.navbar {
+		width: 100%;
+		z-index: 1;
+		height: 70px;
+		background-color: #ffffff;
+
+		-webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;		/*For Smooth Scrolling. Also have to use 2 JS files. Check last 2 JS imports in the html.*/
+		-moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+		transition: background .5s ease-in-out,padding .5s ease-in-out;
+	}
+
+	.navbar-default .plug_nav {
+		font-family: 'Quinfo';		/*For Brand: plugzee, in the navbar*/
+		font-size: 40px;
+		color: #3498db;
+		position: relative;
+		padding-left: 30px;
+		line-height: 40px;			/*To center it in the navbar. Have to change this value according to height of navbar*/
+	}
+
+	.navbar .navbar-collapse {
+		text-align: center;
+	}
+
+	.navbar-default .navbar-nav {
+		display: inline-block;
+		float: none;
+		position: relative;
+		margin-left: -200px;
+		font-size: 15px;
+	}
+
+	.navbar .navbar-nav li a {
+		line-height: 40px;			/*To center it in the navbar. Have to change this value according to height of navbar*/
+	}
+
+	.home .item .container {
+		position: relative;
+		margin-left: 110px;
+	}
+
+	.home .jumbotron {
+		height: 640px;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.home .jumbotron h1 {
+		font-size: 55px;
+	}
+
+	.home .jumbotron p {
+		font-size: 20px;
+	}
+
+	.home .jumbotron button {
+		position: relative;
+		margin-top: 75px;
+		margin-left: 80px;
+		width: 200px;
+		padding-top: 10px;
+	}
+
+	.home .slide1 {
+		background-image:url('/Images/slide-1.jpg');
+	}
+
+	.home .slide1 h1 {
+		font-size: 80px;
+	}
+
+	.home .slide1 h1 p{
+		color: #4b4b4b;
+	}
+
+	.home .slide2 {
+		background-image:url('/Images/slide-2.jpg');
+	}
+
+	.home .slide3 h1 p {
+		color: #4b4b4b;
+	}
+
+	.home .slide3 {
+		background-image:url('/Images/slide-3.jpg');
+	}
+
+	.campaign {
+		background-image: url('/Images/section_2.jpg');
+		height: 350px;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.campaign h2 {
+		text-align: center;
+		font-size: 28px;
+		font-weight: 600;
+		position: relative;
+		margin-top: 80px;
+	}
+
+	.campaign img {
+		position: relative;
+		margin-top: -40px
+	}
+
+	.meet_plugzee {
+		background-image: url('/Images/section_3.jpg');
+	}
+
+	.meet_plugzee .container {
+		position: relative;
+		padding-top: 60px;
+		margin-left: 150px;
+	}
+
+	.meet_plugzee h2 {
+		font-size: 50px;
+		font-weight: 600;
+	}
+
+	.meet_plugzee p {
+		font-size: 20px;
+	}
+
+	.meet_plugzee .container .icons-size {
+		position: relative;
+		margin-left: 42px;
+		margin-top: 50px
+	}
+
+	.meet_plugzee .container .meet_icons p {
+		font-size: 14px;
+		line-height: normal;
+		text-align: center;		/*Center align text. Like in MS Word*/
+	}
+
+	/*.bt_icon {
+		padding-left: 22px;
+	}*/
+
+	.plug_n_play {
+		background-image: url('/Images/section_31.jpg');
+	}
+
+	.plug_n_play .container {
+		position: relative;
+		margin-left: 700px;
+		padding-top: 60px;
+	}
+
+	.plug_n_play h1 {
+		font-size: 50px;
+		font-weight: 600;
+	}
+
+	.plug_n_play p {
+		font-size: 20px;
+	}
+
+	.tech {
+		background-image: url('/Images/section_32.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.tech .container {
+		position: relative;
+		margin-left: 80px;
+		padding-top: 110px;
+	}
+
+	.tech .tech_icons {
+		position: relative;
+		margin-top: 160px;
+	}
+
+	.tech .tech_icons .usb {
+		margin-top: 20px;
+	}
+
+	.tech h2 {
+		font-size: 52px;
+		font-weight: 600;
+	}
+
+	.tech p {
+		font-size: 20px;
+	}
+
+	.subscribe {
+		background-image: url('/Images/section4.jpg');
+		height: 700px;
+	}
+
+	.subscribe .container {
+		position: absolute;
+		margin-top: 100px;
+		padding-left: 95px;
+	}
+
+	.subscribe .container img {
+		position: relative;
+		margin-bottom: 45px; /*To push the text down increase*/
+		margin-top: -40px;	/*To push the icon higher, make more negative*/
+	}
+
+	.subscribe p {
+		font-size: 20px;
+	}
+
+	.subscribe .form {
+		margin: 0 auto;
+		width:80%;
+	}
+
+	.contact {
+		background-image: url('/Images/blue.jpg');
+		height: 350px;
+	}
+
+	.contact .outer_container {
+		padding-top: 50px;
+	}
+
+	.contact .white_text:hover {
+		color: #ffffff;
+	}
+
+	.email { 
+		font-weight: 600;
+	}
+
+	.plug_bold {
+		font-size: 50px;
+	}
+
+	.contact .end_stuff {
+		font-weight: 600;
+	}
+
+	.contact h3 {
+		font-weight: 600;
+	}
+
+	.desktop_hidden{
+		display: none;
+	}
+}
+
+
+@media only screen and (max-width: 767px) {
+	/* phones */
+	/* These are placed in order as used in index.html */
+
+	body { 
+		padding-top: 40px;
+		font-family: sinkinsans;
+		overflow-x: hidden;
+		max-width: 100%; 
+		height: 100%;
+	}
+
+	/* nav bar */
+	.navbar-default .plug_nav {
+		font-family: 'Quinfo';
+		font-size: 30px;
+		color: #3498db;
+	}
+
+	/* Section 1 (Slider) */
+	.jumbotron {
+		height: 625px;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.slide1 {
+		background-image:url('/Images/small-slide1.jpg');
+		
+	}
+
+	.slide2 {
+		background-image:url('/Images/small-slide2.jpg');
+	}
+
+	.black_text {
+		color: #000000;
+	}
+
+	.slide3 {
+		background-image:url('/Images/small-slide3.jpg');
+	}
+
+	/* Section 2 (Comming soon)*/
+	.campaign {
+		background-image: url('/Images/small-section_2.jpg');
+		height: 300px;
+	}
+
+	.campaign h2 {
+		text-align: center;
+		font-size: 18px;
+		font-weight: 600;
+		position: relative;
+		margin-top: 75px;
+	}
+
+	.campaign img {
+		max-width: 40%;
+		max-height: 75%;
+		position: relative;
+		margin-top: -30px
+	}
+
+	.normal_fixed {
+		height: 625px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+	}	
+
+	.white_text {
+		color: #ffffff;
+	}
+
+	.center {
+		display: table;
+		margin: 0 auto;
+	}
+
+	.center-vertical{
+		padding-bottom: 0px
+		padding-top:0px;
+	}
+
+
+	/* Section 3 */
+	.meet_plugzee {
+		background-image: url('/Images/small-section_3.jpg');
+	}
+
+	.meet_icons img{
+		max-width: 50%;
+	}
+
+	.meet_icons p{
+		font-size: 15px;
+		color: #ffffff;
+	}
+
+	.meet_icons{
+		margin-top: 100px;
+	}
+
+	.heading-pos{
+		margin-top: 50px;
+	}
+
+	.para-font{
+		font-size: 17px;
+	}
+
+	.normal_fixed {
+		height: 625px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	.plug_font{
+		font-family: 'Quinfo';
+	}
+
+
+	.icons-size {
+		position: relative;
+		margin-left: 10px;
+	}
+
+	.plug_n_play {
+		background-image: url('/Images/small-section_31.jpg');
+	}
+
+	.plug_n_play p{
+		font-size: 17px;
+		color: #ffffff;
+	}
+
+	.normal_scrolls {
+		height: 625px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: default;
+	}
+
+	.tech {
+		background-image: url('/Images/small-section_32.jpg');
+		background-size: cover;
+		height: 625px;
+	}
+
+	.tech h2 {
+		font-size: 40px;
+		font-weight: 600;
+	}
+
+	.tech p {
+		font-size: 17px;
+	}
+
+	.tech .container {
+		position: relative;
+		margin-left: 30px;
+		padding-top: 30px;
+	}
+
+	.subscribe {
+		background-image: url('/Images/form-small.jpg');
+	}
+	
+	.subscribe .container {
+		position: absolute;
+		margin-top: 100px;
+	}
+
+	.subscribe .container img {
+		position: relative;
+		margin-bottom: 35px;	/*To push the text down increase*/
+		margin-top: -30px;	/*To push the icon higher, make more negative*/
+	}
+	
+	.subscribe p {
+		font-size: 17px;
+		text-align: center;
+	}
+
+	.contact {
+		background-image: url('/Images/blue.jpg');
+		height: 350px;
+	}
+
+	.contact .outer_container {
+		padding-top: 20px;
+	}
+
+	.email { 
+		font-weight: 600;
+	}	
+
+	.contact .white_text:hover {
+		color: #ffffff;
+	}
+
+	.contact .end_stuff {
+		font-weight: 400;
+	}
+
+	.mobile_hidden{
+		display: none;
+	}
+
+	.contact .email {
+		padding-bottom: 30px;
+	}
+
+	.contact .plug_bold{
+		font-size: 30px;
+		position: relative;
+		padding-top: 20px;
+	}
+
+}

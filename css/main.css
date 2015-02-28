@@ -112,7 +112,7 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 
 	.home .item .container {
 		position: relative;
-		margin-left: 110px;
+		/*margin-left: 110px;*/
 	}
 
 	.home .jumbotron {
@@ -126,19 +126,27 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 	}
 
 	.home .jumbotron p {
-		font-size: 20px;
+		font-size: 2em;
 	}
 
 	.home .jumbotron button {
 		position: relative;
-		margin-top: 75px;
-		margin-left: 80px;
+		/*margin-top: 75px;*/
+		/*margin-left: 80px;*/
 		width: 200px;
 		padding-top: 10px;
 	}
 
 	.home .slide1 {
 		background-image:url('/Images/slide-1.jpg');
+	}
+
+	.slide1-elements{
+		margin-top: 1.75em;
+	}
+
+	.slide1-elements button{
+		margin-top: 13em;
 	}
 
 	.home .slide1 h1 {
@@ -151,6 +159,25 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 
 	.home .slide2 {
 		background-image:url('/Images/slide-2.jpg');
+	}
+	
+	.slide2 img{
+		width: 6.4em;
+		height: auto;
+	}
+
+	.slide2-elements{
+		margin-top: 2em;
+		margin-left: 12em;
+		color: #2C3E50;
+	}
+
+	.slide2-elements button{
+		margin-top: 1.5em;
+	}
+
+	.slide2-elements img{
+		margin-top: 7em;
 	}
 
 	.home .slide3 h1 p {

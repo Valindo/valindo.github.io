@@ -216,7 +216,7 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 	.campaign h2 {
 		text-align: center;
 		font-size: 28px;
-		font-weight: 600;
+		font-weight: 0;
 		position: relative;
 		margin-top: 80px;
 	}
@@ -238,7 +238,7 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 
 	.meet_plugzee h2 {
 		font-size: 50px;
-		font-weight: 600;
+		font-weight: 0;
 	}
 
 	.meet_plugzee p {
@@ -261,6 +261,12 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 		padding-left: 22px;
 	}*/
 
+	.meet_icons img{
+		width: 5.35em;
+		height: auto;
+
+	}
+
 	.plug_n_play {
 		background-image: url('/Images/section_31.jpg');
 	}
@@ -273,7 +279,7 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 
 	.plug_n_play h1 {
 		font-size: 50px;
-		font-weight: 600;
+		font-weight: 0;
 	}
 
 	.plug_n_play p {
@@ -303,7 +309,7 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 
 	.tech h2 {
 		font-size: 52px;
-		font-weight: 600;
+		font-weight: 0;
 	}
 
 	.tech p {
@@ -350,7 +356,7 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 	}
 
 	.email { 
-		font-weight: 600;
+		font-weight: 0;
 	}
 
 	.plug_bold {
@@ -358,11 +364,11 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 	}
 
 	.contact .end_stuff {
-		font-weight: 600;
+		font-weight: 0;
 	}
 
 	.contact h3 {
-		font-weight: 600;
+		font-weight: 0;
 	}
 
 	.desktop_hidden{
@@ -423,7 +429,7 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 	.campaign h2 {
 		text-align: center;
 		font-size: 18px;
-		font-weight: 600;
+		font-weight: 0;
 		position: relative;
 		margin-top: 75px;
 	}
@@ -524,7 +530,7 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 
 	.tech h2 {
 		font-size: 40px;
-		font-weight: 600;
+		font-weight: 0;
 	}
 
 	.tech p {
@@ -567,7 +573,7 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 	}
 
 	.email { 
-		font-weight: 600;
+		font-weight: 0;
 	}	
 
 	.contact .white_text:hover {
@@ -575,7 +581,7 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 	}
 
 	.contact .end_stuff {
-		font-weight: 400;
+		font-weight: 0;
 	}
 
 	.mobile_hidden{

@@ -16,6 +16,13 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 	background-color: transparent;
 }
 
+.btn-primary:hover
+{
+	background-color: transparent;
+	border:2px solid white;
+	opacity: 0.5;
+}
+
 .grey-btn{
 	border: 2px solid #2C3E50;
 	color: #2C3E50;
@@ -186,6 +193,17 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 
 	.home .slide3 {
 		background-image:url('/Images/slide-3.jpg');
+	}
+
+	.slide3-elements{
+		margin-left: 10em;
+		margin-top: 18em;
+	}
+	.slide3-elements img{
+		width: 6.4em;
+		height: auto;
+		/*margin-top: 10em;*/
+		margin-left: 60em;
 	}
 
 	.campaign {

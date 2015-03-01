@@ -85,7 +85,8 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 		width: 100%;
 		z-index: 1;
 		height: 70px;
-		background-color: #ffffff;
+		background-color: #3498db;
+		border-color: #3498db;
 
 		-webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;		/*For Smooth Scrolling. Also have to use 2 JS files. Check last 2 JS imports in the html.*/
 		-moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -95,7 +96,7 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 	.navbar-default .plug_nav {
 		font-family: 'Quinfo';		/*For Brand: plugzee, in the navbar*/
 		font-size: 40px;
-		color: #3498db;
+		color: #fff;
 		position: relative;
 		padding-left: 30px;
 		line-height: 40px;			/*To center it in the navbar. Have to change this value according to height of navbar*/
@@ -115,6 +116,18 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 
 	.navbar .navbar-nav li a {
 		line-height: 40px;			/*To center it in the navbar. Have to change this value according to height of navbar*/
+	}
+
+	/*default color when nothing is clicked*/
+	.navbar-default .navbar-nav>li>a, .navbar-default .navbar-text{
+		color: #fff;
+	}
+
+	/*Active state of a navbar link */
+	.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+		background-color: transparent;	
+		border-bottom: 0.214em solid #2A2222;
+		color: #2A2222;
 	}
 
 	.home .item .container {

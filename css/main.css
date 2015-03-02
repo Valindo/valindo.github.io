@@ -52,7 +52,7 @@ body h1 h2 h3 p{
 	}
 
 	.normal_fixed {
-		height: 625px;
+		height: 700px;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-attachment: fixed;
@@ -64,7 +64,10 @@ body h1 h2 h3 p{
 		background-size: cover;
 		background-attachment: default;
 	}
-
+	
+	.slideshow-h{
+		height: 625px;
+	}
 	.center {
 		display: table;
 		margin: 0 auto;
@@ -120,7 +123,7 @@ body h1 h2 h3 p{
 		display: inline-block;
 		float: none;
 		position: relative;
-		margin-left: -200px;
+		margin-left: -135px;
 		font-size: 15px;
 	}
 
@@ -379,11 +382,14 @@ body h1 h2 h3 p{
 
 	.contact {
 		background-image: url('/Images/blue.jpg');
+		background-size: 100% 100%;
+    	background-repeat: no-repeat;
+		height: 350px;
 		
 	}
 
 	.contact .outer_container {
-		padding-top: 150px;
+		padding-top: 50px;
 	}
 
 	.contact .white_text:hover {

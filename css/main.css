@@ -28,6 +28,16 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 	color: #2C3E50;
 }
 
+.grey-btn:hover{
+	border: 2px solid #2C3E50;
+	color: #2C3E50;
+	opacity: 0.5;
+}
+
+body h1 h2 h3 p{
+	font-weight: normal;
+}
+
 @media only screen and (min-width: 768px) {
 	body { 
 		padding-top: 40px;
@@ -128,8 +138,14 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 		background-color: transparent;	
 		border-bottom: 0.214em solid #2A2222;
 		color: #2A2222;
+		/*line-height: 1.5em;*/
 	}
-
+	
+	.navbar-logo{
+		padding-top: 0.2em;
+		width: 4em;
+		height: auto;
+	}
 	.home .item .container {
 		position: relative;
 		/*margin-left: 110px;*/
@@ -142,7 +158,7 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 	}
 
 	.home .jumbotron h1 {
-		font-size: 55px;
+		font-size: 3em;
 	}
 
 	.home .jumbotron p {
@@ -170,8 +186,9 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 	}
 
 	.home .slide1 h1 {
-		font-size: 80px;
+		font-size: 5em;
 	}
+
 
 	.home .slide1 h1 p{
 		color: #4b4b4b;
@@ -251,7 +268,7 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 
 	.meet_plugzee h2 {
 		font-size: 50px;
-		font-weight: 0;
+		/*font-weight: 0;*/
 	}
 
 	.meet_plugzee p {
@@ -286,7 +303,7 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 
 	.plug_n_play .container {
 		position: relative;
-		margin-left: 700px;
+		margin-left: 42.85em;
 		padding-top: 60px;
 	}
 
@@ -329,6 +346,11 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 		font-size: 20px;
 	}
 
+	.tech_icons img{
+		width: 75px;
+		height: auto;
+	}
+
 	.subscribe {
 		background-image: url('/Images/section4.jpg');
 		height: 700px;
@@ -357,7 +379,9 @@ src: url("/fonts/Quinfo.otf") format("opentype");
 
 	.contact {
 		background-image: url('/Images/blue.jpg');
-		height: 350px;
+		/*height: 350px;*/
+		background-position: cover;
+		height: auto;
 	}
 
 	.contact .outer_container {

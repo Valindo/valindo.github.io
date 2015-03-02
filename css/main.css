@@ -379,13 +379,11 @@ body h1 h2 h3 p{
 
 	.contact {
 		background-image: url('/Images/blue.jpg');
-		/*height: 350px;*/
-		background-position: cover;
-		height: auto;
+		
 	}
 
 	.contact .outer_container {
-		padding-top: 50px;
+		padding-top: 150px;
 	}
 
 	.contact .white_text:hover {

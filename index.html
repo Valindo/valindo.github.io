@@ -15,6 +15,16 @@
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
 
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+ 		var js, fjs = d.getElementsByTagName(s)[0];
+ 		if (d.getElementById(id)) return;
+  		js = d.createElement(s); js.id = id;
+  		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=406400052831194&version=v2.0";
+  		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
+
 </head>
 
 <body>
@@ -171,7 +181,7 @@
 		</div>
 	</div>
 
-	<div class="subscribe normal_scrolls" id="subscribe">
+	<div class="subscribe normal_scrolls text-center" id="subscribe">
 		<!--<div class="container">
 			<img src="/Images/mail.png" class="mail_icon center">
 			<h1 class="center">Stay Updated</h1> <br>
@@ -197,6 +207,29 @@
 			</form>
 
 		</div> -->
+		<div class="container white_text">
+			<h2>Plugzee is Now Available on Indiegogo</h2>
+			<!-- <p>We are currently crowdfunding Plugzee on Indiegogo, to avail Plugzee at a discounted price and become a funder to the project visit our campaign page.</p> -->
+			<a href="#" class="page-scroll"><button type="submit" class="btn btn-primary">Pre-order</button></a>
+			<div class="social_media center mobile_hidden social-pos">
+				<div class="col-md-3">
+					<!-- <a href="https://www.facebook.com/plugzee" target="_blank"><img src="/Images/fb.png"></a> -->
+				</div>
+				<div class="col-md-3">
+					<div class="fb-share-button" data-href="http://plugzee.com/" data-layout="box_count"></div>
+				</div>
+				<div class="col-md-3">
+					<!-- <a href="https://plus.google.com/113542799831640851519" target="_blank"> -->
+					<!-- <img src="/Images/g+.png"> -->
+					</a>
+				</div>
+				<div class="col-md-3 col-xs-3">
+					<!-- <a href="mailto:info@plugzee.com"> -->
+					<!-- <img src="/Images/utube.png"> -->
+					</a>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<div class="contact normal_fixed" id="contact">
@@ -239,7 +272,7 @@
 				<div class="col-md-1"></div>
 
 				<div class="col-md-3 col-xs-4">
-					<h3 class="white_text mobile_hidden">COMING SOON TO <img src="/Images/pgogo.png"></h3>  <!-- Don't remove the white_text class. I know it is redundant cause it is already specified. But if you remove it, it leads to problems. Leave it at that -->
+					<h3 class="white_text mobile_hidden text-center">COMING SOON TO <img src="/Images/pgogo.png" ></h3>  <!-- Don't remove the white_text class. I know it is redundant cause it is already specified. But if you remove it, it leads to problems. Leave it at that -->
 				</div>
 			</div>
 

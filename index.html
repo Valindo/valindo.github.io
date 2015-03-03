@@ -16,14 +16,13 @@
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
 
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
- 		var js, fjs = d.getElementsByTagName(s)[0];
- 		if (d.getElementById(id)) return;
-  		js = d.createElement(s); js.id = id;
-  		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=406400052831194&version=v2.0";
-  		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
-	</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=406400052831194&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 </head>
 
@@ -55,7 +54,7 @@
 	</nav>
 
 	<div class="home slideshow-h normal_fixed" id="home">
-		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="500000" data-pause="false">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="false">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -120,7 +119,8 @@
 	<div class="meet_plugzee normal_fixed" id="meet_plugzee">
 		<div class="container">
 			<h2 class="white_text heading-pos">Meet Plugzee</h2> <br>
-			<p class="white_text para-font">A tiny Little Device that turns any <br> audio speaker into a Bluetooth speaker without <br> compromising on its audio quality. </p>
+			<p class="white_text para-font">A tiny device that turns any audio speaker
+			<br/>into a Bluetooth speaker with high-resolution audio.</p>
 			<br>
 			<p class="white_text para-font">Pair your SmartPhone, Tablet or any other <br> Bluetooth-enabled device with Plugzee and <br> stream your music wirelessly.</p>
 
@@ -159,13 +159,27 @@
 		<!-- This div is only for desktop. Hidden on mobile -->
 		<div class="container white_text mobile_hidden">
 			<h2>Tech Specs</h2>
-			<p>Compatible with all Bluetooth devices, <br> Plugzee has a battery life of upto 18 hours <br> and can be charged using any micro USB cable. <br> The sophisticatied yet tiny design of Plugzee <br> makes it easy to carry it everywhere </p>
+			<p>Compatible with all Bluetooth devices, and has a range of 33 feet.
+			<br/>
+			Plugzee has a battery life of upto 18 hours and can be charged via any USB outlet using a Micro USB cable.
+			<br/>
+			 The AptX streaming technology embedded inside Plugzee lets you stream high-resolution music over Bluetooth.
+			 <br/>
+			 With the built-in noise cancellation microphone effortlessly answer your calls over loudspeaker. 
+			</p>
 		</div>
 		
 		<!-- This div is only for mobile. Hidden on desktop -->
 		<div class="container white_text desktop_hidden">
 			<h2>Tech Specs</h2>
-			<p>Compatible with all Bluetooth devices,Plugzee has a battery life of upto 18 hours and can be charged using any micro USB cable. The sophisticatied yet tiny design of Plugzee makes it easy to carry it everywhere </p>
+			<p>Compatible with all Bluetooth devices, and has a range of 33 feet.
+			<br/>
+			Plugzee has a battery life of upto 18 hours and can be charged via any USB outlet using a Micro USB cable.
+			<br/>
+			 The AptX streaming technology embedded inside Plugzee lets you stream high-resolution music over Bluetooth.
+			 <br/>
+			 With the built-in noise cancellation microphone effortlessly answer your calls over loudspeaker. 
+			</p>
 		</div>
 
 		<div class="tech_icons center mobile_hidden">
@@ -211,23 +225,26 @@
 			<h2>Plugzee is Now Available on Indiegogo</h2>
 			<!-- <p>We are currently crowdfunding Plugzee on Indiegogo, to avail Plugzee at a discounted price and become a funder to the project visit our campaign page.</p> -->
 			<a href="#" class="page-scroll"><button type="submit" class="btn btn-primary">Pre-order</button></a>
-			<div class="social_media center mobile_hidden social-pos">
-				<div class="col-md-3">
+			<div class="container text-center social-pos">
+				<div class="col-md-2">
+					<div class="fb-share-button" data-href="http://plugzee.com/" data-layout="button_count"></div>
+				</div>
+				<div class="col-md-2">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://plugzee.com/" data-text="check out plugzee, a wireless solution to your audio" data-hashtags="plugzee">Tweet</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 					<!-- <a href="https://www.facebook.com/plugzee" target="_blank"><img src="/Images/fb.png"></a> -->
 				</div>
-				<div class="col-md-3">
-					<div class="fb-share-button" data-href="http://plugzee.com/" data-layout="box_count"></div>
-				</div>
-				<div class="col-md-3">
+				
+				<!-- <div class="col-md-3"> -->
 					<!-- <a href="https://plus.google.com/113542799831640851519" target="_blank"> -->
 					<!-- <img src="/Images/g+.png"> -->
-					</a>
-				</div>
-				<div class="col-md-3 col-xs-3">
+					<!-- </a> -->
+				<!-- </div> -->
+				<!-- <div class="col-md-3 col-xs-3"> -->
 					<!-- <a href="mailto:info@plugzee.com"> -->
 					<!-- <img src="/Images/utube.png"> -->
-					</a>
-				</div>
+					<!-- </a> -->
+				<!-- </div> -->
 			</div>
 		</div>
 	</div>

@@ -123,7 +123,7 @@ body h1 h2 h3 p{
 		display: inline-block;
 		float: none;
 		position: relative;
-		margin-left: -135px;
+		margin-left: -60px;
 		font-size: 15px;
 	}
 
@@ -161,11 +161,11 @@ body h1 h2 h3 p{
 	}
 
 	.home .jumbotron h1 {
-		font-size: 3em;
+		font-size: 2.5em;
 	}
 
 	.home .jumbotron p {
-		font-size: 2em;
+		font-size: 1.5em;
 	}
 
 	.home .jumbotron button {
@@ -185,6 +185,7 @@ body h1 h2 h3 p{
 	}
 
 	.slide1-elements button{
+		font-size: 1.5em;
 		margin-top: 13em;
 	}
 
@@ -295,7 +296,7 @@ body h1 h2 h3 p{
 	}*/
 
 	.meet_icons img{
-		width: 5.35em;
+		width: 3.35em;
 		height: auto;
 
 	}
@@ -336,10 +337,6 @@ body h1 h2 h3 p{
 		margin-top: 160px;
 	}
 
-	.tech .tech_icons .usb {
-		margin-top: 20px;
-	}
-
 	.tech h2 {
 		font-size: 52px;
 		font-weight: 0;
@@ -361,7 +358,7 @@ body h1 h2 h3 p{
 
 	.subscribe .container {
 		position: absolute;
-		margin-top: 100px;
+		margin-top: 90px;
 		padding-left: 95px;
 	}
 
@@ -382,17 +379,17 @@ body h1 h2 h3 p{
 	}
 
 	.subscribe button{
-		margin-top: 4em;
+		margin-top: 2.5em;
 	}
 
 	.social-pos{
-		margin-left: 19.5em;
+		margin-left: 14.5em;
 	}
 
 	.contact {
 		/*background-image: url('/Images/blue.jpg');*/
 		background-color: #3498db;
-		height: 350px;
+		height: 400px;
 		background-attachment: fixed;
     	background-repeat: no-repeat;
     	background-size: cover;
@@ -415,9 +412,9 @@ body h1 h2 h3 p{
 		font-size: 50px;
 	}
 
-	.contact .end_stuff {
+	/*.contact .end_stuff {
 		font-weight: 0;
-	}
+	}*/
 
 	.contact h3 {
 		font-weight: 0;
@@ -425,6 +422,19 @@ body h1 h2 h3 p{
 
 	.desktop_hidden{
 		display: none;
+	}
+
+	.contactigg{
+		padding-left: 50px;
+		width: 180px;
+		height: auto;
+	}
+	.contact-funding{
+		padding-top: 70px;
+	}
+
+	.contact-icons{
+		padding-top: 150px;
 	}
 }
 

@@ -24,6 +24,31 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
+
+ <style>
+      #map-canvas {
+        width: 200px;
+        height: 100px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(44.5403, -78.5463),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
 </head>
 
 <body>
@@ -54,7 +79,7 @@
 	</nav>
 
 	<div class="home slideshow-h normal_fixed" id="home">
-		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="false">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="50000" data-pause="false">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -161,11 +186,16 @@
 			<h2>Tech Specs</h2>
 			<p>Compatible with all Bluetooth devices, and has a range of 33 feet.
 			<br/>
-			Plugzee has a battery life of upto 18 hours and can be charged via any USB outlet using a Micro USB cable.
+			Plugzee has a battery life of upto 18 hours and can be charged via 
 			<br/>
-			 The AptX streaming technology embedded inside Plugzee lets you stream high-resolution music over Bluetooth.
+			any USB outlet using a Micro USB cable.
+			<br/>
+			 The AptX streaming technology embedded inside Plugzee lets you <br/>
+			 stream high-resolution music over Bluetooth.
 			 <br/>
-			 With the built-in noise cancellation microphone effortlessly answer your calls over loudspeaker. 
+			 With the built-in noise cancellation microphone effortlessly answer
+			 <br/>
+			 your calls over loudspeaker. 
 			</p>
 		</div>
 		
@@ -223,8 +253,8 @@
 		</div> -->
 		<div class="container white_text">
 			<h2>Plugzee is Now Available on Indiegogo</h2>
-			<!-- <p>We are currently crowdfunding Plugzee on Indiegogo, to avail Plugzee at a discounted price and become a funder to the project visit our campaign page.</p> -->
-			<a href="#" class="page-scroll"><button type="submit" class="btn btn-primary">Pre-order</button></a>
+			<p>We are currently crowdfunding Plugzee on Indiegogo, Pre-order it to get an Indiegogo special price.</p>
+			<a href="#" class="page-scroll"><button type="submit" class="btn btn-primary">Pre-order Now</button></a>
 			<div class="container text-center social-pos">
 				<div class="col-md-2">
 					<div class="fb-share-button" data-href="http://plugzee.com/" data-layout="button_count"></div>
@@ -235,11 +265,12 @@
 					<!-- <a href="https://www.facebook.com/plugzee" target="_blank"><img src="/Images/fb.png"></a> -->
 				</div>
 				
-				<!-- <div class="col-md-3"> -->
-					<!-- <a href="https://plus.google.com/113542799831640851519" target="_blank"> -->
-					<!-- <img src="/Images/g+.png"> -->
-					<!-- </a> -->
-				<!-- </div> -->
+				<div class="col-md-2">
+					<!-- Place this tag where you want the share button to render. -->
+<div class="g-plus" data-action="share" data-annotation="bubble"></div>
+
+
+				</div>
 				<!-- <div class="col-md-3 col-xs-3"> -->
 					<!-- <a href="mailto:info@plugzee.com"> -->
 					<!-- <img src="/Images/utube.png"> -->
@@ -252,9 +283,7 @@
 	<div class="contact normal_fixed" id="contact">
 		
 		<div class="outer_container">
-			<h1 class="center white_text">Contact Us</h1>
-			<br>
-			<p class="center email">Email: <a class="white_text" href="mailto:info@plugzee.com">info@plugzee.com</a></p>
+			
 
 			<!-- This div is only for mobile. Hidden on desktop -->
 			<div class="social_media desktop_hidden">
@@ -280,41 +309,47 @@
 
 			<div class="container white_text">
 				<div class="col-md-4 ">
-					<h2 class="plug_font end_stuff plug_bold">plugzee</h2> <br>
+					<h2 class="plug_font end_stuff">plugzee</h2>
 					<p class="end_stuff"><strong>Location: </strong><br class="mobile_hidden"><a href="http://goo.gl/MW1dHd" class="white_text">Miramar-Goa, India</a></p>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.985304450576!2d73.8084135568916!3d15.485222628752446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfc0c2c5b14833%3A0x1008a502b2b19fd9!2sMiramar+Beach%2C+Panjim%2C+Goa!5e0!3m2!1sen!2s!4v1425363358510" width="200" height="125" frameborder="0" style="border:0"></iframe>
 				</div>
 
-				<div class="col-md-4 col-xs-4">	<!-- For alignment. This div creates a blank column in the middle -->
+				<div class="col-md-4 col-xs-4">
+					<h1 class="center white_text">Contact Us</h1>
+					<br>
+					<p class="center email">Email: <a class="white_text" href="mailto:info@plugzee.com">info@plugzee.com</a></p>
+					<div class="social_media center mobile_hidden contact-icons">
+						<div class="col-md-3">
+							<a href="https://www.facebook.com/plugzee" target="_blank"><img src="/Images/fb.png"></a>
+					</div>
+					<div class="col-md-3">
+						<a href="https://twitter.com/@plugzee" target="_blank">
+						<img src="/Images/twitter.png">
+					</a>
+					</div>
+					<div class="col-md-3">
+						<a href="https://plus.google.com/113542799831640851519" target="_blank">
+						<img src="/Images/g+.png">
+						</a>
+					</div>
+					<div class="col-md-3 col-xs-3">
+						<a href="mailto:info@plugzee.com">
+						<img src="/Images/utube.png">
+					</a>
+				</div>
+			</div>
+					<!-- For alignment. This div creates a blank column in the middle -->
 				</div>
 				<div class="col-md-1"></div>
 
-				<div class="col-md-3 col-xs-4">
-					<h3 class="white_text mobile_hidden text-center">COMING SOON TO <img src="/Images/pgogo.png" ></h3>  <!-- Don't remove the white_text class. I know it is redundant cause it is already specified. But if you remove it, it leads to problems. Leave it at that -->
+				<div class="col-md-3 col-xs-4 contact-funding">
+					<h3 class="white_text mobile_hidden text-center">Funding with <img src="/Images/pgogo.png" class="contactigg" ></h3>  <!-- Don't remove the white_text class. I know it is redundant cause it is already specified. But if you remove it, it leads to problems. Leave it at that -->
 				</div>
 			</div>
 
 			<!-- This div is only for desktop. Hidden on mobile -->
 			<!-- To use for mobile add col-xs-VALUE also to the class -->
-			<div class="social_media center mobile_hidden">
-				<div class="col-md-3">
-					<a href="https://www.facebook.com/plugzee" target="_blank"><img src="/Images/fb.png"></a>
-				</div>
-				<div class="col-md-3">
-					<a href="https://twitter.com/@plugzee" target="_blank">
-					<img src="/Images/twitter.png">
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="https://plus.google.com/113542799831640851519" target="_blank">
-					<img src="/Images/g+.png">
-					</a>
-				</div>
-				<div class="col-md-3 col-xs-3">
-					<a href="mailto:info@plugzee.com">
-					<img src="/Images/utube.png">
-					</a>
-				</div>
-			</div>
+			
 
 		</div>
 	</div>

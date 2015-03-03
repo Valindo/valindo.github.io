@@ -381,10 +381,12 @@ body h1 h2 h3 p{
 	}
 
 	.contact {
-		background-image: url('/Images/blue.jpg');
-		background-size: 100% 100%;
-    	background-repeat: no-repeat;
+		/*background-image: url('/Images/blue.jpg');*/
+		background-color: #3498db;
 		height: 350px;
+		background-attachment: fixed;
+    	background-repeat: no-repeat;
+    	background-size: cover;
 		
 	}
 

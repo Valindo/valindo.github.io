@@ -1,14 +1,401 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<script type="text/javascript">
-		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
- 		prompt(navigator.userAgent);
-	}
-	</script>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<meta name="keywords" content="bluetooth speakers, wireless speakers, bluetooth adapter, car bluetooth">
+	<meta name="description" content="Plugzee is a tiny device that turns any audio speaker into a Bluetooth speaker without compromising on the audio quality.">
+	<meta name="author" content="nagarjun kinare">
+
+	<title>Plugzee</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/ico/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/ico/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/ico/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/ico/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/ico/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/ico/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/ico/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/ico/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/ico/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/ico/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/ico/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/ico/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/ico/favicon-16x16.png">
+	<link rel="manifest" href="/ico/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ico/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+
+
+
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=406400052831194&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+ <style>
+      #map-canvas {
+        width: 200px;
+        height: 100px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(44.5403, -78.5463),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
 </head>
+
 <body>
 
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	  <div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="icon-bar"></span>  <!-- the 3 bars on the menu button in mobile view -->
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <!-- <a class="navbar-brand plug_nav" href="#">plugzee</a> -->
+		  <img src="/Images/Icons/Logo.png" class="navbar-logo">
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul class="nav navbar-nav">
+			<li class="active"><a class="page-scroll" href="#home">HOME</a></li>
+			<li><a class="page-scroll" href="#meet_plugzee">ABOUT</a></li>		<!--'page-scroll' is for smooth scrolling-->
+			<li><a class="page-scroll" href="#subscribe">PRE-ORDER</a></li>
+			<li><a class="page-scroll" href="#contact">CONTACT US</a></li>
+		  </ul>
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="home slideshow-h normal_fixed" id="home">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="false">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+		 
+		  
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<div class="jumbotron slide1">
+							<div class="container white_text text-center slide1-elements">
+								<h1 class="plug_font">plugzee</h1>
+								<p>A wireless solution to all your audio</p>
+								<a href="#meet_plugzee" class="page-scroll"><button type="submit" class="btn btn-primary mobile_hidden pink-btn">Pre-Order</button></a>
+								<a href="#meet_plugzee" class="page-scroll"><button type="submit" class="btn btn-primary mobile_hidden">Know More</button></a>
+							</div>
+					</div>
+				</div>
+				<div class="item">
+				  <div class="jumbotron slide2">
+							<div class="container black_text slide2-elements">
+								<h1>Elegant and Impressive.</h1>
+								<p>Plugzee not only brilliantly designed<br/>but also lets you stream music wirelessly<br/>without loss in audio quality.</p>
+								<a href="#meet_plugzee" class="page-scroll"><button type="submit" class="btn btn-primary mobile_hidden pink-btn">Pre-order</button></a>
+								<br/>
+								<img src="/Images/Icons/Logo.png" class="mobile_hidden">
+							</div>
+					</div>
+				</div>
+				<div class="item">
+				  <div class="jumbotron slide3">
+							<div class="container white_text slide3-elements">
+								<img src="/Images/Icons/stroked-microphone.png" class="mobile_hidden">
+								<h1>Carry your music everywhere.</h1>
+								<p>Stream music wirelessly to your home audio system,<br/>car audio or any speaker connected to a plugzee.</p>
+								<!-- <a href="#meet_plugzee" class="page-scroll"><button type="submit" class="btn btn-primary mobile_hidden">Learn More</button></a> -->
+							</div>
+					</div>
+				</div>
+
+			
+			</div>
+
+			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+				<span class="sr-only">Next</span>
+			</a>
+			
+		</div>
+
+
+			<div class="bounce mobile_hidden">
+    				<a href="" ><span class="glyphicon glyphicon-chevron-down"></span></a>
+				</div>
+
+	</div>
+
+	<div class="campaign">
+		<div class="container">
+			<h2 class="white_text">Available on <img src="/Images/gogo.png"></h2>
+			<br>
+			<a href="https://www.indiegogo.com/projects/plugzee-a-wireless-solution-to-all-your-audio/x/6914956" class="center page-scroll"><button type="submit" class="btn btn-primary pink-btn">Pre-order</button></a>
+		</div>
+	</div>
+
+	<div class="meet_plugzee normal_fixed" id="meet_plugzee">
+		<div class="container">
+			<h2 class="white_text heading-pos">Meet Plugzee</h2> <br>
+			<p class="white_text para-font">A tiny device that turns any audio speaker
+			<br class="mobile_hidden" />into a Bluetooth speaker with high-resolution audio.</p>
+			<br>
+			<p class="white_text para-font">Pair your SmartPhone, Tablet or any other <br class="mobile_hidden" /> Bluetooth-enabled device with Plugzee and <br class="mobile_hidden" /> stream your music wirelessly.</p>
+
+			<div class="meet_icons">
+				<div class="col-md-2 col-xs-4">
+					<img src="/Images/Icons/Battery.png" class="icons-size">
+					<br/><br/>
+					<p class="black_text"><strong>Built-in Battery Upto 18 Hours</strong></p>
+				</div>
+				<div class="col-md-2 col-xs-4">
+					<img src="/Images/Icons/charging.png" class="icons-size">
+					<br/><br/>
+					<p class="black_text"><strong>Charge via any Micro USB port</strong></p>
+				</div>
+				<div class="col-md-2 col-xs-4">
+					<img src="/Images/Icons/Bluetooth2.png" class="icons-size bt_icon">
+					<br/><br/>
+					<p class="black_text"><strong>Works with all Bluetooth enabled devices</strong></p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="plug_n_play normal_scrolls">
+		<div class="container">
+			<h1 class="heading-pos">Plug and Play</h1>
+			<p>Plugzee works with any audio speaker <br class="mobile_hidden" /> with a 3.5mm audio jack and retrieves your audio <br class="mobile_hidden" /> in the best quality possible.</p>
+			<br>
+			<p>So whether it's a party or an outing, turn any of your <br class="mobile_hidden" /> speakers into a pair of Bluetooth speakers <br class="mobile_hidden" /> by just plugging into a Plugzee </p>
+		</div>
+	</div>
+
+	<div class="tech normal_fixed">
+		
+		<!-- This div is only for desktop. Hidden on mobile -->
+		<div class="container white_text mobile_hidden">
+			<h2>Tech Specs</h2>
+			<p>Compatible with all Bluetooth devices, and has a range of 33 feet. 
+			<br class="mobile_hidden" />
+			Plugzee has a battery life of upto 18 hours and can be charged via 
+			<br class="mobile_hidden" />
+			any USB outlet using a Micro USB cable. 
+			<br class="mobile_hidden" />
+			 The AptX streaming technology embedded inside Plugzee lets you <br/>
+			 stream high-resolution music over Bluetooth. 
+			 <br class="mobile_hidden" />
+			 With the built-in noise cancellation microphone effortlessly answer 
+			 <br class="mobile_hidden" />
+			 your calls over loudspeaker. 
+			</p>
+		</div>
+		
+		<!-- This div is only for mobile. Hidden on desktop -->
+		<div class="container white_text desktop_hidden">
+			<h2>Tech Specs</h2>
+			<p>Compatible with all Bluetooth devices, and has a range of 33 feet. 
+			<br class="mobile_hidden" />
+			Plugzee has a battery life of upto 18 hours and can be charged via 
+			<br class="mobile_hidden" />
+			any USB outlet using a Micro USB cable. 
+			<br class="mobile_hidden" />
+			 The AptX streaming technology embedded inside Plugzee lets you <br/>
+			 stream high-resolution music over Bluetooth. 
+			 <br class="mobile_hidden" />
+			 With the built-in noise cancellation microphone effortlessly answer 
+			 <br class="mobile_hidden" />
+			 your calls over loudspeaker. 
+		</div>
+
+		<div class="tech_icons center mobile_hidden">
+			<div class="col-md-4">
+				<img src="/Images/bluetooth2.png" class="icons-size">
+			</div>
+			<div class="col-md-4 usb">
+				<img src="/Images/USB.png" class="icons-size">
+			</div>
+			<div class="col-md-4">
+				<img src="/Images/18hours.png" class="icons-size bt_icon">
+			</div>
+		</div>
+	</div>
+
+	<div class="subscribe normal_scrolls text-center" id="subscribe">
+		<!--<div class="container">
+			<img src="/Images/mail.png" class="mail_icon center">
+			<h1 class="center">Stay Updated</h1> <br>
+			
+			<!-- This div is only for desktop. Hidden on mobile -->
+			<!-- <p class="center mobile_hidden white_text" id="changingText">Plugzee will be launching soon on Indiegogo, to get notified <br/> on the day of product launch do leave us your contact below.</p> -->
+			
+			<!-- This div is only for mobile. Hidden on desktop -->
+			<!--<p class="center desktop_hidden white_text" id="changingText">Plugzee will be launching soon on Indiegogo, to get notified on the day of product launch do leave us your contact below.</p>
+			<br>
+
+			<form class="form" id="registrationForm" action="" method="" role="form" autocomplete="on">
+			  <div class="form-group">
+				<input type="text" class="form-control" required name="name" id="name" placeholder="Name (Required)">
+			  </div>
+			  <div class="form-group">
+				<input type="email" class="form-control" required name="email" id="email" placeholder="Email (Required)">
+			  </div>
+
+			  <br><br>
+
+			  <button type="submit" class="btn btn-primary center" id="submitButton">Stay Updated</button>
+			</form>
+
+		</div> -->
+		<div class="container white_text">
+			<h2>Plugzee is Now Available on Indiegogo</h2>
+			<p>We are currently crowdfunding Plugzee on Indiegogo, Pre-order it to get an Indiegogo special price.</p>
+			<a href="https://www.indiegogo.com/projects/plugzee-a-wireless-solution-to-all-your-audio/x/6914956" class="page-scroll"><button type="submit" class="btn btn-primary">Pre-order Now</button></a>
+			<div class="container text-center social-pos">
+				<div class="col-md-2 col-xs-4">
+					<div class="fb-share-button" data-href="http://plugzee.com/" data-layout="button_count"></div>
+				</div>
+				<div class="col-md-2 col-xs-4">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://plugzee.com/" data-text="check out plugzee, a wireless solution to your audio" data-hashtags="plugzee">Tweet</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+					<!-- <a href="https://www.facebook.com/plugzee" target="_blank"><img src="/Images/fb.png"></a> -->
+				</div>
+				
+				<div class="col-md-2 col-xs-4">
+					<!-- Place this tag where you want the share button to render. -->
+<div class="g-plus" data-action="share" data-annotation="bubble"></div>
+
+
+				</div>
+				<!-- <div class="col-md-3 col-xs-3"> -->
+					<!-- <a href="mailto:info@plugzee.com"> -->
+					<!-- <img src="/Images/utube.png"> -->
+					<!-- </a> -->
+				<!-- </div> -->
+			</div>
+		</div>
+	</div>
+
+	<div class="contact normal_fixed" id="contact">
+		
+		<div class="outer_container">
+			
+
+			<!-- This div is only for mobile. Hidden on desktop -->
+			<div class="social_media desktop_hidden">
+				<div class="col-xs-3">
+					<a href="https://www.facebook.com/plugzee" target="_blank"><img src="/Images/fb.png"></a>
+				</div>
+				<div class="col-xs-3">
+					<a href="https://twitter.com/@plugzee" target="_blank">
+					<img src="/Images/twitter.png">
+					</a>
+				</div>
+				<div class="col-xs-3">
+					<a href="https://plus.google.com/113542799831640851519" target="_blank">
+					<img src="/Images/g+.png">
+					</a>
+				</div>
+				<div class="col-xs-3">
+					<a href="mailto:info@plugzee.com">
+					<img src="/Images/utube.png">
+					</a>
+				</div>
+			</div>
+
+			<div class="container white_text">
+				<div class="col-md-4 ">
+					<h2 class="plug_font end_stuff">plugzee</h2>
+					<p class="end_stuff"><strong>Location: </strong><br class="mobile_hidden"><a href="http://goo.gl/MW1dHd" class="white_text">Miramar-Goa, India</a></p>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.985304450576!2d73.8084135568916!3d15.485222628752446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfc0c2c5b14833%3A0x1008a502b2b19fd9!2sMiramar+Beach%2C+Panjim%2C+Goa!5e0!3m2!1sen!2s!4v1425363358510" width="200" height="125" frameborder="0" style="border:0" class="mobile_hidden"></iframe>
+				</div>
+
+				<div class="col-md-4 contact-left">
+					<h1 class="center white_text">Contact Us</h1>
+					<br>
+					<p class="center email">Email: <a class="white_text" href="mailto:info@plugzee.com">info@plugzee.com</a></p>
+					<div class="social_media center mobile_hidden contact-icons">
+						<div class="col-md-3">
+							<a href="https://www.facebook.com/plugzee" target="_blank"><img src="/Images/fb.png"></a>
+					</div>
+					<div class="col-md-3">
+						<a href="https://twitter.com/@plugzee" target="_blank">
+						<img src="/Images/twitter.png">
+					</a>
+					</div>
+					<div class="col-md-3">
+						<a href="https://plus.google.com/113542799831640851519" target="_blank">
+						<img src="/Images/g+.png">
+						</a>
+					</div>
+					<div class="col-md-3 col-xs-3">
+						<a href="mailto:info@plugzee.com">
+						<img src="/Images/utube.png">
+					</a>
+				</div>
+			</div>
+					<!-- For alignment. This div creates a blank column in the middle -->
+				</div>
+				<div class="col-md-1"></div>
+
+				<div class="col-md-3 col-xs-4 contact-funding">
+					<h3 class="white_text mobile_hidden text-center">Funding with <img src="/Images/pgogo.png" class="contactigg" ></h3>  <!-- Don't remove the white_text class. I know it is redundant cause it is already specified. But if you remove it, it leads to problems. Leave it at that -->
+				</div>
+			</div>
+
+			<!-- This div is only for desktop. Hidden on mobile -->
+			<!-- To use for mobile add col-xs-VALUE also to the class -->
+			
+
+		</div>
+	</div>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script async type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script async type="text/javascript" src="js/script.js"></script>
+
+	<!-- For smooth scrolling. Also added something in main.css under 'navbar' class -->
+	<script async type="text/javascript" src="js/jquery.easing.min.js"></script>
+	<script async type="text/javascript" src="js/scrolling-nav.js"></script>
+
 </body>
+
 </html>

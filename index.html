@@ -21,6 +21,84 @@
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
     
+
+    <!-- Coverflow dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.js"></script>
+
+    <!-- interpolate, depends on jQ 1.8.0+ -->
+    <script src="bower_components/coverflow/jquery.interpolate.js"></script>
+
+    <!-- Coverflow -->
+    <script src="bower_components/coverflow/jquery.coverflow.js"></script>
+
+            <script>
+            $(function() {
+
+                // Alphabet
+                jQuery.noConflict();
+                $('.coverflow').coverflow();
+
+                $('#first').click(function() {
+                    $('.coverflow').coverflow('index', 0);
+                });
+
+                $('#last').click(function() {
+                    $('.coverflow').coverflow('index', -1);
+                });
+
+                $('#goto6').click(function() {
+                    $('.coverflow').coverflow('index', 6-1);    // zero-based index!
+                });
+                
+                $('#keyboard').click(function() {
+                    $('.coverflow').coverflow('option', 'enableKeyboard', $(this).is(':checked'));
+                });
+                
+                $('#wheel').click(function() {
+                    $('.coverflow').coverflow('option', 'enableWheel', $(this).is(':checked'));
+                });
+                
+                $('#click').click(function() {
+                    $('.coverflow').coverflow('option', 'enableClick', $(this).is(':checked'));
+                });
+
+                /* CD covers */
+
+                if ($.fn.reflect) {
+                    $('.photos .cover').reflect();
+                }
+
+                $('.photos').coverflow({
+                    easing:         'easeOutElastic',
+                    duration:       'slow',
+                    index:          3,
+                    width:          320,
+                    height:         240,
+                    visible:        'density',
+                    selectedCss:    {   opacity: 1  },
+                    outerCss:       {   opacity: .1 },
+                    
+                    confirm:        function() {
+                        console.log('Confirm');
+                    },
+
+                    change:         function(event, cover) {
+                        var img = $(cover).children().andSelf().filter('img').last();
+                        $('#photos-name').text(img.data('name') || 'unknown');
+                    }
+                    
+                }); 
+
+                $('#leakdetect').click(function() {
+                    $('#leakbucket').empty();
+                    for (var i = 0; i < 100; ++i) {
+                        $('<div><div>test</div></div>').appendTo('#leakbucket').coverflow();
+                    }
+                });
+            });
+        </script>
+
     <!--[if lt IE 9]>
         <script src="assets/js/html5.js"></script>
         <script src="assets/js/respond.min.js"></script>
@@ -103,9 +181,38 @@
     
     <div id="clients">
         <div class="container">
-        <span class="image" >
+        <div class="coverflow">
+            <div class="cover">A</div>
+            <div class="cover">B</div>
+            <div class="cover">C</div>
+            <div class="cover">D</div>
+            <div class="cover">E</div>
+            <div class="cover">F</div>
+            <div class="cover">G</div>
+            <div class="cover">H</div>
+            <div class="cover">I</div>
+            <div class="cover">J</div>
+            <div class="cover">K</div>
+            <div class="cover">L</div>
+            <div class="cover">M</div>
+            <div class="cover">N</div>
+            <div class="cover">O</div>
+            <div class="cover">P</div>
+            <div class="cover">Q</div>
+            <div class="cover">R</div>
+            <div class="cover">S</div>
+            <div class="cover">T</div>
+            <div class="cover">U</div>
+            <div class="cover">V</div>
+            <div class="cover">W</div>
+            <div class="cover">X</div>
+            <div class="cover">Y</div>
+            <div class="cover">Z</div>
+        </div>
+
+        <!-- <span class="image" >
                         <img class="animated hiding"  src="assets/img/logos/logo-1.jpg" alt="mashable" />
-                    </span>
+                    </span> -->
             <!-- <ul class="height-of-logo list-inline logos">
                 <li>
                     <div class="image" >
@@ -135,7 +242,7 @@
                 </li> -->
             <!-- </ul> -->
         <!-- </div> -->
-            <span class="image" >
+          <!--   <span class="image" >
                 <img class="animated hiding"  src="assets/img/logos/logo-1.jpg" alt="mashable" />
             </span>
             <span class="image" >
@@ -143,7 +250,7 @@
             </span>
             <span class="image" >
                 <img class="animated hiding"  src="assets/img/logos/logo-1.jpg" alt="mashable" />
-            </span>
+            </span> -->
     </div>
     
     <a id="showHere"></a>

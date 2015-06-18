@@ -1,0 +1,13 @@
+{
+  "name": "y",
+  "version": "y",
+  "authors": [
+    "valindo <valindo.godinho@gmail.com>"
+  ],
+  "description": "Website for foodcrumbs",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "index.html"
+}

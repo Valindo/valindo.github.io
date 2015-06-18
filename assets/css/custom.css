@@ -1,6 +1,4 @@
-.height-of-logo{
-	height: 400px;
-}
+
 
 .height-of-logo li{
 	padding-left: 0px;
@@ -39,4 +37,58 @@
     -ms-transform:scale(8.25); /* IE 9 */
     -o-transform:scale(8.25); /* Opera */
      transform:scale(8.25);
+}
+
+.makebox div{
+	border: 5px solid black;
+}
+
+/*Top should be refactored!*/
+@font-face{
+	font-family: sinkinsanstwo;
+	src: url("/assets/fonts/Sans200XLight.otf") format("opentype");
+}
+
+@font-face{
+	font-family: sinkinsansthree;
+	src: url("/assets/fonts/Sans300Light.otf") format("opentype");	
+}
+
+.flat-pink{
+		color: #e35a9b;
+}
+
+.sans200{
+	font-family: sinkinsanstwo;
+}
+
+.sans300{
+	font-family: sinkinsansthree;
+}
+
+.flat-grey{
+	color: #303030;
+}
+
+.light-grey{
+	color: #8e8e8e;
+}
+
+.long-block {
+  background: #e35a9b;
+  text-align: left;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+#clients{
+	background: white;
+}
+
+.cf-height{
+	height: 320px;
+}
+
+.cf-height .coverflow{
+	padding-top: 15px;
 }

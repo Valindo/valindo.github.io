@@ -37,7 +37,10 @@
 
                 // Alphabet
                 jQuery.noConflict();
-                $('.coverflow').coverflow();
+                $('.coverflow').coverflow({
+                    duration: 'slow',
+                    index: 3,
+                });
 
                 $('#first').click(function() {
                     $('.coverflow').coverflow('index', 0);
@@ -149,8 +152,9 @@
 	<div id="hero" class="static-header register-version light clearfix">
 
         <div class="text-heading">
-            <h1 class="animated hiding" data-animation="bounceInDown" data-delay="0">Do not wait &mdash; <span class="highlight">launch</span> your startup now!</h1>
-            <p class="animated hiding" data-animation="fadeInDown" data-delay="500">this tempate is flexible enough to suit any kind of startup or new business</p>
+            <h1 class="animated hiding flat-grey sans200" data-animation="bounceInDown" data-delay="0">Discover awesome food across <span class="flat-pink sans300">Goa</span> like never before! 
+            </h1>
+            <p class="animated hiding" data-animation="fadeInDown" data-delay="500"><span class="sans200 flat-grey">We’re coming soon, sign up today and stay updated about the launch and news.</span></p>
         </div>
 		
 		<div class="container">
@@ -165,12 +169,12 @@
 							<div class="form-group">
 								<input size="25" type="email" class="form-control required email" name="email" id="email" placeholder="Email">
 							</div>
-							<div class="form-group password-wrapper">
+							<!-- <div class="form-group password-wrapper">
 								<input type="password" class="form-control required" name="password" id="password" placeholder="Password">
-							</div>
+							</div> -->
 							<div class="form-group submit-wrap">
 								<input type="hidden" name="small-form"/>
-								<button type="submit" class="btn btn-primary btn-md">Get 14 Day Free Trial</button>
+								<button type="submit" class="btn btn-primary btn-md">Stay Tuned</button>
 							</div>
 						</form>
 				</div>
@@ -178,36 +182,33 @@
 		</div>
 		
     </div>
+
+
+       <section id="guarantee" class="long-block light">
+        <div class="container">
+            <div class="col-md-12 col-lg-9">
+                <i class="icon icon-seo-icons-24 pull-left"></i>
+                <article class="pull-left">
+                    <h2>We need <strong>BETA</strong> testers!</h2>
+                    <p class="thin">If you want early access or want to help us discover food sign up for our Beta.</p>
+                </article>
+            </div>
+            
+            <div class="col-md-12 col-lg-3">
+                <a href="hthttp://themeforest.net/item/startuply-responsive-multipurpose-landing-page/7953388" class="btn btn-default">Sign Up</a>
+            </div>
+        </div>
+    </section>
     
     <div id="clients">
-        <div class="container">
+        <div class="container cf-height">
         <div class="coverflow">
-            <div class="cover">B</div>
-            <div class="cover">I</div>
-            <div class="cover">T</div>
-            <div class="cover">C</div>
-            <div class="cover">H</div>
-            <div class="cover"> </div>
-            <div class="cover">N</div>
-            <div class="cover">I</div>
-            <div class="cover">G</div>
-            <div class="cover">G</div>
-            <div class="cover">E</div>
-            <div class="cover">R</div>
-            <div class="cover">J</div>
-            <div class="cover">U</div>
-            <div class="cover">N</div>
-           <!--  <div class="cover">P</div>
-            <div class="cover">Q</div>
-            <div class="cover">R</div>
-            <div class="cover">S</div>
-            <div class="cover">T</div>
-            <div class="cover">U</div>
-            <div class="cover">V</div>
-            <div class="cover">W</div>
-            <div class="cover">X</div>
-            <div class="cover">Y</div>
-            <div class="cover">Z</div> -->
+            <img class="cover animated hiding" src="assets/img/logos/logo-1.jpg" alt="food"/>
+            <img class="cover animated hiding" src="assets/img/logos/logo-2.jpg" alt="food"/>
+            <img class="cover animated hiding" src="assets/img/logos/logo-3.jpg" alt="food"/>
+            <img class="cover animated hiding" src="assets/img/logos/logo-3.jpg" alt="food"/>
+            <img class="cover animated hiding" src="assets/img/logos/logo-3.jpg" alt="food"/>
+            <img class="cover animated hiding" src="assets/img/logos/logo-3.jpg" alt="food"/>
         </div>
 
         <!-- <span class="image" >
@@ -273,12 +274,14 @@
 								<div class="col-sm-6 animated hiding" data-animation="fadeInRight">
 									<br/>
 									<article class="center">
-										<h3>FOR EVERY <span class="highlight">STARTUP</span></h3>
-										<div class="sub-title">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br/> sdfs sit atmet sit dolor greand fdanrh sdfs</div>
-										<p>In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret. Sed virtutem ipsam inchoavit, nihil ampliusuma. Scien tiam pollicentur, quam non erat mirum sapientiae lorem cupido patria esse cariorem. Quae qui non vident, nihilamane umquam magnum ac cognitione.</p>
+										<h3>WHAT IS <span class="flat-pink sans200">FOODCRUMBS?</span></h3>
+										<div class="sub-title light-grey sans200">Goa’s biggest food discovery network in the making.</div>
+										<p>FoodCrumbs lets you discover the best food across Goa. Whether it's one of those authentic Goan dishes or an Italian delicacy, FoodCrumbs is on its journey to discover the best.
+                                        <br/>
+                                        And that's not it, the FoodCrumb network will be built with the help of all you adventurous food lovers out there. Let the journey of finding awesome food begin.</p>
 										<br/>
-										<a href="#" class="btn btn-secondary animated hiding" data-animation="bounceIn" data-delay="700">Get template</a>
-										<a href="#" class="btn btn-secondary animated hiding" data-animation="bounceIn" data-delay="700">See elements</a>
+										<!-- <a href="#" class="btn btn-secondary animated hiding" data-animation="bounceIn" data-delay="700">Get template</a>
+										<a href="#" class="btn btn-secondary animated hiding" data-animation="bounceIn" data-delay="700">See elements</a> -->
 									</article>
 								</div>
 					</div>
@@ -485,8 +488,8 @@
         <div class="container center">
             <div class="col-sm-12 col-lg-5">
                 <article>
-                    <h2><strong>GET</strong> LIVE UPDATES</h2>
-                     <p class="thin">No spam promise - only latest news and prices!</p>
+                    <h2><strong class="flat-pink">GET</strong> UPDATES</h2>
+                     <!-- <p class="thin">No spam promise - only latest news and prices!</p> -->
                 </article>
             </div>
             <div class="col-sm-12 col-lg-7">
@@ -494,7 +497,7 @@
             <div class="form-group form-inline">
               <input size="15" type="text" class="form-control required" id="NewsletterName" name="NewsletterName" placeholder="Your name" /> 
               <input size="25" type="email" class="form-control required" id="NewsletterEmail" name="NewsletterEmail" placeholder="your@email.com" /> 
-			  <input type="submit" class="btn btn-default" value="SUBSCRIBE" />
+			  <input type="submit" class="btn btn-default" value="Stay Tuned" />
 			  <span id="response">
 				<? require_once('assets/mailchimp/inc/store-address.php'); if($_GET['submit']){ echo storeAddress(); } ?>
 			  </span>
@@ -740,21 +743,7 @@
         </div>
     </section> -->
     
-  <!--  <section id="guarantee" class="long-block light">
-        <div class="container">
-            <div class="col-md-12 col-lg-9">
-				<i class="icon icon-seo-icons-24 pull-left"></i>
-                <article class="pull-left">
-                    <h2><strong>LAUNCH</strong> YOUR STARTUP NOW!</h2>
-                    <p class="thin">In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret.</p>
-                </article>
-            </div>
-			
-            <div class="col-md-12 col-lg-3">
-                <a href="hthttp://themeforest.net/item/startuply-responsive-multipurpose-landing-page/7953388class="btn btn-default">Get this template</a>
-            </div>
-        </div>
-    </section> -->
+
     
     <footer id="footer" class="footer light">
         <div class="container">
@@ -763,8 +752,8 @@
                     <div class="logo-wrapper">
                         <img src="assets/img/logo.png" alt="logo" />
                     </div>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco. Qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Nisi ut aliquid ex ea commodi consequatur?</p>
-                    <p><strong>John Doeson, Founder</strong>.</p>
+                    <p>Bitche's ain't shit but hoes and tricks, that is the moto to this world and you should eat with this moto man!</p>
+                    <p><strong>Nagarjun Kinare, Founder</strong>.</p>
                 </div>
                 <div class="col-sm-5 social-wrap">
                     <div class="footer-title">Social Networks</div>
@@ -782,25 +771,25 @@
                     </ul>
                 </div>
                 <div class="col-sm-3">
-                    <div class="footer-title">Our Contacts</div>
+                    <div class="footer-title">CONTACT US</div>
                     <ul class="list-unstyled">
                         <li>
                             <span class="icon icon-chat-messages-14"></span> 
-                            <a href="mailto:info@startup.ly">info@startup.ly</a>
+                            <a href="mailto:info@startup.ly">info@foodcrumbs.in</a>
                         </li>
                         <li>
                             <span class="icon icon-seo-icons-34"></span> 
-                            2901 Marmora road, Glassgow, Seattle, WA 98122-1090
+                            Miramar, Goa, INDIA 403002
                         </li>
                         <li>
                             <span class="icon icon-seo-icons-17"></span>
-                            1 - 234-456-7980
+                            +91 880 601 3736
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="copyright">startup.ly 2014. All rights reserved.</div>
+        <div class="copyright">FoodCrumbs 2015. All rights reserved.</div>
     </footer>
     
     <div class="back-to-top"><i class="fa fa-angle-up fa-3x"></i></div>

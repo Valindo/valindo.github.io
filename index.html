@@ -40,6 +40,7 @@
                 $('.coverflow').coverflow({
                     duration: 'slow',
                     index: 3,
+                    enableWheel:false
                 });
 
                 $('#first').click(function() {
@@ -58,9 +59,9 @@
                     $('.coverflow').coverflow('option', 'enableKeyboard', $(this).is(':checked'));
                 });
                 
-                $('#wheel').click(function() {
-                    $('.coverflow').coverflow('option', 'enableWheel', $(this).is(':checked'));
-                });
+                // $('#wheel').click(function() {
+                //     $('.coverflow').coverflow('option', 'enableWheel', $(this).is(':checked'));
+                // });
                 
                 $('#click').click(function() {
                     $('.coverflow').coverflow('option', 'enableClick', $(this).is(':checked'));
@@ -184,7 +185,7 @@
     </div>
 
 
-       <section id="guarantee" class="long-block light">
+       <section id="guarantee" class="long-block ghost-light">
         <div class="container">
             <div class="col-md-12 col-lg-9">
                 <i class="icon icon-seo-icons-24 pull-left"></i>
@@ -497,7 +498,7 @@
             <div class="form-group form-inline">
               <input size="15" type="text" class="form-control required" id="NewsletterName" name="NewsletterName" placeholder="Your name" /> 
               <input size="25" type="email" class="form-control required" id="NewsletterEmail" name="NewsletterEmail" placeholder="your@email.com" /> 
-			  <input type="submit" class="btn btn-default" value="Stay Tuned" />
+			  <input type="submit" class="btn btn-default grey-btn" value="Stay Tuned" />
 			  <span id="response">
 				<? require_once('assets/mailchimp/inc/store-address.php'); if($_GET['submit']){ echo storeAddress(); } ?>
 			  </span>
@@ -759,16 +760,16 @@
                     <div class="footer-title">Social Networks</div>
                     <ul class="list-inline socials">
                         <li><a href="#"><span class="icon icon-socialmedia-08"></span></a></li>
-                        <li><a href="#"><span class="icon icon-socialmedia-09"></span></a></li>
+                        <li><a href="#"><span class="icon icon-socialmedia-07"></span></a></li>
                         <li><a href="#"><span class="icon icon-socialmedia-16"></span></a></li>
                         <li><a href="#"><span class="icon icon-socialmedia-04"></span></a></li>
                     </ul>
-                    <ul class="list-inline socials">
+                   <!--  <ul class="list-inline socials">
                         <li><a href="#"><span class="icon icon-socialmedia-07"></span></a></li>
                         <li><a href="#"><span class="icon icon-socialmedia-16"></span></a></li>
                         <li><a href="#"><span class="icon icon-socialmedia-09"></span></a></li>
                         <li><a href="#"><span class="icon icon-socialmedia-08"></span></a></li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <div class="col-sm-3">
                     <div class="footer-title">CONTACT US</div>

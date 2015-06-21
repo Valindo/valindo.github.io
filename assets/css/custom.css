@@ -92,3 +92,85 @@
 .cf-height .coverflow{
 	padding-top: 15px;
 }
+
+.btn-primary{
+	background: #e35a9b ;
+	border: #e35a9b;
+}
+
+.form-register-small .form-control{
+	border-left: 3px solid #e35a9b;
+}
+
+#subscribe .form-control{
+	border-left: 3px solid #e35a9b;	
+}
+
+.footer .list-inline li .icon{
+	color: #e35a9b;
+}
+
+.footer .list-unstyled li .icon{
+	color: #e35a9b;
+}
+
+a{
+	color: #e35a9b;
+}
+
+.navigation-header .navigation-bar > li.featured > a{
+	border:1px solid #e35a9b;
+	color: #e35a9b;
+}
+
+.navigation-header .navigation-bar > li.featured > a:Hover {
+ 	opacity: .9; 
+ 	background:#e35a9b; 
+ 	color:#fff; 
+}
+
+.fixmenu-clone.navigation-header .navigation-bar > .featured > a{
+	color: #e35a9b;
+}
+
+#hero .btn-primary:hover, #hero .btn-primary.hovered{
+	background: #FFF;
+	border:1px solid #e35a9b;
+	color: #e35a9b;
+}
+
+.btn-default:Hover, .btn-default.hovered{
+	color: #e35a9b;
+}
+
+.navigation-header .navigation-bar > li > a{
+	color: #303030;
+}
+
+.light{
+	color: #303030;
+}
+
+.grey-btn{
+	color: #303030;
+	border:1px solid #303030;
+}
+
+.footer .footer-title{
+	color: #303030;
+}
+.footer p, .footer li{
+	color: #303030;
+}
+
+.copyright{
+	color: #303030;
+}
+
+.ghost-light{
+	color: #fff;
+}
+
+.ghost-light p{
+	color: #fff;
+}

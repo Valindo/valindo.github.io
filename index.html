@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/toastr.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
     
 
     <!-- Coverflow dependencies -->
@@ -558,46 +559,46 @@
                      <!-- <p class="thin">No spam promise - only latest news and prices!</p> -->
                 </article>
             </div>
-            <!-- <div class="col-sm-12 col-lg-7">
-			 <form id="subscribe" class="form" action="<?=//$_SERVER['PHP_SELF']; ?>" method="post">
+            <div class="col-sm-12 col-lg-7">
+			 <form id="subscribe" class="form" action="<?=$_SERVER['PHP_SELF']; ?>" method="post">
             <div class="form-group form-inline">
-              <input size="15" type="text" class="form-control required" id="NewsletterName" name="fname" placeholder="Your name" /> 
-              <input size="25" type="email" class="form-control required" id="NewsletterEmail" name="email" placeholder="your@email.com" /> 
-			  <input type="submit" class="btn btn-default grey-btn" value="Stay Tuned" />
+              <input size="15" type="text" class="form-control required" id="name" name="name" placeholder="Your name" /> 
+              <input size="25" type="email" class="form-control required" id="email" name="email" placeholder="your@email.com" /> 
+			  <input type="submit" id="submit" class="btn btn-default grey-btn" value="Stay Tuned" />
 			  <span id="response">
-				<? //require_once('assets/mailchimp/inc/store-address.php'); if($_GET['submit']){ echo storeAddress(); } ?>
+				<? require_once('assets/mailchimp/inc/store-address.php'); if($_GET['submit']){ echo storeAddress(); } ?>
 			  </span>
             </div>
           </form>
-            </div> -->
-            <div id="wufoo-z8nls6g0hplk01">
-                Fill out my <a href="https://kiritayya.wufoo.com/forms/z8nls6g0hplk01">online form</a>.
             </div>
+           <!--  <div id="wufoo-z8nls6g0hplk01">
+                Fill out my <a href="https://kiritayya.wufoo.com/forms/z8nls6g0hplk01">online form</a>.
+            </div> -->
            <!--  <div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;">The easy to use <a href="http://www.wufoo.com/form-builder/">Wufoo form builder</a> helps you make forms easy, fast, and fun.</div> -->
-             <script type="text/javascript">var z8nls6g0hplk01;(function(d, t) {
-                var s = d.createElement(t), options = {
-                    'userName':'kiritayya',
-                    'formHash':'z8nls6g0hplk01',
-                    'autoResize':true,
-                    'height':'320',
-                    'async':true,
-                    'host':'wufoo.com',
-                    'header':'show',
-                    'ssl':true };
+              <script type="text/javascript">var z8nls6g0hplk01;(function(d, t) {
+             //    var s = d.createElement(t), options = {
+             //        'userName':'kiritayya',
+             //        'formHash':'z8nls6g0hplk01',
+             //        'autoResize':true,
+             //        'height':'320',
+             //        'async':true,
+             //        'host':'wufoo.com',
+             //        'header':'show',
+             //        'ssl':true };
                     
-                    s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+             //        s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
                     
-                    s.onload = s.onreadystatechange = function() {
-                    var rs = this.readyState;
-                    if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-                    try { z8nls6g0hplk01 = new WufooForm();
-                        z8nls6g0hplk01.initialize(options);
-                        z8nls6g0hplk01.display(); 
-                    } catch (e) {}};
-                    var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; 
-                    par.insertBefore(s, scr);
-                    })(document, 'script');
-             </script>
+             //        s.onload = s.onreadystatechange = function() {
+             //        var rs = this.readyState;
+             //        if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+             //        try { z8nls6g0hplk01 = new WufooForm();
+             //            z8nls6g0hplk01.initialize(options);
+             //            z8nls6g0hplk01.display(); 
+             //        } catch (e) {}};
+             //        var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; 
+             //        par.insertBefore(s, scr);
+             //        })(document, 'script');
+             // </script>
         </div>
     </section>
 	

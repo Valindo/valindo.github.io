@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Home | Techyon</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="bower_components/fullpage.js/jquery.fullPage.css" />
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+	<div id="fullpage">
+		<div class="section">
+			<canvas id="animus" ></canvas>
+			<div class="container text-center">
+				<img src="images/logo.svg" class="img-responsive" id="logo-homepage" >
+			</div>
+			
+		</div>
+		<div class="section" style="background-color:#3498db">
+			<div class="container text-center" id="events">
+				<div class="row departments">
+					<div class="col-md-3 " onclick="testing()"><div class="dept-card mech">M</div></div>
+					<div class="col-md-3 "><div class="dept-card it">I</div></div>
+					<div class="col-md-3 "><div class="dept-card comp">C</div></div>
+					<div class="col-md-3 "><div class="dept-card etc">E</div></div>
+				</div>
+			</div>
+			<div class="container hidden" id = "mech">
+				<h1>Ami Baba Danger</h1>
+			</div>
+		</div>
+
+		<!-- ADD TIMETABLE in the DIV below -->
+		<div class="section" style="background-color:#e74c3c"></div>
+		<div class="section" style="background-color:#2c3e50"></div>
+		
+	</div>
+	<div class="pull-right-bottom">
+				<img src="images/fb.svg" alt="">
+				<img src="images/insta.svg" alt="">
+				<img src="images/twitter.svg" alt="">
+			</div>
+
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="lib/animus.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript" src="bower_components/fullpage.js/jquery.fullPage.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+    		$('#fullpage').fullpage();
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Arvo);
+*{
+	font-family: 'Arvo', serif;
+}
+
+
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Montserrat', sans-serif;
+}
+h3{
+	margin-top: 0;
+}
+i{
+	margin-right: 5px;
+}
+#animus{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+.menu{
+	position: relative;
+	z-index: 99;
+	font-size: 120%;
+}
+.navbar{
+	margin-bottom: 0;
+	border-radius: 0;
+}
+.jumbotron{
+	text-align: center;
+	margin-bottom: 0;
+	padding-top: 0;
+}
+.mainslide img{
+	width: 90%;
+	margin: 10% 5%;
+}
+.mainslide span{
+	border-bottom: 2px solid #222d2f;
+	padding-bottom: 3px;
+}
+.img-full{
+	width: 100%;
+	height: 100%;
+}
+.details{
+	position: relative;
+	top: -130px;
+}
+.pcce{
+	width: 12%;
+	margin: 0 44%;
+}
+.type{
+	font-size: 0;
+	padding: 5%;
+}
+.type div{
+	width: 100%;
+	display: block;
+}
+.type section{
+	display: inline-block;
+	width: 42%;
+	margin: 4%;
+	height: 300px;
+	box-shadow: 0px 0px 10px #333;
+}
+.type section:hover{
+	box-shadow: 0px 0px 10px #000;
+}
+.flashback{
+	text-align: center;
+	background-image: url('../images/bkg1.png');
+}
+
+body{
+	background-color: #e67e22;
+}
+
+
+.departments{
+	font-size: 200%;
+}
+
+#logo-homepage{
+	display: inline-block;
+}
+
+
+
+.pull-right-bottom{
+	position: absolute;
+	font-size: 50px;
+	bottom:0%;
+	right: 0%;
+	z-index: 10;
+	width: 10%;
+	position: fixed; 
+
+}
+
+.pull-right-bottom img{
+	width: 20%;
+}
+
+.dept-card{
+	color: white;
+	padding: 30% 30% 30% 30%;
+}
+
+.mech{
+	background-color: #2c3e50;
+}
+
+
+
+.it{
+	background-color: #e74c3c;
+}
+
+.etc{
+	background-color: #4183D7;
+}
+
+.comp{
+	background-color: #2ECC71;
+}
+.dept-card:hover{
+	opacity: 0.5;
+	content: "test";
+}
+

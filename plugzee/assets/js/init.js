@@ -3,7 +3,7 @@ $(document).ready(function() {
     	css3: true,
         scrollingSpeed: 5,
         autoScrolling: false,
-        fitToSection: true,
+        fitToSection: false,
         fitToSectionDelay: 1000,
         scrollBar: true,
         easing: 'easeInOutCubic',
@@ -16,7 +16,7 @@ $(document).ready(function() {
         touchSensitivity: 5,
         normalScrollElementTouchThreshold: 5,
 
-        sectionsColor: ['#3498db','#f2ae2e','#fff','#fff899']
+        sectionsColor: ['#3498db','#f2ae2e','#8e44ad','#81d5f2','#fff899']
 
 
     });
@@ -38,7 +38,7 @@ $(document).ready(function() {
     // document.getElementsByClassName("section").style.width = $(window).width()
     // document.getElementsByClassName("section").style.height = $(window).height()    
 
-    document.getElementById('ifrm').src = "http://clips.animatron.com/0825fac28fb46d92df44e479dc43e248?w="+width+"&h="+height+"&autoPlay=1&r=1";
+    document.getElementById('ifrm').src = "http://clips.animatron.com/91e4707a2b19c4599adb3c12cc42e305?w="+width+"&h="+height+"&autoPlay=1&r=1";
 
     $(".progress-bar-success").animate({
             width: "35%"

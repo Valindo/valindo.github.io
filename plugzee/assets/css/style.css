@@ -11,7 +11,7 @@ body {
 
 @font-face {
 	font-family: quinfo;
-	src: url("/plugzee/font/Quinfo.woff") format("woff");
+	src: url("/font/Quinfo.woff") format("woff");
 }
 
 .turq{

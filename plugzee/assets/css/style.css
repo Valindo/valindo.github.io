@@ -1,0 +1,169 @@
+body {
+	cursor: url(../../lel.jpg), auto;
+}
+
+sup {
+	display: block;
+	font-size: 70% !important;
+}
+
+
+
+
+
+
+@font-face {
+	font-family: quinfo;
+	src: url("/font/Quinfo.otf") format("opentype");
+}
+
+.turq{
+	color:#44bcb7;
+}
+
+.social-icons{
+	padding-right: 15px;
+	padding-left: 15px;
+	font-size: 50px;
+	color:#F2505d;
+
+}
+
+.social-icons:hover{
+	text-decoration: none;
+}
+
+.social-icons:focus{
+	text-decoration: none;
+}
+
+.estoniapin{
+	position: absolute;
+	z-index: 2;
+	margin-bottom: 26%;
+	margin-left: 13%;
+}
+
+.bounce{
+	-webkit-animation:bounce 1s infinite;
+}
+
+@-webkit-keyframes bounce {
+	0%       { bottom:5px; }
+	25%, 75% { bottom:15px; }
+	50%      { bottom:20px; }
+	100%     {bottom:0;}
+}
+
+.goapin{
+	position: absolute;
+	margin-bottom: 30%;
+	margin-left: -9%;
+}
+
+
+@media (max-width: 500px) { 
+	.social-icons{
+		padding-right: 15px;
+		padding-left: 15px;
+		font-size: 30px;
+		color:#F2505d;
+	}
+
+	.social-icons:hover{
+		text-decoration: none;
+	}
+
+	.social-icons:focus{
+		text-decoration: none;
+	}
+
+}
+
+
+
+
+
+.navigation-brand{
+	font-size: 30px;
+	color: white;
+}
+
+.navigation{
+	color: white;
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	display: table;
+}
+
+.logo{
+	font-size: 2.5em;
+	font-family: quinfo;
+}
+
+
+.fixed-menu .navigation{
+	background-color: white;
+	color: #22313F;
+	box-shadow: 0px 3px 10px #7f8c8d;
+}
+
+.fixed-menu .order-now{
+	color: white;
+}
+
+.order-now{
+	background-color: #F27064;
+	border-radius: 3.5rem;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	cursor: pointer;
+	border-bottom: 5px solid #cd5d51;
+
+}
+
+.navbar-links{
+	padding-top: 1em;
+	font-size: 1.2em;
+}
+
+.order-now-align{
+	padding-top: 1.5%;
+}
+
+.fixed-menu .order-now-align{
+	padding-top: 1%;
+}
+
+.col-md-8 p{
+	display: inline;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+
+@media (min-width: 410px) and
+(min-height: 667px) and
+(orientation: landscape) and
+(-webkit-device-pixel-ratio: 2){
+	
+}
+
+
+.section{
+	width: 100%;
+	height: 100%;
+}
+
+.progress {
+	border-radius: 5em;
+	height: 2em;
+	width: 100%;
+}
+
+.progress-bar{
+	line-height: 2.5em;
+}

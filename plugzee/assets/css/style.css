@@ -1,5 +1,5 @@
 body {
-	cursor: url(../../lel.jpg), auto;
+	cursor: url(../../lel.png), auto;
 }
 
 
@@ -11,7 +11,7 @@ body {
 
 @font-face {
 	font-family: quinfo;
-	src: url("/font/Quinfo.otf") format("opentype");
+	src: url("/font/Quinfo.woff") format("woff");
 }
 
 .turq{

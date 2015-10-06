@@ -38,7 +38,7 @@ $(document).ready(function() {
     // document.getElementsByClassName("section").style.width = $(window).width()
     // document.getElementsByClassName("section").style.height = $(window).height()    
 
-    document.getElementById('ifrm').src = "http://clips.animatron.com/91e4707a2b19c4599adb3c12cc42e305?w="+width+"&h="+height+"&autoPlay=1&r=1";
+    document.getElementById('ifrm').src = "http://clips.animatron.com/a99b8ebd771b54afd510244369ca5834?w="+width+"&h="+height+"&autoPlay=1&r=1&c=false&rc=#81d5f2&bg=#81d5f2";
 
     $(".progress-bar-success").animate({
             width: "35%"

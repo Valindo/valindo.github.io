@@ -16,7 +16,7 @@ $(document).ready(function() {
         touchSensitivity: 5,
         normalScrollElementTouchThreshold: 5,
 
-        sectionsColor: ['#3498db','#f2ae2e','#81d5f2','#8e44ad','#E67E22','#2ECC71','#F22613','#fff899']
+        sectionsColor: ['#3498db','#f2ae2e','#81d5f2','#8e44ad','#E67E22','#2ECC71','#fff899']
 
 
     });

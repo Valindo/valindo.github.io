@@ -18,6 +18,9 @@
 	<!-- Line-icons -->
 	<link rel="stylesheet" type="text/css" href="font/css/font-lineicons.css">
 
+	<!-- ngDialog -->
+	<link rel="stylesheet" type="text/css" href="bower_components/ng-dialog/css/ngDialog.min.css">
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 	
@@ -146,9 +149,7 @@
 			<iframe id="ifrm" src="" frameborder="0" width="100%" height="100%" anm-auto-play="true" anm-controls="false" anm-auto-frameborder="0" anm-rib-color="#81d5f2" rc="#81d5f2"></iframe>	
 		</div>
 		
-		<div class="section fp-auto-height">
-			<h1>In the News</h1>
-		</div>
+		
 
 		<div class="section" id="section2">
 			<h2> Technical aspects</h2>
@@ -158,7 +159,10 @@
 			<h2>Indiegogo/Pre-order information
 		</div>
 
-
+		<div class="section fp-auto-height" ng-controller="MainCtrl" >
+			<h1>In the News</h1>
+			<button type="button" ng-click="clickToOpen()"></button>
+		</div>
 		
 
 		<div class="section" id="section4">
@@ -214,6 +218,8 @@
 	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 	<!-- jQuerys countTo -->
 	<script type="text/javascript" src="assets/js/jquery.countTo.js"></script>
+	<!-- ngDialog -->
+	<script type="text/javascript" src="bower_components/ng-dialog/js/ngDialog.min.js"></script>
 
 	<script type="text/javascript" src="assets/js/app.js"></script>
 	<script type="text/javascript" src="assets/js/init.js"></script>

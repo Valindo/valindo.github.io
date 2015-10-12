@@ -16,7 +16,7 @@ $(document).ready(function() {
         touchSensitivity: 5,
         normalScrollElementTouchThreshold: 5,
 
-        sectionsColor: ['#1abc9c','#344451','#81d5f2','#e8e6df','#fff','#344451','#fee066']
+        sectionsColor: ['#81d5f2','#344451','#81d5f2','#e8e6df','#81d5f2','#344451','#fee066']
 
 
     });
@@ -38,7 +38,8 @@ $(document).ready(function() {
     // document.getElementsByClassName("section").style.width = $(window).width()
     // document.getElementsByClassName("section").style.height = $(window).height()    
 
-    document.getElementById('ifrm').src = "http://clips.animatron.com/9d2aa5da1421219c96c9684a3835846a?w="+width+"&h="+height+"&autoPlay=1&r=1&c=false&rc=blue&bg=#81d5f2";
+    // document.getElementById('ifrm').src = "http://clips.animatron.com/9d2aa5da1421219c96c9684a3835846a?w="+width+"&h="+height+"&autoPlay=1&r=1&c=false&rc=blue&bg=#81d5f2";
+    // document.getElementById('ifrm').src = "http://clips.animatron.com/a99b8ebd771b54afd510244369ca5834?w="+w+"&h="+h+"&autoPlay=1&r=1";
 
     $(".progress-bar-success").animate({
             width: "35%"

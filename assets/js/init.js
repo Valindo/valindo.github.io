@@ -16,7 +16,7 @@ $(document).ready(function() {
         touchSensitivity: 5,
         normalScrollElementTouchThreshold: 5,
 
-        sectionsColor: ['#81d5f2','#344451','#81d5f2','#e8e6df','#81d5f2','#344451','#fee066']
+        // sectionsColor: ['#81d5f2','#344451','#81d5f2','#e8e6df','#81d5f2','#344451','#fee066']
 
 
     });
@@ -28,6 +28,7 @@ $(document).ready(function() {
 
     var w = $(window).width();
     var h = $(window).height();
+    console.log(w);
     // document.getElementById('section1').setAttribute("style","width:"+w+"px;"+"height:"+h+"px"+";background-color:blue;")
     // document.getElementById('section2').setAttribute("style","width:"+w+"px;"+"height:"+h+"px"+";background-color:green;")
     // document.getElementById('section3').setAttribute("style","width:"+w+"px;"+"height:"+h+"px"+";background-color:red;")

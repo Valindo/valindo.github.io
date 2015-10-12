@@ -1,35 +1,258 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="landingPage">
 <head>
-	<title>Valindo Godinho</title>
-	<link rel="stylesheet" type="text/css" href="/bootstrap-3.3.5-dist/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="/css/style.css">
-	<script type="text/javascript" href="/bootstrap-3.3.5-dist/css/bootstrap.js"></script>
+	<title>Plugzee</title>
 
-	<link rel="apple-touch-icon" sizes="57x57" href="/ico/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/ico/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/ico/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/ico/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/ico/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/ico/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/ico/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/ico/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/ico/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="/ico/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/ico/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="/ico/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/ico/favicon-16x16.png">
-	<link rel="manifest" href="/ico/manifest.json">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="/ico/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<!-- Boostrap v3.3.5 -->
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+	<!-- Fullpage.js -->
+	<link rel="stylesheet" type="text/css" href="bower_components/fullpage.js/jquery.fullPage.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/test.css">
+
+	<!-- Line-icons -->
+	<link rel="stylesheet" type="text/css" href="font/css/font-lineicons.css">
+
+	<!-- ngDialog -->
+	<link rel="stylesheet" type="text/css" href="bower_components/ng-dialog/css/ngDialog.min.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/ng-dialog/css/ngDialog-theme-default.min.css">
+	
+	<!-- coverflow -->
+	
+	
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	
+	<script src="http://player.animatron.com/latest/bundle/animatron.min.js"></script>
+	
 </head>
 <body>
-	<div class="outer-div container text-center">
-		<div class="inner-div">
-			<h1>Coming soon</h1>
+
+	
+	<header>
+		<div class="container text-center navigation">
+			<div class="row">
+				<span class="col-md-2 logo">plugzee</span>
+				<span class="col-md-8 navbar-links">
+					<a href="#"><p>HOME</p></a>
+					<a href="#"><p>ABOUT</p></a>
+					<a href="#"><p>INDIEGOGO</p></a>
+					<a href="#"><p>CONTACT</p></a>
+				</span>
+				<span class="col-md-2 navbar-links order-now-align"><span class="order-now">PRE-ORDER</span></span>
+			</div>
 		</div>
+	</header>
+
+	<div id="fullpage" class="text-center">
+		
+
+		<div class="section">
+			<!-- <iframe id="ifrm" src="" frameborder="0" width="100%" height="100%" anm-auto-play="true" anm-controls="false" anm-auto-frameborder="0" anm-rib-color="#81d5f2" rc="#81d5f2" style="z-index=-1"></iframe>	 -->
+			<!-- <div class="container"> -->
+			<!-- <span style="font-size:5em;color:#ebebeb">Main Section</span> -->
+			<div id="player-target" anm-player-target anm-src="http://clips.animatron.com/9d2aa5da1421219c96c9684a3835846a.json" anm-importer="animatron" anm-width="1280" anm-height="400" anm-rib-color="#81d5f2" anm-bg-color="#81d5f2" anm-auto-play="true" anm-controls="false"></div>
+
+			<div class="container text-center ghost-section">				
+				<!-- <iframe id="ifrm" src="" frameborder="0" width="100%" height="100%" anm-auto-play="true" anm-controls="false" anm-auto-frameborder="0" anm-rib-color="#81d5f2" rc="#81d5f2"></iframe>	 -->
+				<h4>India's Most Successful Hardware Crowdfunding Campaign</h4>
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-10">
+						<div class="progress">
+							<div class="progress-bar progress-bar-success" style="width:0%">
+								$15,000
+							</div>
+							<div class="progress-bar progress-bar-info" style="width:0%">
+								$41,881
+							</div>
+						</div>
+
+						<span class="milestones">
+							Amount
+							$<span class="amount" data-from="0" data-to="41881" data-speed="2000" data-refresh-interval="10" ></span>
+						</span>
+
+						<span class="milestones">
+							Backers
+							<span class="amount" data-from="0" data-to="1490" data-speed="2000" data-refresh-interval="10" ></span>
+						</span>
+
+						<span class="milestones">
+							Funded
+							<span class="amount" data-from="0" data-to="378" data-speed="2000" data-refresh-interval="10" ></span>%
+						</span>
+					</div>
+
+					<div class="col-md-1"></div>
+				</div>
+			</div>
+		</div>
+		<!-- </div> -->
+
+		<div>
+			
+		</div>
+		
+		<div class="section fp-auto-height text-center featured-in">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-2"><img src="/assets/images/logo/slashgear-logo.png" alt="" ></div>
+					<div class="col-md-2"></div>
+					<div class="col-md-2"><img src="/assets/images/logo/oh-gizmo-logo.png" alt="" ></div>
+					<div class="col-md-2"></div>
+					<div class="col-md-2"><img src="/assets/images/logo/economic-times-logo.png" alt="" ></div>
+					<div class="col-md-1"></div>					
+				</div>
+
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-2"><img src="/assets/images/logo/CNBC-TV18-Logo.png" alt="" ></div>
+					<div class="col-md-2"></div>
+					<div class="col-md-2"><img src="/assets/images/logo/Connected-arena-logo.png" alt="" ></div>
+					<div class="col-md-2"></div>
+					<div class="col-md-2"><img src="/assets/images/logo/YourStory-logo.png" alt="" ></div>
+					<div class="col-md-1"></div>
+				</div>
+
+				<div class="row">		
+					<div class="col-md-1"></div>			
+					<div class="col-md-2"><img src="/assets/images/logo/deccan-chronicle-logo.png" alt="" ></div>
+					<div class="col-md-2"></div>
+					<div class="col-md-2"><img src="/assets/images/logo/asian-age-logo.png" alt="" ></div>
+					<div class="col-md-2"></div>
+					<div class="col-md-2"><img src="/assets/images/logo/atmel-logo.png" alt="" ></div>
+					<div class="col-md-1"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section">
+			
+		</div>
+
+
+
+		<div class="section">
+			<h2> Technical aspects</h2>
+		</div>
+
+		<div class="section" id="section2">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+						<h1>The world Loves Plugzee</h1>
+						<p>With over 1500 backers from 62 different countries, Plugzee has benn recieving amazing reviews from all across the world.</p>
+						<img src="assets/images/map.svg" alt="" class="map">
+					</div>
+
+					<div class="col-md-6" >
+						<div class="coverflow">
+							<div class="cover">
+								<img src="http://placehold.it/250x250" class="img-responsive" >
+								<p>Some great shit</p>
+							</div>
+
+							<div class="cover">
+								<img src="http://placehold.it/250x250" >
+								<p>Niggerjun yeah!</p>
+							</div>
+
+							<div class="cover">
+								<img src="http://placehold.it/250x250" >
+								<p>Bitches ain't shit but hoes and tricks</p>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section fp-auto-height" ng-controller="MainCtrl" >
+			<h1>In the News</h1>
+			<button type="button" ng-click="clickToOpen()" ng-dialog-class="ngdialog-theme-default" class="ng-isolate-scope">Buy Now</button>
+		</div>
+
+
+		<div class="section" >
+			<div class="container-fluid text-center">
+				<h1 class="turq">Contact Us</h1>
+				<div class="row">
+					<div class="col-md-12">
+						<!-- facebook -->
+						<a href="https://www.facebook.com/plugzee" target="_blank" class="social-icons"><span class="icon icon-socialmedia-08"></span></a>
+						<!-- youtube -->
+						<a href="https://www.youtube.com/channel/UC_owTacIEin0r5sXZIoJjmg" target="_blank" class="social-icons"><span class="icon icon-socialmedia-29"></span></a>
+						<!-- email -->
+						<a href="mailto:info@plugzee.com" target="_blank" class="social-icons"><!-- <span class="icon icon-chat-messages-14"></span> --><span class="fa fa-envelope"></span></a>
+						<!-- twitter -->
+						<a href="https://twitter.com/plugzee" target="_blank" class="social-icons"><span class="icon icon-socialmedia-07"></span></a>
+						<!-- Google+ -->
+						<a href="https://plus.google.com/113542799831640851519/about" target="_blank" class="social-icons"><span class="icon icon-socialmedia-16"></span></a>
+					</div>
+				</div>
+				<div class="row text-center">
+					<div class="col-md-6">
+						<h2 class="turq">Estonia</h2>
+						<p>Riia 181a, Tartu, Estonia</p>
+						<p>+372 58333379</p>
+						<img src="assets/images/estoniapin.png" alt="" class="estoniapin bounce">
+						<img src="assets/images/estonia.png" alt="" class="img-responsive">
+					</div>
+					<div class="col-md-6">
+						<h2 class="turq">Goa</h2>
+						<p>Shivangi Building, Panaji, Goa, India</p>
+						<p>+91 880 601 3736</p>
+						<img src="assets/images/goapin.png" alt="" class="goapin bounce">
+						<img src="assets/images/goa.png" alt="" class="img-responsive">
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
+
+
+
+
+	
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<!-- Bootstrap -->
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- Fullpage.js -->
+	<script type="text/javascript" src="bower_components/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
+	<script type	="text/javascript" src="bower_components/fullpage.js/jquery.fullPage.js"></script>
+	<!-- Angular JS -->
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<!-- jQuerys countTo -->
+	<script type="text/javascript" src="assets/js/jquery.countTo.js"></script>
+	<!-- ngDialog -->
+	<script type="text/javascript" src="bower_components/ng-dialog/js/ngDialog.min.js"></script>
+	
+	<script type="text/javascript" src="bower_components/coverflow/jquery.coverflow.js"></script>
+
+	<script type="text/javascript" src="assets/js/app.js"></script>
+	<script type="text/javascript" src="assets/js/init.js"></script>
+	<script type="text/javascript" src="assets/js/test.js"></script>
+
+	<script type="text/javascript">
+		$('.amount').countTo();
+		$('.anm-controls').remove()
+	</script>
+
+	<script type="text/javascript">
+    $(function() {
+        $('.coverflow').coverflow();
+    });
+</script>
 </body>
 </html>

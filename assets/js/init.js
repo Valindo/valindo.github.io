@@ -34,7 +34,6 @@ $(document).ready(function() {
     // document.getElementById('section3').setAttribute("style","width:"+w+"px;"+"height:"+h+"px"+";background-color:red;")
     // document.getElementById('section4').setAttribute("style","width:"+w+"px;"+"height:"+h+"px"+";background-color:yellow;")
 
-
     // document.getElementsByClassName("section").setAttribute("style","width:"+w+"px");
     // document.getElementsByClassName("section").style.width = $(window).width()
     // document.getElementsByClassName("section").style.height = $(window).height()    
@@ -43,11 +42,11 @@ $(document).ready(function() {
     // document.getElementById('ifrm').src = "http://clips.animatron.com/a99b8ebd771b54afd510244369ca5834?w="+w+"&h="+h+"&autoPlay=1&r=1";
 
     $(".progress-bar-success").animate({
-            width: "35%"
+            width: "30%"
         },100);
 
     $(".progress-bar-info").animate({
-            width: "65%"
+            width: "70%"
         },100);
     
 

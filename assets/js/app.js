@@ -7,4 +7,9 @@
 		};
 	});
 
+	app.controller('VideoCtrl',function($scope){
+		$scope.w = $(window).width();
+		$scope.w = String($scope.w);
+		});
+
 })();

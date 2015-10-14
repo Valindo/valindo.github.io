@@ -311,6 +311,10 @@ body{
 	color: black !important;
 }
 
+.section-5 h1{
+	padding-bottom: 2%;
+}
+
 .filler{
 	z-index: -1;
 	position:absolute;

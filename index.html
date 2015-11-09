@@ -68,9 +68,10 @@
 			</div>
 			<div class="row" id="mobile-menu" ng-hide="{{show}}">
 				<div  class=" col-md-12 text-center">
-					<p>Hello</p>
-					<p>Hello</p>
-					<p>Hello</p>
+					<p>HOME</p>
+					<p>ABOUT</p>
+					<p>INDIEGOGO</p>
+					<p>CONTACT</p>
 				</div>
 			</div>
 		</div>
@@ -80,13 +81,98 @@
 		
 
 		<div class="section section-1">
-			<!-- <iframe id="ifrm" src="" frameborder="0" width="100%" height="100%" anm-auto-play="true" anm-controls="false" anm-auto-frameborder="0" anm-rib-color="#81d5f2" rc="#81d5f2" style="z-index=-1"></iframe>	 -->
-			<!-- <div class="container"> -->
-			<!-- <span style="font-size:5em;color:#ebebeb">Main Section</span> -->
-			
-
-			<div class="container text-center">				
+			<div class="text-center">				
 				<!-- <iframe id="ifrm" src="" frameborder="0" width="100%" height="100%" anm-auto-play="true" anm-controls="false" anm-auto-frameborder="0" anm-rib-color="#81d5f2" rc="#81d5f2"></iframe>	 -->
+				<h2 >Plug. Pair. Play</h2>
+				<div id="player-target" anm-player-target anm-src="http://clips.animatron.com/9d2aa5da1421219c96c9684a3835846a.json" anm-importer="animatron" anm-width="{{w-10}}" anm-height="400" anm-rib-color="#81d5f2" anm-bg-color="#81d5f2" anm-auto-play="true" anm-controls="false" ></div>
+
+				<p>Plugzee simply connects to the 3.5mm audio cable of any active speaker, pairs with your phone via Bluetooth and lets you stream music wirelessly.</p>
+			</div>
+			<div class="container" ng-controller="FromSubmit" name="signupForm" id="signupForm">
+				<form class="signup form-inline">
+					<div class="form-group">
+						<input type="text" ng-init="name=''" ng-model="name" placeholder="Name">
+					</div>
+					<div class="form-group">
+						<input type="email" ng-init="emails=''" ng-model="emails" placeholder="Email">
+					</div>
+					<div class="form-group">
+						<button  class="submit" ng-click="post(name,emails)" value="Signup">Signup</button>
+					</div>
+					<p ng-init="result=false" ng-model="result" ng-show="result">Success <span ng-click="again()">Signup again</span></p>
+				</form>
+			</div>
+		</div>
+
+		<div class="section ghost-section-1 fp-auto-height text-center featured-in">
+			<div class="container">
+				<!-- <h3>FEATURED ON</h3>
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-2"><img src="/assets/images/logo/slashgear-logo.png" alt="" ></div>
+					<div class="col-md-2"></div>
+					<div class="col-md-2"><img src="/assets/images/logo/oh-gizmo-logo.png" alt="" ></div>
+					<div class="col-md-2"></div>
+					<div class="col-md-2"><img src="/assets/images/logo/economic-times-logo.png" alt="" ></div>
+					<div class="col-md-1"></div>					
+				</div>
+
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-2"><img src="/assets/images/logo/CNBC-TV18-Logo.png" alt="" ></div>
+					<div class="col-md-2"></div>
+					<div class="col-md-2"><img src="/assets/images/logo/Connected-arena-logo.png" alt="" ></div>
+					<div class="col-md-2"></div>
+					<div class="col-md-2"><img src="/assets/images/logo/YourStory-logo.png" alt="" ></div>
+					<div class="col-md-1"></div>
+				</div>
+
+				<div class="row">		
+					<div class="col-md-1"></div>			
+					<div class="col-md-2"><img src="/assets/images/logo/deccan-chronicle-logo.png" alt="" ></div>
+					<div class="col-md-2"></div>
+					<div class="col-md-2"><img src="/assets/images/logo/asian-age-logo.png" alt="" ></div>
+					<div class="col-md-2"></div>
+					<div class="col-md-2"><img src="/assets/images/logo/atmel-logo.png" alt="" ></div>
+					<div class="col-md-1"></div>
+				</div>
+			</div> -->
+
+			<h4>India's Most Successful Hardware Crowdfunding Campaign</h4>
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<div class="progress">
+						<div class="progress-bar progress-bar-success" style="width:0%">
+							$10,000
+						</div>
+						<div class="progress-bar progress-bar-info" style="width:0%">
+							$41,891
+						</div>
+					</div>
+
+					<span class="milestones">
+						Amount
+						$<span class="amount" data-from="0" data-to="41891" data-speed="2000" data-refresh-interval="10" ></span>
+					</span>
+
+					<span class="milestones">
+						Backers
+						<span class="amount" data-from="0" data-to="1492" data-speed="2000" data-refresh-interval="10" ></span>
+					</span>
+
+					<span class="milestones">
+						Funded
+						<span class="amount" data-from="0" data-to="378" data-speed="2000" data-refresh-interval="10" ></span>%
+					</span>
+				</div>
+
+				<div class="col-md-1"></div>
+			</div>
+		</div>
+
+		<div class="section section-2 text-center" >
+			<div class="unskew container">
 				<h4>India's Most Successful Hardware Crowdfunding Campaign</h4>
 				<div class="row">
 					<div class="col-md-1"></div>
@@ -118,50 +204,6 @@
 
 					<div class="col-md-1"></div>
 				</div>
-			</div>
-		</div>
-		
-		<div class="section ghost-section-1 fp-auto-height text-center featured-in">
-			<div class="container">
-				<h3>FEATURED ON</h3>
-				<div class="row">
-					<div class="col-md-1"></div>
-					<div class="col-md-2"><img src="/assets/images/logo/slashgear-logo.png" alt="" ></div>
-					<div class="col-md-2"></div>
-					<div class="col-md-2"><img src="/assets/images/logo/oh-gizmo-logo.png" alt="" ></div>
-					<div class="col-md-2"></div>
-					<div class="col-md-2"><img src="/assets/images/logo/economic-times-logo.png" alt="" ></div>
-					<div class="col-md-1"></div>					
-				</div>
-
-				<div class="row">
-					<div class="col-md-1"></div>
-					<div class="col-md-2"><img src="/assets/images/logo/CNBC-TV18-Logo.png" alt="" ></div>
-					<div class="col-md-2"></div>
-					<div class="col-md-2"><img src="/assets/images/logo/Connected-arena-logo.png" alt="" ></div>
-					<div class="col-md-2"></div>
-					<div class="col-md-2"><img src="/assets/images/logo/YourStory-logo.png" alt="" ></div>
-					<div class="col-md-1"></div>
-				</div>
-
-				<div class="row">		
-					<div class="col-md-1"></div>			
-					<div class="col-md-2"><img src="/assets/images/logo/deccan-chronicle-logo.png" alt="" ></div>
-					<div class="col-md-2"></div>
-					<div class="col-md-2"><img src="/assets/images/logo/asian-age-logo.png" alt="" ></div>
-					<div class="col-md-2"></div>
-					<div class="col-md-2"><img src="/assets/images/logo/atmel-logo.png" alt="" ></div>
-					<div class="col-md-1"></div>
-				</div>
-			</div>
-		</div>
-
-		<div class="section section-2 text-center" >
-			<div class="unskew">
-				<h2 >Plug. Pair. Play</h2>
-				<div id="player-target" anm-player-target anm-src="http://clips.animatron.com/9d2aa5da1421219c96c9684a3835846a.json" anm-importer="animatron" anm-width="{{w-10}}" anm-height="400" anm-rib-color="#81d5f2" anm-bg-color="#81d5f2" anm-auto-play="true" anm-controls="false" ></div>
-
-				<p>Plugzee simply connects to the 3.5mm audio cable of any active speaker, pairs with your phone via Bluetooth and lets you stream music wirelessly.</p>
 			</div>
 		</div>
 
@@ -290,15 +332,15 @@
 	<script type="text/javascript" src="bower_components/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
 	<script type	="text/javascript" src="bower_components/fullpage.js/jquery.fullPage.js"></script>
 	<!-- Angular JS -->
-	
+
 	<!-- jQuerys countTo -->
 	<script type="text/javascript" src="assets/js/jquery.countTo.js"></script>
 	<!-- ngDialog -->
-	
+
 	<!-- Coverflow -->
 	<script type="text/javascript" src="bower_components/coverflow/jquery.coverflow.js"></script>
 
-	
+
 	<script type="text/javascript" src="assets/js/init.js"></script>
 	<script type="text/javascript" src="assets/js/test.js"></script>
 

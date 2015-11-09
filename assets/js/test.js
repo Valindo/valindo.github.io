@@ -18,23 +18,23 @@ var Startuply;
 
 // Main theme functions start
 Startuply = {
-    defaults: {
-        log: false,
-        styleSwitcher: false,
-        animations: true,
-        onePageNav: true,
-        onePageNavHashChange: false,
-        alwaysMobileMenuMode: false,
-        mobileMenuMaxWidth: 768,
-        stickyMenuMode: true,
-        stickyMenuOffset: 500,
-        smoothScroll: true,
-        smoothScrollSpeed: 800,
-        ajaxedForm: true,
-        ajaxedFormSuccessMsg: 'Success',
-        ajaxedFormErrorMsg: 'An error occured. Please try again later.',
-        toastrPositionClass: 'toast-top-full-width'
-    },
+    // defaults: {
+    //     log: false,
+    //     styleSwitcher: false,
+    //     animations: true,
+    //     onePageNav: true,
+    //     onePageNavHashChange: false,
+    //     alwaysMobileMenuMode: false,
+    //     mobileMenuMaxWidth: 768,
+    //     stickyMenuMode: true,
+    //     stickyMenuOffset: 500,
+    //     smoothScroll: true,
+    //     smoothScrollSpeed: 800,
+    //     ajaxedForm: true,
+    //     ajaxedFormSuccessMsg: 'Success',
+    //     ajaxedFormErrorMsg: 'An error occured. Please try again later.',
+    //     toastrPositionClass: 'toast-top-full-width'
+    // },
 
     mobileDevice: false,
     mobileMenuView: false,
@@ -381,23 +381,23 @@ Startuply = {
             });
         }
 
-        submitHandler = function (event) {
-            event.preventDefault();
+        // submitHandler = function (event) {
+        //     event.preventDefault();
 
-            var form = this;
+        //     var form = this;
 
-            $.ajax({
-                url: form.action,
-                type: 'POST',
-                data: $(form).serialize()
-            }).done(function(msg) {
-                doneHandler(msg, form);
+        //     $.ajax({
+        //         url: form.action,
+        //         type: 'POST',
+        //         data: $(form).serialize()
+        //     }).done(function(msg) {
+        //         doneHandler(msg, form);
 
-            }).fail(function() {
-                failHandler(form);
+        //     }).fail(function() {
+        //         failHandler(form);
 
-            });
-        }
+        //     });
+        // }
 
         validateOptions = {
             rules: {

@@ -18,7 +18,12 @@ body, h1, h2, h3, h4, h5, h6, p {
 }
 
 body{
-	background-color:#3399d9;
+	background-color:#81d5f2;
+	/*background: -webkit-repeating-linear-gradient(45deg, #1abc9c 0%, #3399d9 100%);
+	background: -o-repeating-linear-gradient(45deg, #1abc9c 0%, #3399d9 100%);
+	background: -moz-repeating-linear-gradient(45deg,#1abc9c 0%, #3399d9 100%);
+	background: repeating-linear-gradient(45deg,#1abc9c 0%, #3399d9 100%);
+	*/
 }
 
 .turq{
@@ -114,7 +119,7 @@ body{
 	}
 
 
-	.section-2 p{
+	.section-1 p{
 		justify-content: center;
 		padding-left: 1.5em;
 		padding-right: 1.5em;
@@ -125,7 +130,7 @@ body{
 
 
 @media (min-width: 500px){
-	.section-2 p{
+	.section-1 p{
 		justify-content: center;
 		padding-left: 15em;
 		padding-right: 15em;
@@ -256,11 +261,7 @@ body{
 }
 
 .section-1{
-	/*background: -webkit-repeating-linear-gradient(45deg, #1abc9c 0%, #3399d9 100%);
-	background: -o-repeating-linear-gradient(45deg, #1abc9c 0%, #3399d9 100%);
-	background: -moz-repeating-linear-gradient(45deg,#1abc9c 0%, #3399d9 100%);
-	background: repeating-linear-gradient(45deg,#1abc9c 0%, #3399d9 100%);
-	*/
+	
 	background-color: #81d5f2;
 }
 
@@ -274,7 +275,12 @@ body{
 }
 
 .section-2{
-	background-color: #81d5f2;
+	background: -webkit-repeating-linear-gradient(45deg, #1abc9c 0%, #3399d9 100%);
+	background: -o-repeating-linear-gradient(45deg, #1abc9c 0%, #3399d9 100%);
+	background: -moz-repeating-linear-gradient(45deg,#1abc9c 0%, #3399d9 100%);
+	background: repeating-linear-gradient(45deg,#1abc9c 0%, #3399d9 100%);
+	
+	/*background-color: #81d5f2;*/
 	transform: skewY(-3.1deg);
 }
 
@@ -392,7 +398,7 @@ body{
 }
 
 
-.section-2 p{
+.section-1 p{
 	font-size: 1.3em;
 	font-weight: bold;
 }

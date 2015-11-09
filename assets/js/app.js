@@ -12,4 +12,12 @@
 		$scope.w = String($scope.w);
 		});
 
+	app.controller('MenuCtrl',function($scope){
+		$scope.show = true;
+		$scope.showMe = function(){
+			$scope.show = !$scope.show;
+			console.log($scope.show);
+		};
+	});
+
 })();

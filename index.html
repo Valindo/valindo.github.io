@@ -43,8 +43,8 @@
 
 	
 	<header>
-		<div class="container text-center navigation">
-			<div class="row">
+		<div class="container text-center navigation" ng-controller="MenuCtrl">
+			<div class="row desktop">
 				<span class="col-md-2 logo">plugzee</span>
 				<span class="col-md-8 navbar-links">
 					<a href="#" class="hvr-underline-from-center"><p>HOME</p></a>
@@ -53,6 +53,25 @@
 					<a href="#" class="hvr-underline-from-center"><p>CONTACT</p></a>
 				</span>
 				<span class="col-md-2 navbar-links order-now-align"><span class="order-now">PRE-ORDER</span></span>
+			</div>
+
+			<div class="mobile navbar-header navigation row">
+				
+				<div class="col-xs-6 text-left">
+					<span class="col-md-2 logo">plugzee</span>
+				</div>
+				<div class="col-xs-6 menu">
+					<button type="button" class="menu-button" ng-click="showMe()">Menu</button>
+				</div>
+
+				
+			</div>
+			<div class="row" id="mobile-menu" ng-hide="{{show}}">
+				<div  class=" col-md-12 text-center">
+					<p>Hello</p>
+					<p>Hello</p>
+					<p>Hello</p>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -150,7 +169,7 @@
 			<div class="unskew">
 				<!-- <h2 class="black">{{w}}</h2> -->
 				<h3 class="black">Technical Specification</h3>
-				<img src="/assets/images/hand.png" alt="">
+				<img src="/assets/images/hand.png" alt="" class="desktop">
 			</div>
 		</div>
 

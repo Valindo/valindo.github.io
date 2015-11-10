@@ -47,14 +47,18 @@
 	// 		// console.log($scope.cfdump);
 	// 	};
 	$scope.post = function(names,emails) {
-		$http.post("http://plugzee-signup.herokuapp.com/new", { name: names, email: emails }).success(function(result) {
-			console.log(result);
-			$scope.resultPost = result;
-			console.log("*********")
-			$scope.result = true;
-		}).error(function() {
-			console.log("error");
-		});
+		if ($scope.signupForm.$valid){
+			$http.post("http://plugzee-signup.herokuapp.com/new", { name: names, email: emails }).success(function(result) {
+				console.log(result);
+				$scope.resultPost = result;
+				console.log("*********")
+				$scope.result = true;
+			}).error(function() {
+				console.log("error");
+			});
+		} else {
+			console.log("Error");
+		}
 	};
 
 	$scope.again = function(){

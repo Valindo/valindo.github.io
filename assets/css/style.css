@@ -26,61 +26,12 @@ body{
 	*/
 }
 
-.turq{
-	color:#44bcb7 !important;
-}
 
-.black{
-	color:#000 !important;
-}
-
-.social-icons{
-	padding-right: 15px;
-	padding-left: 15px;
-	font-size: 50px;
-	color:#F2505d;
-
-}
-
-.social-icons:hover{
-	text-decoration: none;
-}
-
-.social-icons:focus{
-	text-decoration: none;
-}
-
-.estoniapin{
-	position: absolute;
-	z-index: 2;
-	margin-bottom: 26%;
-	margin-left: 13%;
-}
-
-.bounce{
-	-webkit-animation:bounce 1s infinite;
-}
-
-@-webkit-keyframes bounce {
-	0%       { bottom:5px; }
-	25%, 75% { bottom:15px; }
-	50%      { bottom:20px; }
-	100%     {bottom:0;}
-}
-
-.goapin{
-	position: absolute;
-	margin-bottom: 30%;
-	margin-left: -9%;
-}
-
+/*MEDIA QUERIES*/
 
 @media (max-width: 500px) { 
 	.social-icons{
-		padding-right: 15px;
-		padding-left: 15px;
-		font-size: 30px;
-		color:#F2505d;
+		margin-top: 0% !important;
 	}
 
 	.social-icons:hover{
@@ -126,7 +77,17 @@ body{
 		font-weight: bold;
 	}
 
+	.section-1 h2{
+		padding-top: 45px;
+	}
+
+	.indiegogo{
+		padding-left: 35%;
+		padding-right: 5%;
+	}
+
 }
+
 
 
 @media (min-width: 500px){
@@ -137,7 +98,114 @@ body{
 		font-weight: bold;
 	}
 
+	.desktop{
+		display:none;
+	}
+
+	.mobile{
+		display:block !important;
+	}
+
+	.menu{
+		margin-top: 16px;
+		cursor:pointer;
+	}
+
+	.fixed-menu .menu{
+		color:black !important;
+		cursor:pointer;
+	}
+
+	.menu button {
+		border-radius: 5em !important;
+		padding-top: 10px !important;
+		padding-bottom: 10px !important;
+		/*margin-top: 3px !important;*/
+		float: right !important;
+		border-color: white;
+	}
+
+	.section-1 p{
+		justify-content: center;
+		padding-left: 1.5em;
+		padding-right: 1.5em;
+		font-weight: bold;
+	}
+	.indiegogo{
+		padding-left: 35%;
+		padding-right: 5%;
+	}
+
+	.social-icons{
+		margin-top: 0% !important;
+	}
+
 }
+
+
+
+
+
+
+
+
+
+.turq{
+	color:#44bcb7 !important;
+}
+
+.black{
+	color:#000 !important;
+}
+
+.social-icons{
+	margin-top: 40% ;
+	padding-right: 15px;
+	padding-left: 15px;
+	font-size: 2em;
+	color:#F2505d;
+	float: none;
+	display: inline-block;
+	vertical-align: middle;
+
+}
+
+.social-icons:hover{
+	text-decoration: none;
+}
+
+.social-icons:focus{
+	text-decoration: none;
+}
+
+.estoniapin{
+	position: absolute;
+	z-index: 2;
+	margin-bottom: 26%;
+	margin-left: 13%;
+}
+
+.bounce{
+	-webkit-animation:bounce 1s infinite;
+}
+
+@-webkit-keyframes bounce {
+	0%       { bottom:5px; }
+	25%, 75% { bottom:15px; }
+	50%      { bottom:20px; }
+	100%     {bottom:0;}
+}
+
+.goapin{
+	position: absolute;
+	margin-bottom: 30%;
+	margin-left: -9%;
+}
+
+
+
+
+
 
 
 
@@ -183,9 +251,23 @@ body{
 
 }
 
+.order-now:hover{
+	background-color: #fff;
+	border-radius: 3.5rem;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	cursor: pointer;
+	color: #f27064;
+	border-bottom: 5px solid #e3e3e3;
+
+}
+
 .navbar-links{
 	padding-top: 1em;
 	font-size: 1.2em;
+	font-weight: bold;
 }
 
 
@@ -244,6 +326,7 @@ body{
 	padding-left: 10px;
 	font-size: 1.2em;
 	color: white;
+	font-weight: bold;
 }
 
 .section-1 h4{
@@ -353,7 +436,7 @@ body{
 
 
 .testimonials{
-	background-color: #ecf0f1;
+	/*background-color: #ecf0f1;*/
 	border-radius: 10px;
 	padding:1em 1em 1em 1em;
 }
@@ -364,7 +447,7 @@ body{
 }
 
 .testimonials p{
-	color: #9274c4 !important;
+	color: #fff !important;
 }
 
 .ghost-section-2 .order-now{
@@ -374,16 +457,17 @@ body{
 }
 
 .ghost-section-2 h5 {
-	padding-top: 10%;
-	padding-bottom: 10%;
+	padding-top: 5%;
+	padding-bottom: 5%;
 }
 
 .section-5 p{
 	color: black !important;
+	font-size: 1.1em;
 }
 
-.section-5 h1{
-	padding-bottom: 2%;
+.section-5 h2{
+	font-size: 1.8em;
 }
 
 .filler{
@@ -429,15 +513,52 @@ body{
 
 .signup input{
 	border: 1px solid #ECF0F1;
-	border-left: 2px solid #22A7F0;
+	border-left: 2px solid #f27064;
 	padding:10px 10px 10px 10px;
 	font-size: 17px;
 	margin-right: 5px;
 	margin-left: 5px;
 }
 
-.signup .submit{
-	background-color: #22A7F0;
-	color: white;
-	border:none;
+
+.indiegogo{
+	width: 70%;
+	padding-top: 12%;
+}
+
+.section-4 .row{
+	padding-bottom: 30px;
+}
+
+.section-4 p{
+	font-size: 1.1em;
+}
+
+.signup p{
+	/*padding: 0px;*/
+	font-size: 0.8em;
+
+}
+
+.signup-button{
+	background-color: #F27064 !important;
+	border-radius: 3.5rem !important;
+	padding-left: 10% !important;
+	padding-right: 10% !important;
+	padding-top: 8% !important;
+	padding-bottom: 8% !important;
+	cursor: pointer !important;
+	border-bottom: 5px solid #cd5d51 !important;
+}
+
+.signup-button:hover{
+	background-color: #fff!important;
+	border-radius: 3.5rem !important;
+	padding-left: 10% !important;
+	padding-right: 10% !important;
+	padding-top: 8% !important;
+	padding-bottom: 8% !important;
+	cursor: pointer !important;
+	color: #f27064 !important;
+	border-bottom: 5px solid #e3e3e3 !important;
 }

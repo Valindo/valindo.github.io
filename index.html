@@ -45,14 +45,14 @@
 	<header>
 		<div class="container text-center navigation" ng-controller="MenuCtrl">
 			<div class="row desktop">
-				<span class="col-md-2 logo">plugzee</span>
-				<span class="col-md-8 navbar-links">
+				<span class="col-md-2 col-sm-2 logo">plugzee</span>
+				<span class="col-md-8 col-sm-8 navbar-links">
 					<a href="#" class="hvr-underline-from-center"><p>HOME</p></a>
 					<a href="#" class="hvr-underline-from-center"><p>ABOUT</p></a>
 					<a href="#" class="hvr-underline-from-center"><p>INDIEGOGO</p></a>
 					<a href="#" class="hvr-underline-from-center"><p>CONTACT</p></a>
 				</span>
-				<span class="col-md-2 navbar-links order-now-align"><span class="order-now">PRE-ORDER</span></span>
+				<span class="col-md-2 col-sm-2 navbar-links order-now-align"><span class="order-now">PRE-ORDER</span></span>
 			</div>
 
 			<div class="mobile navbar-header navigation row">
@@ -66,7 +66,7 @@
 
 				
 			</div>
-			<div class="row" id="mobile-menu" ng-hide="{{show}}">
+			<div class="row" id="mobile-menu" ng-hide="show">
 				<div  class=" col-md-12 text-center">
 					<p>HOME</p>
 					<p>ABOUT</p>
@@ -88,19 +88,21 @@
 
 				<p>Plugzee simply connects to the 3.5mm audio cable of any active speaker, pairs with your phone via Bluetooth and lets you stream music wirelessly.</p>
 			</div>
-			<div class="container" ng-controller="FromSubmit" name="signupForm" id="signupForm">
-				<form class="signup form-inline">
+			<div class="container signup" ng-controller="FromSubmit" >
+
+				<form class=" form-inline" name="signupForm" id="signupForm">
 					<div class="form-group">
-						<input type="text" ng-init="name=''" ng-model="name" placeholder="Name">
+						<input type="text" ng-init="name=''" ng-model="name" placeholder="Name" required>
 					</div>
 					<div class="form-group">
-						<input type="email" ng-init="emails=''" ng-model="emails" placeholder="Email">
+						<input type="email" ng-init="emails=''" ng-model="emails" placeholder="Email" required>
 					</div>
 					<div class="form-group">
-						<button  class="submit" ng-click="post(name,emails)" value="Signup">Signup</button>
+						<button  class="submit signup-button" ng-click="post(name,emails)" value="Signup">Signup</button>
 					</div>
 					<p ng-init="result=false" ng-model="result" ng-show="result">Success <span ng-click="again()">Signup again</span></p>
 				</form>
+				<p>Sign-up to stay updated about our products!</p>
 			</div>
 		</div>
 
@@ -177,16 +179,16 @@
 				<!-- <img src="/assets/images/hand.png" alt="" class="desktop"> -->
 				<div class="container">
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-md-4 col-sm-4">
 							<img src="assets/images/icons/bt.png">
 							<p>Experience the uniques features and great pairing capabilities of BLE 4.0
 							</p>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-4 col-sm-4">
 							<img src="assets/images/icons/usb.png">
 							<p>No more additional wires. Charge with existing micro USB cable</p>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-4 col-sm-4">
 							<img src="assets/images/icons/codec.png">
 							<p>Enjoy high quality audio streaming over Bluetooth with AptX codec
 							</p>
@@ -194,17 +196,17 @@
 					</div>
 
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-md-4 col-sm-4">
 							<img src="assets/images/icons/battery.png">
 							<p>18 hours of playback & 30 day standby to listen music uninterruptedly on-the-go
 							</p>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-4 col-sm-4">
 							<img src="assets/images/icons/mic.png">
 							<p>Answer calls hands-free with in-built noise cancelling microphone
 							</p>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-4 col-sm-4">
 							<img src="assets/images/icons/distance.png">
 							<p>With a range of 15 meters, stream music from any corner of the room.</p>
 						</div>
@@ -213,13 +215,27 @@
 			</div>
 		</div>
 
-		<div class="section section-3" >
-			<div class="unskew container">
-				<!-- <h2 class="black">{{w}}</h2> -->
+		<!-- <div class="section section-3" > -->
+		<!-- <div class="unskew container"> -->
+		<!-- <h2 class="black">{{w}}</h2> -->
 
-				<h4>India's Most Successful Hardware Crowdfunding Campaign</h4>
+		<!-- <h4>India's Most Successful Hardware Crowdfunding Campaign</h4> -->
+
+		<!-- </div> -->
+		<!-- </div> -->
+
+		<div class="section section-4" id="section2">
+			<div class="container-fluid unskew">
+				<div class="row">
+					<div class="col-md-5"></div>
+					<div class="col-md-2">
+						<img src="assets/images/indiegogo.png" class="img-responsive indiegogo">
+					</div>
+					<div class="col-md-5"></div>
+				</div>
 				<div class="row">
 					<div class="col-md-1"></div>
+					
 					<div class="col-md-10">
 						<div class="progress">
 							<div class="progress-bar progress-bar-success" style="width:0%">
@@ -248,11 +264,6 @@
 
 					<div class="col-md-1"></div>
 				</div>
-			</div>
-		</div>
-
-		<div class="section section-4" id="section2">
-			<div class="container-fluid unskew">
 				<div class="row">
 					<div class="col-md-1"></div>
 					<div class="col-md-5">
@@ -298,99 +309,120 @@
 
 		<div class="section fp-auto-height ghost-section-2" ng-controller="MainCtrl" >
 			<div class="container unskew">
-				<div class="col-md-1"></div>
-				<div class="col-md-5">
+				<div class="row">
+					<div class="col-md-1"></div>
+				<!-- <div class="col-md-5">
 					<h5>Get your Plugzee today and add more life to your speakers</h5>
 					<span class="order-now">Pre-Order</span>
-				</div>
-				<div class="col-md-5">
+				</div> -->
+				<div class="col-md-10">
 					<h5>Read In-Dept About Our Journey With Plugzee On Our Campaign Page</h5>
-					<span class="order-now" ng-click="clickToOpen()">Campaign</span>
+					
 
 				</div>
 
 				<div class="col-md-1"></div>
 			</div>
-			<!-- <button type="button" ng-click="clickToOpen()" ng-dialog-class="ngdialog-theme-default" class="ng-isolate-scope">Buy Now</button> -->
-		</div>
-
-		<div class="filler">
-		</div>
-
-		<div class="section section-5" >
-			<div class="container-fluid text-center">
-				<h1 class="turq">Contact Us</h1>
-				<div class="row">
-					<div class="col-md-12">
-						<!-- facebook -->
-						<a href="https://www.facebook.com/plugzee" target="_blank" class="social-icons"><span class="icon icon-socialmedia-08"></span></a>
-						<!-- youtube -->
-						<a href="https://www.youtube.com/channel/UC_owTacIEin0r5sXZIoJjmg" target="_blank" class="social-icons"><span class="icon icon-socialmedia-29"></span></a>
-						<!-- email -->
-						<a href="mailto:info@plugzee.com" target="_blank" class="social-icons"><!-- <span class="icon icon-chat-messages-14"></span> --><span class="fa fa-envelope"></span></a>
-						<!-- twitter -->
-						<a href="https://twitter.com/plugzee" target="_blank" class="social-icons"><span class="icon icon-socialmedia-07"></span></a>
-						<!-- Google+ -->
-						<a href="https://plus.google.com/113542799831640851519/about" target="_blank" class="social-icons"><span class="icon icon-socialmedia-16"></span></a>
-					</div>
-				</div>
-				<div class="row text-center">
-					<div class="col-md-2"></div>
-					<div class="col-md-4">
-						<h2 class="turq">Estonia</h2>
-						<p>Riia 181a, Tartu, Estonia</p>
-						<p>+372 58333379</p>
-						<img src="assets/images/estoniapin.png" alt="" class="estoniapin bounce">
-						<img src="assets/images/estonia.png" alt="" class="img-responsive">
-					</div>
-					<div class="col-md-4">
-						<h2 class="turq">Goa</h2>
-						<p>Shivangi Building, Panaji, Goa, India</p>
-						<p>+91 880 601 3736</p>
-						<img src="assets/images/goapin.png" alt="" class="goapin bounce">
-						<img src="assets/images/goa.png" alt="" class="img-responsive">
-					</div>
-					<div class="col-md-2"></div>
-				</div>
+			<div class="row">
+				<div class="col-md-4"></div>
+				<div class="col-md-4"><span class="order-now" ng-click="clickToOpen()">Campaign</span></div>
+				<div class="col-md-4"></div>
 			</div>
 		</div>
-
+		<!-- <button type="button" ng-click="clickToOpen()" ng-dialog-class="ngdialog-theme-default" class="ng-isolate-scope">Buy Now</button> -->
 	</div>
 
+	<div class="filler">
+	</div>
+
+	<div class="section fp-auto-height section-5" >
+		<!-- <div class="container-fluid text-center"> -->
+		<!-- <h1 class="turq">Contact Us</h1> -->
+		<!-- <div class="row"> -->
+		<!-- <div class="col-md-12"> -->
+		<!-- facebook -->
+		<!-- <a href="https://www.facebook.com/plugzee" target="_blank" class="social-icons"><span class="icon icon-socialmedia-08"></span></a> -->
+		<!-- youtube -->
+		<!-- <a href="https://www.youtube.com/channel/UC_owTacIEin0r5sXZIoJjmg" target="_blank" class="social-icons"><span class="icon icon-socialmedia-29"></span></a> -->
+		<!-- email -->
+		<!-- <a href="mailto:info@plugzee.com" target="_blank" class="social-icons"><span class="icon icon-chat-messages-14"></span><span class="fa fa-envelope"></span></a> -->
+		<!-- twitter -->
+		<!-- <a href="https://twitter.com/plugzee" target="_blank" class="social-icons"><span class="icon icon-socialmedia-07"></span></a> -->
+		<!-- Google+ -->
+		<!-- <a href="https://plus.google.com/113542799831640851519/about" target="_blank" class="social-icons"><span class="icon icon-socialmedia-16"></span></a> -->
+		<!-- </div> -->
+		<!-- </div> -->
+		<div class="container">
+			<div class="row text-center">
+				<!-- <div class="col-md-1"></div> -->
+				<div class="col-md-4">
+					<h2 class="turq">Estonia</h2>
+					<p>Riia 181a, Tartu, Estonia</p>
+					<p>+372 58333379</p>
+					<img src="assets/images/estoniapin.png" alt="" class="estoniapin bounce">
+					<img src="assets/images/estonia.png" alt="" class="img-responsive">
+				</div>
+				<div class="col-md-4">
+					<a href="https://www.facebook.com/plugzee" target="_blank" class="social-icons"><span class="icon icon-socialmedia-08"></span></a>
+					<!-- youtube -->
+					<a href="https://www.youtube.com/channel/UC_owTacIEin0r5sXZIoJjmg" target="_blank" class="social-icons"><span class="icon icon-socialmedia-29"></span></a>
+					<!-- email -->
+					<a href="mailto:info@plugzee.com" target="_blank" class="social-icons"><!-- <span class="icon icon-chat-messages-14"></span> --><span class="fa fa-envelope"></span></a>
+					<!-- twitter -->
+					<a href="https://twitter.com/plugzee" target="_blank" class="social-icons"><span class="icon icon-socialmedia-07"></span></a>
+					<!-- Google+ -->
+					<a href="https://plus.google.com/113542799831640851519/about" target="_blank" class="social-icons"><span class="icon icon-socialmedia-16"></span></a>
+				</div>
+				<div class="col-md-4">
+					<h2 class="turq">Goa</h2>
+					<p>Shivangi Building, Panaji, Goa, India</p>
+					<p>+91 880 601 3736</p>
+					<img src="assets/images/goapin.png" alt="" class="goapin bounce">
+					<img src="assets/images/goa.png" alt="" class="img-responsive">
+				</div>
+				<!-- <div class="col-md-1"></div> -->
+			</div>
+		</div>
+	</div>
+</div>
 
 
 
 
-	<!-- jQuery -->
-
-	<!-- Bootstrap -->
-	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<!-- Fullpage.js -->
-	<script type="text/javascript" src="bower_components/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
-	<script type	="text/javascript" src="bower_components/fullpage.js/jquery.fullPage.js"></script>
-	<!-- Angular JS -->
-
-	<!-- jQuerys countTo -->
-	<script type="text/javascript" src="assets/js/jquery.countTo.js"></script>
-	<!-- ngDialog -->
-
-	<!-- Coverflow -->
-	<script type="text/javascript" src="bower_components/coverflow/jquery.coverflow.js"></script>
 
 
-	<script type="text/javascript" src="assets/js/init.js"></script>
-	<script type="text/javascript" src="assets/js/test.js"></script>
 
-	<script type="text/javascript">
-		$('.amount').countTo();
-		$('.anm-controls').remove()
-	</script>
+<!-- jQuery -->
 
-	<script type="text/javascript">
-		$(function() {
-			$('.coverflow').coverflow();
+<!-- Bootstrap -->
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Fullpage.js -->
+<script type="text/javascript" src="bower_components/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
+<script type	="text/javascript" src="bower_components/fullpage.js/jquery.fullPage.js"></script>
+<!-- Angular JS -->
+
+<!-- jQuerys countTo -->
+<script type="text/javascript" src="assets/js/jquery.countTo.js"></script>
+<!-- ngDialog -->
+
+<!-- Coverflow -->
+<script type="text/javascript" src="bower_components/coverflow/jquery.coverflow.js"></script>
+
+
+<script type="text/javascript" src="assets/js/init.js"></script>
+<script type="text/javascript" src="assets/js/test.js"></script>
+
+<script type="text/javascript">
+	$('.amount').countTo();
+	$('.anm-controls').remove()
+</script>
+
+<script type="text/javascript">
+	$(function() {
+		$('.coverflow').coverflow();
+		$('.coverflow').coverflow('option', 'enableWheel', false);
 			// $('.coverflow').options.enableClick (boolean, default: false);
 		});
-	</script>
+</script>
 </body>
 </html>

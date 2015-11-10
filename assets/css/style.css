@@ -284,7 +284,25 @@ body{
 	transform: skewY(-3.1deg);
 }
 
+.section-2 p{
+	font-weight: bold;
+	font-size: 1.1em;
+	padding: 0% 15%;
+	text-align: center;
+}
 
+.section-2 .row{
+	margin-top:5em;
+	/*margin-bottom: 20px;*/
+}
+
+.section-2 h2{
+	font-weight: bold;
+}
+
+.section-2 img{
+	padding: 0% 0% 5%;
+}
 
 .section-3{
 	background-color: #fff;

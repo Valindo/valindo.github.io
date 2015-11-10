@@ -11,6 +11,7 @@
 
 	app.controller('MainCtrl',function($scope, ngDialog){
 		$scope.clickToOpen = function (){
+			console.log("I reached here");
 			ngDialog.open({ template: 'test.html'});
 		};
 	});

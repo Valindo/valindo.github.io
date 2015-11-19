@@ -82,8 +82,8 @@ body{
 
 	.section-1 p{
 		justify-content: center;
-		padding-left: 1.5em;
-		padding-right: 1.5em;
+		padding-left: 1.6em;
+		padding-right: 1.6em;
 		font-weight: bold;
 	}
 
@@ -515,7 +515,7 @@ body{
 .section-1 p{
 	font-size: 1.3em;
 	font-weight: bold;
-	/*padding: 0% 18%;*/
+	padding: 0% 10%;
 }
 
 

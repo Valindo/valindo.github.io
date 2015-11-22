@@ -93,8 +93,7 @@ body{
 	}
 
 	.indiegogo{
-		padding-left: 35%;
-		padding-right: 5%;
+		width: auto !important;
 	}
 
 }
@@ -588,4 +587,52 @@ body{
 sub{
 	font-size: 10px !important;
 	font-weight: bold;
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+	.indiegogo{
+		width: auto !important;
+	}
+}
+
+@media (min-width: 768px){
+/*	.navbar-nav{
+		margin: 0 auto;
+		display: table;
+		table-layout: fixed;
+		float:none;
+	}
+*/} 
+
+.navbar-nav.nav-justified{
+	/*position: absolute;*/
+}
+
+.navbar-nav.nav-justified > li{
+	/*float:none;*/
+}
+
+.nav-justified {
+	width: 98%;
+}
+.nav-justified > li {
+	float: none;
+}
+@media (min-width: 768px) {
+
+	.nav-justified {
+		width: 97%;
+	}
+}
+
+
+nav{
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+	-o-transition: all 0.7s ease;
+	transition: all 0.7s ease;
+}
+
+.navbar-row{
+	width: 100%;
 }

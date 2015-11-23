@@ -100,6 +100,13 @@ body{
 		width: auto !important;
 	}
 
+	.signup-button{
+		padding-left: 1% !important;
+		padding-right: 1% !important;
+		padding-top: 2% !important;
+		padding-bottom: 2% !important;
+	}
+
 }
 
 
@@ -584,10 +591,6 @@ body{
 .signup-button{
 	background-color: #F27064 !important;
 	border-radius: 3.5rem !important;
-	padding-left: 10% !important;
-	padding-right: 10% !important;
-	padding-top: 8% !important;
-	padding-bottom: 8% !important;
 	cursor: pointer !important;
 	border-bottom: 5px solid #cd5d51 !important;
 }
@@ -617,6 +620,10 @@ sub{
 	.indiegogo{
 		width: auto !important;
 	}
+
+	.signup-button{
+		padding: none !important;
+	}
 }
 
 .raised{
@@ -625,4 +632,13 @@ sub{
 
 .ghost-section-2 .row{
 	padding-top: 2%;
+}
+
+@media only screen and ( min-device-width : 1024px){
+	.signup-button{
+		padding-left: 10% !important;
+		padding-right: 10% !important;
+		padding-top: 8% !important;
+		padding-bottom: 8% !important;
+	}	
 }

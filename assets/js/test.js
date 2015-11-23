@@ -18,23 +18,23 @@ var Startuply;
 
 // Main theme functions start
 Startuply = {
-    // defaults: {
-    //     log: false,
-    //     styleSwitcher: false,
-    //     animations: true,
-    //     onePageNav: true,
-    //     onePageNavHashChange: false,
-    //     alwaysMobileMenuMode: false,
-    //     mobileMenuMaxWidth: 768,
-    //     stickyMenuMode: true,
-    //     stickyMenuOffset: 500,
-    //     smoothScroll: true,
-    //     smoothScrollSpeed: 800,
-    //     ajaxedForm: true,
-    //     ajaxedFormSuccessMsg: 'Success',
-    //     ajaxedFormErrorMsg: 'An error occured. Please try again later.',
-    //     toastrPositionClass: 'toast-top-full-width'
-    // },
+    defaults: {
+        // log: false,
+        styleSwitcher: false,
+        animations: true,
+        onePageNav: true,
+        onePageNavHashChange: false,
+        alwaysMobileMenuMode: false,
+        mobileMenuMaxWidth: 768,
+        stickyMenuMode: true,
+        stickyMenuOffset: 2,
+        smoothScroll: true,
+        smoothScrollSpeed: 800,
+        // ajaxedForm: true,
+        // ajaxedFormSuccessMsg: 'Success',
+        // ajaxedFormErrorMsg: 'An error occured. Please try again later.',
+        // toastrPositionClass: 'toast-top-full-width'
+    },
 
     mobileDevice: false,
     mobileMenuView: false,
@@ -89,9 +89,9 @@ Startuply = {
 
             $('.animated').appear(function() {
                 var $el = $(this),
-                    animation = $el.data('animation'),
-                    animationDelay = $el.data('delay') || 0,
-                    animationDuration = $el.data('duration') || 1000;
+                animation = $el.data('animation'),
+                animationDelay = $el.data('delay') || 0,
+                animationDuration = $el.data('duration') || 1000;
 
                 if ( _this.options.animations ) {
                     $el.css({
@@ -109,32 +109,32 @@ Startuply = {
                     //     $(this).removeClass(animation);
                     // });
 
-                    $el.one('webkitAnimationStart mozAnimationStart MSAnimationStart oanimationstart animationstart', function() {
-                        if ( typeof $.fn.countTo == 'function' ) {
-                            if ( $el.hasClass('counter-block') ) $el.find('.value').countTo();
-                        } else {
-                            _this.log( 'Can\'t find jQuery.countTo function' );
-                        }
-                    });
+$el.one('webkitAnimationStart mozAnimationStart MSAnimationStart oanimationstart animationstart', function() {
+    if ( typeof $.fn.countTo == 'function' ) {
+        if ( $el.hasClass('counter-block') ) $el.find('.value').countTo();
+    } else {
+        _this.log( 'Can\'t find jQuery.countTo function' );
+    }
+});
 
-                }else {
-                    $el.removeClass('animated');
+}else {
+    $el.removeClass('animated');
 
-                    if ( typeof $.fn.countTo == 'function' ) {
-                        if ( $el.hasClass('counter-block') ) $el.find('.value').countTo();
-                    } else {
-                        _this.log( 'Can\'t find jQuery.countTo function' );
-                    }
-                }
-            }, {accY: -150});
+    if ( typeof $.fn.countTo == 'function' ) {
+        if ( $el.hasClass('counter-block') ) $el.find('.value').countTo();
+    } else {
+        _this.log( 'Can\'t find jQuery.countTo function' );
+    }
+}
+}, {accY: -150});
 
-        }else {
-            $('.animated').css('opacity', 1);
+}else {
+    $('.animated').css('opacity', 1);
 
-            this.log( 'Can\'t find jQuery.appear function' );
-            this.log( 'Remove animations' );
-        }
-    },
+    this.log( 'Can\'t find jQuery.appear function' );
+    this.log( 'Remove animations' );
+}
+},
 
     //check mobile view
     mobileMenuStatus: function () {
@@ -183,7 +183,7 @@ Startuply = {
 
     windowHeightBlock: function () {
         var $blocks = $('.window-height'),
-            height = window.innerHeight;
+        height = window.innerHeight;
 
         if ( $blocks.length ) {
             $blocks.each(function () {
@@ -200,10 +200,10 @@ Startuply = {
         if ( $blocks.length ) {
             $blocks.each( function () {
                 var $el = $(this),
-                    $parent = $el.parent(),
-                    elHeight = $el.outerHeight(),
-                    parentHeight = $parent.outerHeight(),
-                    padding = (parentHeight - elHeight) / 2;
+                $parent = $el.parent(),
+                elHeight = $el.outerHeight(),
+                parentHeight = $parent.outerHeight(),
+                padding = (parentHeight - elHeight) / 2;
 
                 if ( padding >= 0 ) {
                     $parent.css({'padding-top': padding, 'padding-bottom': 0 });
@@ -219,8 +219,8 @@ Startuply = {
 
         $('.ytp-player-background').each( function() {
             var $el = $(this),
-                $player,
-                controlsTempalte;
+            $player,
+            controlsTempalte;
 
             if ( $el.data('video') && $el.data('video').length ) {
                 $el.css('background-image', 'url(https://i.ytimg.com/vi/' + $el.data('video') + '/maxresdefault.jpg)')
@@ -231,22 +231,22 @@ Startuply = {
 
                 $player = $el.YTPlayer();
                 controlsTempalte = '<div class="video-conrols">' +
-                                       '<i class="yt-play-btn-big"></i>' +
-                                       '<div class="bottom">' +
-                                           '<div class="controls-container">' +
-                                               '<i class="yt-play-toggle"></i>' +
-                                               '<i class="yt-mute-toggle active"></i>' +
-                                               '<div class="yt-volume-slider"></div>' +
-                                           '</div>' +
-                                       '</div>' +
-                                   '<div>';
+                '<i class="yt-play-btn-big"></i>' +
+                '<div class="bottom">' +
+                '<div class="controls-container">' +
+                '<i class="yt-play-toggle"></i>' +
+                '<i class="yt-mute-toggle active"></i>' +
+                '<div class="yt-volume-slider"></div>' +
+                '</div>' +
+                '</div>' +
+                '<div>';
 
                 $el.append(controlsTempalte);
 
                 var $playBtn = $el.find('.yt-play-btn-big'),
-                    $playToggle = $el.find('.yt-play-toggle'),
-                    $muteToggle = $el.find('.yt-mute-toggle'),
-                    $volumeSlider = $el.find('.yt-volume-slider');
+                $playToggle = $el.find('.yt-play-toggle'),
+                $muteToggle = $el.find('.yt-mute-toggle'),
+                $volumeSlider = $el.find('.yt-volume-slider');
 
                 if ( typeof $.fn.slider == 'function' ) {
                     $volumeSlider.slider({
@@ -305,81 +305,81 @@ Startuply = {
                 }
             }
         });
-    },
+},
 
-    formInit: function () {
-        var _this = this;
+formInit: function () {
+    var _this = this;
 
-        this.log( 'Init ajaxed forms.' );
+    this.log( 'Init ajaxed forms.' );
 
-        if ( typeof toastr != 'undefined' ) {
-            toastr.options = {
-                positionClass: this.options.toastrPositionClass
-            };
+    if ( typeof toastr != 'undefined' ) {
+        toastr.options = {
+            positionClass: this.options.toastrPositionClass
+        };
 
-        }else {
-            this.log( 'Can\'t find toastr. Form messages in alerts.' );
+    }else {
+        this.log( 'Can\'t find toastr. Form messages in alerts.' );
+    }
+
+    var validateOptions,
+    submitHandler,
+    doneHandler,
+    failHandler;
+
+    mailchimpHandler = function (event) {
+        event.preventDefault();
+
+        var $firstNameField = $(this).find('[name=FNAME]'),
+        $lastNameField = $(this).find('[name=LNAME]'),
+        $fullnameField = $(this).find('[name=FULLNAME]'),
+        $emailField = $(this).find('[name=EMAIL]'),
+        $phoneField = $(this).find('[name=PHONE]'),
+        $responseBlock = $(this).find('.response'),
+        fullname, fname, lname, email, phone, data = {};
+
+        if ( $fullnameField.length && $fullnameField.val().length ) {
+            fullname = $fullnameField.val().split(' ');
+            fname = fullname[0];
+
+            if ( fullname.length > 1 ) lname = fullname[1];
         }
 
-        var validateOptions,
-            submitHandler,
-            doneHandler,
-            failHandler;
+        if ( $firstNameField.length && $firstNameField.val().length ) fname = $firstNameField.val();
+        if ( $lastNameField.length && $lastNameField.val().length ) lname = $lastNameField.val();
+        if ( fname ) data.fname = escape(fname);
+        if ( lname ) data.lname = escape(lname);
 
-        mailchimpHandler = function (event) {
-            event.preventDefault();
+        if ( $emailField.length && $emailField.val().length ) {
+            email = $emailField.val();
+            data.email = escape(email);
+        }
 
-            var $firstNameField = $(this).find('[name=FNAME]'),
-                $lastNameField = $(this).find('[name=LNAME]'),
-                $fullnameField = $(this).find('[name=FULLNAME]'),
-                $emailField = $(this).find('[name=EMAIL]'),
-                $phoneField = $(this).find('[name=PHONE]'),
-                $responseBlock = $(this).find('.response'),
-                fullname, fname, lname, email, phone, data = {};
+        if ( $phoneField.length && $phoneField.val().length ) {
+            phone = $phoneField.val();
+            data.phone = escape(phone);
+        }
 
-            if ( $fullnameField.length && $fullnameField.val().length ) {
-                fullname = $fullnameField.val().split(' ');
-                fname = fullname[0];
+        if ( typeof toastr == 'undefined' ) $responseBlock.html('<span class="notice_message">Adding email address...</span>');
 
-                if ( fullname.length > 1 ) lname = fullname[1];
-            }
+        data.ajax = true;
 
-            if ( $firstNameField.length && $firstNameField.val().length ) fname = $firstNameField.val();
-            if ( $lastNameField.length && $lastNameField.val().length ) lname = $lastNameField.val();
-            if ( fname ) data.fname = escape(fname);
-            if ( lname ) data.lname = escape(lname);
+        $.ajax({
+            url: '/assets/mailchimp/inc/store-address.php',
+            data: data,
 
-            if ( $emailField.length && $emailField.val().length ) {
-                email = $emailField.val();
-                data.email = escape(email);
-            }
+            success: function(msg) {
+                if ( msg.indexOf('Success') != -1 ) {
+                    if ( typeof toastr != 'undefined' ) toastr.success('Success! You are now subscribed to our newsletter!');
+                    else if ( $responseBlock.length ) $responseBlock.html('<span class="success-message">Success! You are now subscribed to our newsletter!</span>');
 
-            if ( $phoneField.length && $phoneField.val().length ) {
-                phone = $phoneField.val();
-                data.phone = escape(phone);
-            }
+                } else {
+                    if ( typeof toastr != 'undefined' ) toastr.error(msg);
+                    else if ( $responseBlock.length ) $responseBlock.html('<span class="error-message">' + msg + '</span>');
 
-            if ( typeof toastr == 'undefined' ) $responseBlock.html('<span class="notice_message">Adding email address...</span>');
-
-            data.ajax = true;
-
-            $.ajax({
-                url: '/assets/mailchimp/inc/store-address.php',
-                data: data,
-
-                success: function(msg) {
-                    if ( msg.indexOf('Success') != -1 ) {
-                        if ( typeof toastr != 'undefined' ) toastr.success('Success! You are now subscribed to our newsletter!');
-                        else if ( $responseBlock.length ) $responseBlock.html('<span class="success-message">Success! You are now subscribed to our newsletter!</span>');
-
-                    } else {
-                        if ( typeof toastr != 'undefined' ) toastr.error(msg);
-                        else if ( $responseBlock.length ) $responseBlock.html('<span class="error-message">' + msg + '</span>');
-
-                    }
                 }
-            });
-        }
+            }
+        });
+    }
 
         // submitHandler = function (event) {
         //     event.preventDefault();
@@ -482,7 +482,7 @@ Startuply = {
                 this.log( 'Init product slider' );
 
                 var imageSlider,
-                    thumbSlider;
+                thumbSlider;
 
                 if ( $('.product-image-list li img').length ) {
                     imageSlider = $('.product-image-list').bxSlider({
@@ -505,8 +505,8 @@ Startuply = {
 
                         $('.product-thumb-list').on('click.startuply', '.product-thumb', function () {
                             var $this = $(this),
-                                imgId = $this.attr('data-img-id'),
-                                $currentSlide = $('.product-image-list').find('[data-img-id=' + imgId + ']');
+                            imgId = $this.attr('data-img-id'),
+                            $currentSlide = $('.product-image-list').find('[data-img-id=' + imgId + ']');
 
                             imageSlider.goToSlide($currentSlide.index() - 1);
                         });
@@ -524,13 +524,13 @@ Startuply = {
             this.log( 'Init cart checkout navigation' );
 
             var $nav = $('.cart-checkout-navigation-list'),
-                $navControls = $('.cart-checkout-navigation-controls');
+            $navControls = $('.cart-checkout-navigation-controls');
 
             $navControls.on('click.startuply', '.btn', function (event) {
                 var next = $(this).is('.next'),
-                    $activeLi = $nav.find('> .active'),
-                    $next = $activeLi.next().find('.cart-checkout-navigation-list-item-link'),
-                    $prev = $activeLi.prev().find('.cart-checkout-navigation-list-item-link');
+                $activeLi = $nav.find('> .active'),
+                $next = $activeLi.next().find('.cart-checkout-navigation-list-item-link'),
+                $prev = $activeLi.prev().find('.cart-checkout-navigation-list-item-link');
 
                 event.preventDefault();
 
@@ -543,10 +543,10 @@ Startuply = {
 
             $nav.on('shown.bs.tab', '.cart-checkout-navigation-list-item-link', function () {
                 var $thisLi = $(this).closest('li'),
-                    $prevLi = $thisLi.prev(),
-                    $nextLi = $thisLi.next(),
-                    $prevBtn = $navControls.find('.prev'),
-                    $nextBtn = $navControls.find('.next');
+                $prevLi = $thisLi.prev(),
+                $nextLi = $thisLi.next(),
+                $prevBtn = $navControls.find('.prev'),
+                $nextBtn = $navControls.find('.next');
 
                 if ( $nextLi.length ) {
                     $nextBtn.removeClass('hidden');
@@ -661,13 +661,13 @@ Startuply = {
 
                 $menuLinks.each(function (index) {
                     var href = $(this).attr('href'),
-                        anchorId = href.substring(href.indexOf('#'), href.length),
-                        $block = $(anchorId);
+                    anchorId = href.substring(href.indexOf('#'), href.length),
+                    $block = $(anchorId);
 
                     if ( $block.length ) {
                         $block.waypoint(function () {
                             var id = $(this)[0].element.id,
-                                $item = $('.navigation-bar a[href="#' + id + '"]');
+                            $item = $('.navigation-bar a[href="#' + id + '"]');
 
                             $('.navigation-bar li.active').removeClass('active');
                             $item.closest('li').addClass('active');
@@ -685,54 +685,54 @@ Startuply = {
                     }
                 });
 
-                $('body').waypoint(function () {
-                    var id = 'hero',
-                        $item = $('.navigation-bar a[href="#' + id + '"]');
+$('body').waypoint(function () {
+    var id = 'hero',
+    $item = $('.navigation-bar a[href="#' + id + '"]');
 
-                    $('.navigation-bar li.active').removeClass('active');
+    $('.navigation-bar li.active').removeClass('active');
 
-                    if ( $item.length ) {
-                        $item.closest('li').addClass('active');
+    if ( $item.length ) {
+        $item.closest('li').addClass('active');
 
-                        if ( _this.options.onePageNavHashChange ){
-                            if ( history.pushState ) {
-                                history.pushState(null, null, '#' + id);
-                            }else {
-                                _this.log('Browser don\'t support history API');
-                            }
-                        }
-                    }
-                }, { offset: -100 });
-
-                $('body').on( 'click.startuply', 'a[href*="#"]', function (event) {
-                    var href = $(this).attr('href'),
-                        anchorId = href.substring(href.indexOf('#'), href.length);
-
-                    if ( $(this).attr('data-toggle') && $(this).attr('data-toggle').length ) {
-                        return;
-
-                    }
-
-                    if ( $(anchorId).length ) {
-                        _this.anchorClickHandler(anchorId);
-
-                        return false;
-                    }
-                });
-
+        if ( _this.options.onePageNavHashChange ){
+            if ( history.pushState ) {
+                history.pushState(null, null, '#' + id);
             }else {
-                this.log( 'Can\'t find jQuery.waypoint function' );
-
+                _this.log('Browser don\'t support history API');
             }
         }
-    },
+    }
+}, { offset: -100 });
+
+$('body').on( 'click.startuply', 'a[href*="#"]', function (event) {
+    var href = $(this).attr('href'),
+    anchorId = href.substring(href.indexOf('#'), href.length);
+
+    if ( $(this).attr('data-toggle') && $(this).attr('data-toggle').length ) {
+        return;
+
+    }
+
+    if ( $(anchorId).length ) {
+        _this.anchorClickHandler(anchorId);
+
+        return false;
+    }
+});
+
+}else {
+    this.log( 'Can\'t find jQuery.waypoint function' );
+
+}
+}
+},
 
     //custom smooth scrolling for all onpage anchors
     anchorClickHandler: function(anchorId) {
         var _this = this,
-            offsetTop = $(anchorId).offset().top - $('.navigation-header').height(),
-            $nav = $('.navigation-bar'),
-            $elems = $nav.find('a[href="' + anchorId + '"]');
+        offsetTop = $(anchorId).offset().top - $('.navigation-header').height(),
+        $nav = $('.navigation-bar'),
+        $elems = $nav.find('a[href="' + anchorId + '"]');
 
         $('body, html').animate({
             scrollTop: offsetTop
@@ -820,7 +820,7 @@ Startuply = {
     navigationToggleHandler: function ($el) {
         if ( this.mobileMenuView ) {
             var $btn = $el,
-                $menu = $btn.closest('.navigation-header').find('.navigation-navbar');
+            $menu = $btn.closest('.navigation-header').find('.navigation-navbar');
 
             if ( $menu.hasClass('collapsing') ) {
                 return false;
@@ -855,8 +855,8 @@ Startuply = {
     bodyMouseMoveHandler: function (event) {
         if ( !this.mobileMenuView && $('.dropdown.opened').length ) {
             var elements = $(event.target).parents('.dropdown.opened').find('> .dropdown-menu').get(),
-                $dropdownMenu = $('body').find('.dropdown.opened > .dropdown-menu'),
-                $secondLevelDropdownMenu = $('body').find('.dropdown-menu .dropdown.opened > .dropdown-menu');
+            $dropdownMenu = $('body').find('.dropdown.opened > .dropdown-menu'),
+            $secondLevelDropdownMenu = $('body').find('.dropdown-menu .dropdown.opened > .dropdown-menu');
 
             if ( $(event.target).hasClass('dropdown opened') ) {
                 elements.push($(event.target).find('> .dropdown-menu').get(0));
@@ -880,10 +880,10 @@ Startuply = {
 
             if ( $el.closest('.dropdown-menu').length ) {
                 var elWidth = $el.outerWidth(),
-                    elLeft = $el.offset().left,
-                    windowWidth = $(window).width(),
-                    rightGap = windowWidth - elWidth - elLeft,
-                    dropdownMenuWidth = $dropdownMenu.width();
+                elLeft = $el.offset().left,
+                windowWidth = $(window).width(),
+                rightGap = windowWidth - elWidth - elLeft,
+                dropdownMenuWidth = $dropdownMenu.width();
 
                 if ( rightGap < dropdownMenuWidth + 10 ) {
                     $dropdownMenu.addClass('left-side-menu');
@@ -920,7 +920,7 @@ Startuply = {
     navScrollHandler: function(event, el) {
         if ( this.mobileMenuView ) {
             var e0 = event.originalEvent,
-                delta = e0.wheelDelta || -e0.detail;
+            delta = e0.wheelDelta || -e0.detail;
 
             el.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
 
@@ -945,7 +945,7 @@ Startuply = {
 
     styleSwitcherColorHandler: function (event, $el) {
         var $this = $el,
-            colorName = $this.attr('data-color');
+        colorName = $this.attr('data-color');
 
         event.preventDefault();
 
@@ -975,7 +975,7 @@ Startuply = {
     //material design animations framework
     waveShowAnimation: function (event, $el) {
         var diag = Math.sqrt($el.outerWidth()*$el.outerWidth() + $el.outerHeight()*$el.outerHeight()),
-            radiusIndex = Math.floor(diag/Math.sqrt(20))
+        radiusIndex = Math.floor(diag/Math.sqrt(20))
 
         $el.prepend('<div class="inside-wave base-clr-bg" style="top:' + event.offsetY + 'px; left:' + event.offsetX + 'px;"></div>');
 

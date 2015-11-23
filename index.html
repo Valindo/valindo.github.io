@@ -5,11 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Boostrap v3.3.5 -->
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-	<!-- <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css"> -->
 	<!-- Fullpage.js -->
 	<link rel="stylesheet" type="text/css" href="bower_components/fullpage.js/jquery.fullPage.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<!-- <link rel="stylesheet" type="text/css" href="assets/css/test.css"> -->
+	<link rel="stylesheet" type="text/css" href="assets/css/test.css">
 	<!-- Line-icons -->
 	<link rel="stylesheet" type="text/css" href="font/css/font-lineicons.css">
 	<!-- ngDialog -->
@@ -29,7 +28,7 @@
 </head>
 <body>
 	<!-- <div class="se-pre-con"></div>	 -->
-	<!-- <header>
+	<header>
 		<div class="container text-center navigation" ng-controller="MenuCtrl">
 			<div class="row desktop">
 				<span class="col-md-2 col-sm-2 logo">plugzee</span>
@@ -60,44 +59,9 @@
 				</div>
 			</div>
 		</div>
-	</header> -->
-
-
-
-	<nav class="navbar navbar-default">
-		<div class="container">
-			<div class="row text-center navbar-row">
-				<div class="containder-fluid col-md-2 col-sm-2">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand logo" href="#">plugzee</a>
-					</div>
-				</div>
-				<!-- <button type="button" class="btn btn-default navbar-btn pull-right">Sign in</button> -->
-				<div class="collapse navbar-collapse container col-md-8 col-sm-8 nav-links" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<li><a href="#home">HOME</a></li>
-						<li><a href="#about">ABOUT</a></li>
-						<li><a href="#indiegogo">INDEIGOGO</a></li>
-						<li><a href="#contact">CONTACT</a></li>
-						<li class="hidden-md hidden-lg hidden-sm"><button type="button" class="btn btn-default navbar-btn order-now">Pre-order</button></li>
-
-
-					</ul>
-				</div>
-				<div class="col-md-2 col-sm-2 pull-right">
-					<button type="button" class="btn btn-default navbar-btn pull-right hidden-xs order-now">Pre-order</button>
-				</div>
-			</div>
-		</div>
-	</nav>
+	</header>
 	<div id="fullpage" class="text-center">
-
+		
 		<div class="section section-1" id="home">
 			<div class="text-center">				
 				<h2 >Plug. Pair. Play</h2>
@@ -178,7 +142,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-1"></div>
-
+					
 					<div class="col-md-10">
 						<div class="progress">
 							<div class="progress-bar progress-bar-success" style="width:0%">
@@ -334,12 +298,9 @@
      //>=, not <=
      if (scroll >= 500) {
         //clearHeader, not clearheader - caps H
-        // $("nav").switchClass( "", "navbar-fixed-top", 100, "easeInOutQuad" );
-        $("nav").addClass("navbar-fixed-top",300,"easeInOutCubic");
-        $("nav").removeClass("navbar-default");
+        $("header").addClass("fixed-menu");
     } else {
-    	$("nav").removeClass("navbar-fixed-top");
-    	$("nav").addClass("navbar-default");
+    	$("header").removeClass("fixed-menu");
     }
 });	
 </script>

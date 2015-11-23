@@ -206,21 +206,38 @@
 		</div>
 		<div class="section fp-auto-height ghost-section-2" ng-controller="MainCtrl" >
 			<div class="container unskew">
-				<div class="row">
-					<div class="col-md-1"></div>
+				<!-- <div class="row"> -->
+				<!-- <div class="col-md-1"></div> -->
 				<!-- <div class="col-md-5">
 					<h5>Get your Plugzee today and add more life to your speakers</h5>
 					<span class="order-now">Pre-Order</span>
 				</div> -->
-				<div class="col-md-10">
+				<!-- <div class="col-md-10">
 					<h5>Read In-Dept About Our Journey With Plugzee On Our Campaign Page</h5>
 				</div>
 				<div class="col-md-1"></div>
-			</div>
+			</div> -->
 			<div class="row">
-				<div class="col-md-4"></div>
-				<div class="col-md-4"><span class="order-now" ng-click="clickToOpen()">Campaign</span></div>
-				<div class="col-md-4"></div>
+				<div class="col-md-6">
+					Know more about is on 
+					<span class="order-now" ng-click="clickToOpen()">Indiegogo</span>
+				</div>
+				<div class="col-md-6" ng-controller="FromSubmit">
+					<form class=" form-inline signup" name="signupForm" id="signupForm">
+						<div class="row">
+							<div class="col-xs-4 form-group">
+								<input type="text" ng-init="name=''" ng-model="name" placeholder="Name" required>
+							</div>
+							<div class="col-xs-5 form-group">
+								<input type="email" ng-init="emails=''" ng-model="emails" placeholder="Email" required>
+							</div>
+							<div class="col-xs-3">
+								<button  class="submit signup-button" ng-click="post(name,emails)" value="Signup">Sign up</button>
+								<p ng-init="result=false" ng-model="result" ng-show="result">Success</p>
+							</div>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 		<!-- <button type="button" ng-click="clickToOpen()" ng-dialog-class="ngdialog-theme-default" class="ng-isolate-scope">Buy Now</button> -->

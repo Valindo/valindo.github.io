@@ -27,6 +27,11 @@ body, h1, h2, h3, h4, h5, h6, p {
 	color:white !important;
 }
 
+
+strong{
+	font-family: brownfox !important;
+}
+
 body{
 	background-color:#81d5f2;
 	/*background: -webkit-repeating-linear-gradient(45deg, #1abc9c 0%, #3399d9 100%);
@@ -170,14 +175,18 @@ body{
 .social-icons{
 	margin-top: 20%;
 	/*padding-top: 40% ;*/
-	padding-right: 15px;
-	padding-left: 15px;
+	padding-right: 10px;
+	padding-left: 10px;
 	font-size: 2em;
 	color:#F2505d;
 	float: none;
 	display: inline-block;
 	vertical-align: middle;
 
+}
+
+.social-icons img{
+	width: 50px;
 }
 
 .social-icons:hover{
@@ -480,7 +489,9 @@ body{
 }
 
 .section-5 p{
+	padding: 0% 15% 0% 15%;
 	font-size: 1.1em;
+	text-align: left;
 }
 
 .section-5 h2{

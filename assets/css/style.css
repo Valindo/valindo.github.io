@@ -410,6 +410,7 @@ body{
 
 .section-2 img{
 	padding: 0% 0% 5%;
+	width: 64px;
 }
 
 .section-3{
@@ -478,9 +479,17 @@ body{
 }
 
 .ghost-section-2 .order-now{
-	font-size: 1.3em;
+	/*font-size: 1.3em;*/
 	padding-top: 1.5%;
 	padding-bottom: 1.5%;
+}
+
+.ghost-section-2 p{
+	padding-top: 3.5%;
+}
+
+.ghost-section-2 button{
+	margin-top: 2% !important;
 }
 
 .ghost-section-2 h5 {
@@ -612,4 +621,8 @@ sub{
 
 .raised{
 	padding-bottom: 3% !important;
+}
+
+.ghost-section-2 .row{
+	padding-top: 2%;
 }

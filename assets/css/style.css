@@ -35,6 +35,7 @@ no-js #loader { display: none;  }
 		/*cursor: url(../../lel.png), auto;*/
 		font-family: brownfox !important;
 		color:white !important;
+		font-weight: bold;
 	}
 
 	@-moz-document url-prefix() {
@@ -621,11 +622,12 @@ no-js #loader { display: none;  }
 
 .section-4 p{
 	font-size: 1.1em;
+	font-weight: bold;
 }
 
 .signup p{
-	padding: 0.5%;
-	font-size: 0.9em;
+	padding: 1.5%;
+	font-size: 1em;
 	font-weight: bold;
 
 }

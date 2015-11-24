@@ -24,7 +24,7 @@
 	}]);
 
 	app.controller('VideoCtrl',function($scope){
-		$scope.w = $(window).width();
+		$scope.w = $(document).width();
 		$scope.w = String($scope.w);
 	});
 

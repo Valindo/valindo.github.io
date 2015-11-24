@@ -22,28 +22,28 @@ no-js #loader { display: none;  }
 	}*/
 
 
-@font-face{ 
-	font-family: brownfox;
-	src: url('/font/brownfox-webfont.eot');
-	src: url('/font/brownfox-webfont.eot?#iefix') format('embedded-opentype'),
-	url('/font/brownfox-webfont.woff') format('woff'),
-	url('/font/brownfox-webfont.ttf') format('truetype'),
-	url('/font/brownfox-webfont.svg#webfont') format('svg');
-}
+	@font-face{ 
+		font-family: brownfox;
+		src: url('/font/brownfox-webfont.eot');
+		src: url('/font/brownfox-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/font/brownfox-webfont.woff') format('woff'),
+		url('/font/brownfox-webfont.ttf') format('truetype'),
+		url('/font/brownfox-webfont.svg#webfont') format('svg');
+	}
 
-body, h1, h2, h3, h4, h5, h6, p {
-	/*cursor: url(../../lel.png), auto;*/
-	font-family: brownfox !important;
-	color:white !important;
-}
+	body, h1, h2, h3, h4, h5, h6, p {
+		/*cursor: url(../../lel.png), auto;*/
+		font-family: 'Raleway' !important;
+		color:white !important;
+	}
 
 
-strong{
-	font-family: brownfox !important;
-}
+	strong{
+		font-family: brownfox !important;
+	}
 
-body{
-	background-color:#81d5f2;
+	body{
+		background-color:#81d5f2;
 	/*background: -webkit-repeating-linear-gradient(45deg, #1abc9c 0%, #3399d9 100%);
 	background: -o-repeating-linear-gradient(45deg, #1abc9c 0%, #3399d9 100%);
 	background: -moz-repeating-linear-gradient(45deg,#1abc9c 0%, #3399d9 100%);

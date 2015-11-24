@@ -405,6 +405,7 @@ no-js #loader { display: none;  }
 	font-weight: bold !important;
 	font-size: 2.5em;
 	padding-top: 2%;
+	padding-bottom: 0.5%;
 }
 
 .section-1 .row{
@@ -687,4 +688,21 @@ sub{
 		padding-top: 8% !important;
 		padding-bottom: 8% !important;
 	}
+}
+
+
+
+
+
+.testimonials p{
+	/*padding-left: 2%;*/
+	/*padding-right: 2%;*/
+	color: black !important;
+}
+
+.cards{
+	width: 300px !important;
+	background-color:#fff;
+	color: black !important;
+	padding: 15% 3% 15% 3%;
 }

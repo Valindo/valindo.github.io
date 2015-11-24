@@ -92,7 +92,7 @@ body{
 	}
 
 	.section-1 h2{
-		padding-top: 6% !important;
+		padding-top: 12% !important;
 		/*font-weight: bold;*/
 	}
 
@@ -105,6 +105,17 @@ body{
 		padding-right: 1% !important;
 		padding-top: 2% !important;
 		padding-bottom: 2% !important;
+	}
+
+	.signup-button:hover{
+		padding-left: 1% !important;
+		padding-right: 1% !important;
+		padding-top: 2% !important;
+		padding-bottom: 2% !important;
+	}
+
+	.form .form-group[class*="col-"] textarea, .form .form-group[class*="col-"] input[type=text], .form .form-group[class*="col-"] input[type=url], .form .form-group[class*="col-"] input[type=tel], .form .form-group[class*="col-"] input[type=number], .form .form-group[class*="col-"] input[type=color], .form .form-group[class*="col-"] input[type=email], .form .form-group[class*="col-"] input[type=email], .form .form-group[class*="col-"] input[type=password]{
+		width: 90% !important;
 	}
 
 }
@@ -592,16 +603,13 @@ body{
 	background-color: #F27064 !important;
 	border-radius: 3.5rem !important;
 	cursor: pointer !important;
+	border-width: 0 !important;
 	border-bottom: 5px solid #cd5d51 !important;
 }
 
 .signup-button:hover{
 	background-color: #fff!important;
 	border-radius: 3.5rem !important;
-	padding-left: 10% !important;
-	padding-right: 10% !important;
-	padding-top: 8% !important;
-	padding-bottom: 8% !important;
 	cursor: pointer !important;
 	color: #f27064 !important;
 	border-bottom: 5px solid #e3e3e3 !important;
@@ -627,7 +635,7 @@ sub{
 }
 
 .raised{
-	padding-bottom: 3% !important;
+	padding-bottom: 9% !important;
 }
 
 .ghost-section-2 .row{
@@ -640,5 +648,13 @@ sub{
 		padding-right: 10% !important;
 		padding-top: 8% !important;
 		padding-bottom: 8% !important;
-	}	
+		
+	}
+
+	.signup-button:hover{
+		padding-left: 10% !important;
+		padding-right: 10% !important;
+		padding-top: 8% !important;
+		padding-bottom: 8% !important;
+	}
 }

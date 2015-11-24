@@ -533,10 +533,11 @@ no-js #loader { display: none;  }
 	/*font-size: 1.3em;*/
 	padding-top: 1.5%;
 	padding-bottom: 1.5%;
+	font-weight: 700;
 }
 
 .ghost-section-2 p{
-	padding-top: 7.8%;
+	padding-top: 3.8%;
 }
 
 .ghost-section-2 button{
@@ -549,11 +550,18 @@ no-js #loader { display: none;  }
 }
 
 .section-5 p{
-	padding: 0% 15% 0% 15%;
+	padding: 0% 15% 0% 25%;
 	font-size: 1.1em;
 	text-align: left;
 }
 
+.section-5 a{
+	color: #4abcb6;
+}
+
+.section-5 a:hover{
+	color: #fff;
+}
 .section-5 h2{
 	font-size: 1.8em;
 }
@@ -700,7 +708,7 @@ sub{
 .testimonials p{
 	/*padding-left: 2%;*/
 	/*padding-right: 2%;*/
-	color: black !important;
+	color: #363636 !important;
 }
 
 .cards{
@@ -732,4 +740,15 @@ blockquote p{
 
 .coverflow{
 	padding-top: 4%;
+}
+
+.share-buttons{
+	position: fixed;
+	z-index: 10;
+	right:1%;
+	bottom:45%;
+}
+
+.share-buttons img{
+	display: block
 }

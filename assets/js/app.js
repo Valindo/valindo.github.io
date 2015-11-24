@@ -9,7 +9,7 @@
 	app.controller('MainCtrl',function($scope, ngDialog){
 		$scope.clickToOpen = function (){
 			console.log("I reached here");
-			ngDialog.open({ template: 'test.html'});
+			ngDialog.open({ url: 'http://www.google.com'});
 		};
 	});
 	app.controller('VideoCtrl',function($scope){

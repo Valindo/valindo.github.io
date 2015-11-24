@@ -33,9 +33,25 @@ no-js #loader { display: none;  }
 
 	body, h1, h2, h3, h4, h5, h6, p {
 		/*cursor: url(../../lel.png), auto;*/
-		font-family: 'Raleway' !important;
+		font-family: brownfox !important;
 		color:white !important;
 	}
+
+	@-moz-document url-prefix() {
+		body, h1, h2, h3, h4, h5, h6, p {
+			font-family: 'Raleway' !important;
+			color:white !important;
+		}
+	}
+
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+		body, h1, h2, h3, h4, h5, h6, p {
+			font-family: 'Raleway' !important;
+			color:white !important;
+		}
+	}
+
+
 
 
 	strong{

@@ -16,9 +16,19 @@ no-js #loader { display: none;  }
 	src: url("/font/Quinfo.woff") format("woff");
 }
 
-@font-face {
+/*@font-face {
 	font-family: brownfox;
 	src: url("/font/Brownfox.otf") format("opentype");
+	}*/
+
+
+@font-face{ 
+	font-family: brownfox;
+	src: url('/font/brownfox-webfont.eot');
+	src: url('/font/brownfox-webfont.eot?#iefix') format('embedded-opentype'),
+	url('/font/brownfox-webfont.woff') format('woff'),
+	url('/font/brownfox-webfont.ttf') format('truetype'),
+	url('/font/brownfox-webfont.svg#webfont') format('svg');
 }
 
 body, h1, h2, h3, h4, h5, h6, p {

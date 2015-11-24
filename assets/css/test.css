@@ -511,7 +511,7 @@
     blockquote:after {
     	font-family: "line-icons";
     	position: absolute;
-    	top: 25%;
+    	top: 10%;
     }
 
     blockquote:before {

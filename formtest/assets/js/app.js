@@ -15,12 +15,17 @@
 			});
 
 			request.success(
-                    function( html ) {
-                        $scope.cfdump = html;
-                    }
-                );
+				function( html ) {
+					$scope.cfdump = html;
+				}
+				);
 			// console.log($scope.cfdump);
 		};
 	}]);
+
+	app.controller('VideoCtrl',function($scope){
+		$scope.w = $(window).width();
+		$scope.w = String($scope.w);
+	});
 
 })();

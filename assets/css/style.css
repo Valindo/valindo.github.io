@@ -118,6 +118,10 @@ body{
 		width: 90% !important;
 	}
 
+	.social-icons img{
+		width: 50px !important;
+	}
+
 }
 
 

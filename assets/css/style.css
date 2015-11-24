@@ -706,3 +706,10 @@ sub{
 	color: black !important;
 	padding: 15% 3% 15% 3%;
 }
+
+cite{
+	display: block;
+	font-style: normal;
+	line-height: 1.2;
+	font-size: 0.8em !important;
+}

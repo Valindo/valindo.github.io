@@ -1,0 +1,8 @@
+@font-face {
+	font-family: pacifico;
+	src: url("/fonts/Pacifico.ttf") format("ttf");
+}
+
+.wafer-font{
+	font-family: pacifico;
+}

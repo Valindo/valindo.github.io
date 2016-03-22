@@ -2095,7 +2095,19 @@
 	width: 290px;
     }
     .fashImg img{
-	width: 100%;
+	width: 55%;
+    }
+    .fashHover {
+    padding: 50px 20px 0;
+    }
+
+    .fashHover h2{
+        font-size: 22px;
+    }
+
+    .fashHover p{
+        font-size: 8px;
+        /*padding-right: 122px;*/
     }
     .promoArti{
 	margin-bottom: 50px;

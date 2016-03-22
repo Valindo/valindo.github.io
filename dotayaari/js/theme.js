@@ -128,7 +128,7 @@
 	    stopOnHover: true,
 	    navigationText: false,
 	    itemsDesktop: [1199, 3],
-	    itemsMobile: [480, 1],
+	    itemsMobile: [480, 2],
 	    itemsTablet: [991, 2],
 	    itemsTabletSmall: [767, 1]
 	});

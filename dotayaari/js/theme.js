@@ -103,8 +103,8 @@
 	    stopOnHover: true,
 	    itemsDesktop: [1199, 3],
 	    itemsTablet: [991, 2],
-	    itemsTabletSmall: [767, 1],
-	    itemsMobile: [480, 1]
+	    itemsTabletSmall: [767, 2],
+	    itemsMobile: [480, 2]
 	});
     }
     if ($('#helthCarousel').length > 0) {
@@ -116,8 +116,8 @@
 	    stopOnHover: true,
 	    itemsDesktop: [1199, 3],
 	    itemsTablet: [991, 2],
-	    itemsTabletSmall: [767, 1],
-	    itemsMobile: [480, 1]
+	    itemsTabletSmall: [767, 2],
+	    itemsMobile: [480, 2]
 	});
     }
     if ($('#fashionCarousel').length > 0) {
@@ -130,7 +130,7 @@
 	    itemsDesktop: [1199, 3],
 	    itemsMobile: [480, 2],
 	    itemsTablet: [991, 2],
-	    itemsTabletSmall: [767, 1]
+	    itemsTabletSmall: [767, 2]
 	});
     }
     if ($('#loveCarousel').length > 0) {
@@ -142,8 +142,8 @@
 	    navigationText: false,
 	    itemsDesktop: [1199, 3],
 	    itemsTablet: [991, 2],
-	    itemsTabletSmall: [767, 1],
-	    itemsMobile: [480, 1]
+	    itemsTabletSmall: [767, 2],
+	    itemsMobile: [480, 2]
 	});
     }
     if ($('#hotCrousel').length > 0) {
@@ -154,8 +154,8 @@
 	    navigationText: false,
 	    itemsDesktop: [1199, 3],
 	    itemsTablet: [991, 2],
-	    itemsTabletSmall: [767, 1],
-	    itemsMobile: [480, 1],
+	    itemsTabletSmall: [767, 2],
+	    itemsMobile: [480, 2],
 	    singleItem: false,
 	    stopOnHover: true
 	});
@@ -624,7 +624,7 @@
          soloArrowRightVOffset:0,
  
  
-         touchenabled:"on",
+         touchenabled:"off",
          swipe_velocity:"0.7",
          swipe_max_touches:"1",
          swipe_min_touches:"1",

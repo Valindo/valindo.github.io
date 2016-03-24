@@ -2099,6 +2099,7 @@
     }
     .fashHover {
     padding: 50px 20px 0;
+    background: rgba(0,0,0,.1);
     }
 
     .fashHover h2{
@@ -2106,8 +2107,8 @@
     }
 
     .fashHover p{
-        font-size: 8px;
-        /*padding-right: 122px;*/
+        font-size: 14px;
+        width : 50%;
     }
     .promoArti{
 	margin-bottom: 50px;

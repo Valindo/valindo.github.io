@@ -282,10 +282,10 @@
 	$range.ionRangeSlider({
 	    type: "double",
 	    min: 0,
-	    max: 500,
+	    max: 1000,
 	    from: 50,
 	    to: 300,
-	    prefix: "$"
+	    prefix: "Rs"
 	});
     }
 //    Preloader

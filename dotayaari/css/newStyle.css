@@ -1,0 +1,13 @@
+.logoImg{
+	background: none !important;
+	border-radius: 0px !important;
+}
+
+.logoImg img{
+	margin: 0 !important;
+	width: 100%;
+}
+
+body{
+	background: url(/images/symphony.png);
+}

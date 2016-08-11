@@ -17,6 +17,7 @@ var gulp = require('gulp'),
     imageop = require('gulp-image-optimization'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
+    connect = require( "gulp-connect"),
     reload = browserSync.reload;
 
 

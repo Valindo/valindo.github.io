@@ -241,7 +241,7 @@ gulp.task('clean', function (cb) {
 
 gulp.task('serveprod', function() {
   connect.server({
-    root: '/',
+    root: [process.env.ROOT],
     port: process.env.PORT || 5000, // localhost:5000
     livereload: false
   });

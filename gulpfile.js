@@ -238,9 +238,15 @@ gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
 
-
+gulp.task('serveprod', function() {
+  connect.server({
+    root: process.env,
+    port: process.env.PORT || 5000, // localhost:5000
+    livereload: false
+  });
+});
 
 /////////////////////////////////////////////////////////////////////////////
 // DEFAULT TASK
-gulp.task('default', ['build', 'watch']);
+gulp.task('default', ['build', 'serveprod', 'watch']);
 

@@ -242,5 +242,5 @@ gulp.task('clean', function (cb) {
 
 /////////////////////////////////////////////////////////////////////////////
 // DEFAULT TASK
-gulp.task('default', ['build', 'serve', 'watch']);
+gulp.task('default', ['build', 'watch']);
 

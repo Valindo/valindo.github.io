@@ -76,8 +76,7 @@ var config = {
     },
     files: ['./build/**/*'],
     tunnel: false,
-    host: 'localhost',
-    port: 9000,
+    host: 'https://murmuring-river-81183.herokuapp.com',
     logPrefix: "frontend",
     watchTask: true
 };

@@ -70,22 +70,22 @@ function printError(error) {
 
 /////////////////////////////////////////////////////////////////////////////
 // BROWSERSYNC SERVE
-var config = {
-    server: {
-        baseDir: "./build"
-    },
-    files: ['./build/**/*'],
-    tunnel: false,
-    host: 'https://murmuring-river-81183.herokuapp.com',
-    logPrefix: "frontend",
-    watchTask: true
-};
+// var config = {
+//     server: {
+//         baseDir: "./build"
+//     },
+//     files: ['./build/**/*'],
+//     tunnel: false,
+//     host: process.env,
+//     logPrefix: "frontend",
+//     watchTask: true
+// };
 
-gulp.task('serve', function () {
-    setTimeout(function () {
-        browserSync(config);
-    }, 5000)
-});
+// gulp.task('serve', function () {
+//     setTimeout(function () {
+//         browserSync(config);
+//     }, 5000)
+// });
 
 
 

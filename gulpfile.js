@@ -241,7 +241,8 @@ gulp.task('clean', function (cb) {
 
 gulp.task('serveprod', function() {
   connect.server({
-    root: ['/app'],
+    root: 'app',
+    host: 'murmuring-river'
     port: process.env.PORT, // localhost:5000
     livereload: false
   });

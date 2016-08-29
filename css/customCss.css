@@ -1,0 +1,23 @@
+@font-face {
+    font-family: Ananda;
+    src: url("/fonts/AnandaNeptouch.ttf");
+}
+
+.dotayaari{
+	font-family: Ananda;
+}
+
+
+.logoImg{
+	background: none !important;
+	border-radius: 0px !important;
+}
+
+.logoImg img{
+	margin: 0 !important;
+	width: 100%;
+}
+
+.lightSliderCap{
+	font-size: 50px;
+}

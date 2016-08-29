@@ -24,13 +24,23 @@
 						</div>
 					</div>
 					<div *ngFor="let planner of planners" class="col-lg-4 col-sm-6 col-xs-12 text-center wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
-						<div class="podContainer">
+						<!-- <div class="podContainer">
 							<div class="podImg">
 								<img class="img-responsive" [src]="'http://205.147.100.109'+planner.images[0].image" alt="" (click)="gotoPlanner(planner)">
 							</div>
 							<div class="podMeta">
 								<h5>{{planner.title}}</h5>
 								<p>{{planner.address}}</p>
+							</div>
+						</div> -->
+						<div class="fashImg">
+							<img class="img-responsive" [src]="'http://205.147.100.109'+planner.images[0].image" alt=""  (click)="gotoPlanner(planner)" >
+							<div class="fashHover">
+								<p>12/10</p>
+								<p>{{planner.address}}</p>
+							</div>
+							<div class="fashContent">
+							<p>{{planner.title}}</p>
 							</div>
 						</div>
 					</div>

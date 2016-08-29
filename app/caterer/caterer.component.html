@@ -24,13 +24,14 @@
 						</div>
 					</div>
 					<div *ngFor="let caterer of caterers" class="col-lg-4 col-sm-6 col-xs-12 text-center wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
-						<div class="podContainer">
-							<div class="podImg">
-								<img class="img-responsive" [src]="'http://205.147.100.109'+caterer.images[0].image" alt="" (click)="goToCaterer(caterer)">
-							</div>
-							<div class="podMeta">
-								<h5>{{caterer.title}}</h5>
+						<div class="fashImg">
+							<img class="img-responsive" [src]="'http://205.147.100.109'+caterer.images[0].image" alt="" (click)="goToCaterer(caterer)" >
+							<div class="fashHover">
+								<p>12/10</p>
 								<p>{{caterer.address}}</p>
+							</div>
+							<div class="fashContent">
+							<p>{{caterer.title}}</p>
 							</div>
 						</div>
 					</div>

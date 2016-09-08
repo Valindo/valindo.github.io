@@ -34,8 +34,8 @@
 							</div>
 						</div> -->
 						<div class="fashImg">
-							<img class="img-responsive" [src]="'http://205.147.100.109'+planner.images[0].image" alt=""  (click)="gotoPlanner(planner)" >
-							<div class="fashHover">
+							<img class="img-responsive" [src]="'http://205.147.100.109'+planner.images[0].image" alt=""   >
+							<div class="fashHover" (click)="gotoPlanner(planner)">
 								<p>12/10</p>
 								<p>{{planner.address}}</p>
 							</div>

@@ -3,6 +3,8 @@ import {Component, ElementRef, NgZone} from '@angular/core'
 import {FacebookService} from './facebook.service'
 import {ImageService} from './image.service'
 
+
+
 @Component({
 	selector: 'home',
 	templateUrl: 'app/home/home.component.html',
@@ -12,7 +14,7 @@ import {ImageService} from './image.service'
 export class HomeComponent{
 	name=""
 	isUser = false
-	public pictureUrl = "Hello";
+	static pictureUrl = "Hello";
 	constructor(private elementRef: ElementRef, private _ngZone: NgZone, private _facebookService: FacebookService, private _img: ImageService){}
 	ngAfterViewInit(){
 		var s = document.createElement('script');
@@ -64,13 +66,13 @@ export class HomeComponent{
 	login(){
 		FB.login(function(response) {
 			console.log(response);
-			console.log(this.pictureUrl);
+			console.log(HomeComponent.pictureUrl);
 			FB.api('/me?fields=id,name,picture.width(100).height(100)', function(response) {
 
-				console.log(this.pictureUrl);
+				console.log(HomeComponent.pictureUrl);
 				this.name = response.name;
-				this.isUser = true
-				this._img.setImage(response.picture.data.url)
+				this.isUser = true;
+				this._img.setImage(response.picture.data.url);
 				
 				console.log(response);
 				console.log(response.name);

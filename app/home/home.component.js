@@ -19,7 +19,6 @@ var HomeComponent = (function () {
         this._img = _img;
         this.name = "";
         this.isUser = false;
-        this.pictureUrl = "Hello";
     }
     HomeComponent.prototype.ngAfterViewInit = function () {
         var s = document.createElement('script');
@@ -63,9 +62,9 @@ var HomeComponent = (function () {
     HomeComponent.prototype.login = function () {
         FB.login(function (response) {
             console.log(response);
-            console.log(this.pictureUrl);
+            console.log(HomeComponent.pictureUrl);
             FB.api('/me?fields=id,name,picture.width(100).height(100)', function (response) {
-                console.log(this.pictureUrl);
+                console.log(HomeComponent.pictureUrl);
                 this.name = response.name;
                 this.isUser = true;
                 this._img.setImage(response.picture.data.url);
@@ -80,6 +79,7 @@ var HomeComponent = (function () {
     HomeComponent.prototype.getImageUrl = function () {
         return this._img.getImage();
     };
+    HomeComponent.pictureUrl = "Hello";
     HomeComponent = __decorate([
         core_1.Component({
             selector: 'home',

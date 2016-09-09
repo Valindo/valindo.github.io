@@ -60,7 +60,7 @@ var HomeComponent = (function () {
     HomeComponent.prototype.login = function () {
         FB.login(function (response) {
             console.log(response);
-            FB.api('/me', function (response) {
+            FB.api('/me?fields=id,name,picture.width(100).height(100)', function (response) {
                 this.name = response.name;
                 this.isUser = true;
                 console.log(response);

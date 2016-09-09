@@ -8,10 +8,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+/// <reference path="fbsdk.d.ts" />
 var core_1 = require('@angular/core');
+var facebook_service_1 = require('./facebook.service');
 var HomeComponent = (function () {
-    function HomeComponent(elementRef) {
+    function HomeComponent(elementRef, _ngZone, _facebookService) {
         this.elementRef = elementRef;
+        this._ngZone = _ngZone;
+        this._facebookService = _facebookService;
+        this.name = "";
+        this.isUser = false;
     }
     HomeComponent.prototype.ngAfterViewInit = function () {
         var s = document.createElement('script');
@@ -23,12 +29,58 @@ var HomeComponent = (function () {
         t.src = 'js/wow.min.js';
         this.elementRef.nativeElement.appendChild(t);
     };
+    HomeComponent.prototype.ngOnInit = function () {
+        this._facebookService.loadAndInitFBSDK();
+        // console.log("I reach here")
+        // window.fbAsyncInit = function() {
+        // 	FB.init(
+        // 	{
+        // 		appId      : '153757638403747',
+        // 		xfbml      : true,
+        // 		version    : 'v2.0'
+        // 	}
+        // 	);
+        // 	FB.ui(
+        // 	{
+        // 		method: 'share',
+        // 		href: 'https://developers.facebook.com/docs/dialogs/'
+        // 	},
+        // 	function(response) {
+        // 		console.log(response);
+        // 	}
+        // 	);
+        // 	// FB.api(
+        // 	// 	"/me",
+        // 	// 	"POST",
+        // 	// 	function (fbResponse){
+        // 	// 		console.log(fbResponse);
+        // 	// 	}
+        // 	// 	);
+        // };
+    };
+    HomeComponent.prototype.login = function () {
+        FB.login(function (response) {
+            if (this.response.authResponse) {
+                FB.api('/me', "GET", function (response) {
+                    var _this = this;
+                    this._ngZone.run(function () {
+                        _this.name = _this.response.name;
+                        _this.isUser = true;
+                    });
+                });
+            }
+            else {
+                console.log('User cancelled login or did not fully authorize.');
+            }
+        });
+    };
     HomeComponent = __decorate([
         core_1.Component({
             selector: 'home',
-            templateUrl: 'app/home/home.component.html'
+            templateUrl: 'app/home/home.component.html',
+            providers: [facebook_service_1.FacebookService]
         }), 
-        __metadata('design:paramtypes', [core_1.ElementRef])
+        __metadata('design:paramtypes', [core_1.ElementRef, core_1.NgZone, facebook_service_1.FacebookService])
     ], HomeComponent);
     return HomeComponent;
 }());

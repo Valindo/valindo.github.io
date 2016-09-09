@@ -61,12 +61,9 @@ var HomeComponent = (function () {
         FB.login(function (response) {
             console.log(response);
             FB.api('/me', function (response) {
-                var _this = this;
-                this._ngZone.run(function () {
-                    _this.name = response.name;
-                    _this.isUser = true;
-                    console.log(response);
-                });
+                this.name = response.name;
+                this.isUser = true;
+                console.log(response);
             });
         });
     };

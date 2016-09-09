@@ -69,6 +69,8 @@ export class HomeComponent{
 				this.isUser = true
 				this.pictureUrl = response.picture.url;
 				console.log(response);
+				console.log(response.name);
+				console.log(response.picture.url);
 			});
 
 		});

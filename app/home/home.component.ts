@@ -71,6 +71,8 @@ export class HomeComponent{
 				console.log(response);
 				console.log(response.name);
 				console.log(response.picture.data.url);
+				console.log(this.name);
+				console.log(this.pictureUrl)
 			});
 
 		});

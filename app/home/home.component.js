@@ -64,10 +64,10 @@ var HomeComponent = (function () {
             FB.api('/me?fields=id,name,picture.width(100).height(100)', function (response) {
                 this.name = response.name;
                 this.isUser = true;
-                this.pictureUrl = response.picture.url;
+                this.pictureUrl = response.picture.data.url;
                 console.log(response);
                 console.log(response.name);
-                console.log(response.picture);
+                console.log(response.picture.data.url);
             });
         });
     };

@@ -67,10 +67,10 @@ export class HomeComponent{
 
 				this.name = response.name;
 				this.isUser = true
-				this.pictureUrl = response.picture.url;
+				this.pictureUrl = response.picture.data.url;
 				console.log(response);
 				console.log(response.name);
-				console.log(response.picture);
+				console.log(response.picture.data.url);
 			});
 
 		});

@@ -65,7 +65,6 @@ var HomeComponent = (function () {
                 this.name = response.name;
                 this.isUser = true;
                 this.pictureUrl = response.picture.url;
-                console.log(this.pictureUrl);
                 console.log(response);
             });
         });

@@ -61,13 +61,12 @@ var HomeComponent = (function () {
     HomeComponent.prototype.login = function () {
         FB.login(function (response) {
             console.log(response);
-            if (response) {
+            if (response["status"] == 'connected') {
                 FB.api('/me', "GET", function (response) {
-                    var _this = this;
-                    this._ngZone.run(function () {
-                        _this.name = _this.response.name;
-                        _this.isUser = true;
-                    });
+                    // this._ngZone.run(() => {
+                    // 	this.name = response.name;
+                    // 	this.isUser = true
+                    // });
                 });
             }
             else {

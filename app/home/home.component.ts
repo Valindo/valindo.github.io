@@ -62,12 +62,12 @@ export class HomeComponent{
 	login(){
 		FB.login(function(response) {
 				console.log(response);
-				if (response) {
+				if (response["status"] == 'connected') {
 					FB.api('/me',"GET", function(response) {
-						this._ngZone.run(() => {
-							this.name = this.response.name;
-							this.isUser = true
-						});
+						// this._ngZone.run(() => {
+						// 	this.name = response.name;
+						// 	this.isUser = true
+						// });
 					});
 				}else{
 					console.log('User cancelled login or did not fully authorize.');

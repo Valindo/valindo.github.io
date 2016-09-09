@@ -61,7 +61,8 @@ export class HomeComponent{
 
 	login(){
 		FB.login(function(response) {
-				if (this.response.authResponse) {
+				console.log(response);
+				if (response) {
 					FB.api('/me',"GET", function(response) {
 						this._ngZone.run(() => {
 							this.name = this.response.name;

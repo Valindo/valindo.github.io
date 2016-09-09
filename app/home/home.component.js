@@ -60,7 +60,8 @@ var HomeComponent = (function () {
     };
     HomeComponent.prototype.login = function () {
         FB.login(function (response) {
-            if (this.response.authResponse) {
+            console.log(response);
+            if (response) {
                 FB.api('/me', "GET", function (response) {
                     var _this = this;
                     this._ngZone.run(function () {

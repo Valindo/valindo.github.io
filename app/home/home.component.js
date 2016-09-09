@@ -76,6 +76,9 @@ var HomeComponent = (function () {
             });
         });
     };
+    HomeComponent.prototype.getImageUrl = function () {
+        return this._img.getImage();
+    };
     HomeComponent = __decorate([
         core_1.Component({
             selector: 'home',

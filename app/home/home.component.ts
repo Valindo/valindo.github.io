@@ -80,4 +80,8 @@ export class HomeComponent{
 
 		});
 	}
+
+	getImageUrl(){
+		return this._img.getImage();
+	}
 }

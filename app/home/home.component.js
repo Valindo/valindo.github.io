@@ -17,7 +17,6 @@ var HomeComponent = (function () {
         this._facebookService = _facebookService;
         this.name = "";
         this.isUser = false;
-        this.pictureUrl = "";
     }
     HomeComponent.prototype.ngAfterViewInit = function () {
         var s = document.createElement('script');

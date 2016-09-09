@@ -11,7 +11,7 @@ import {FacebookService} from './facebook.service'
 export class HomeComponent{
 	name=""
 	isUser = false
-	pictureUrl = "";
+	pictureUrl: String;
 	constructor(private elementRef: ElementRef, private _ngZone: NgZone, private _facebookService: FacebookService){}
 	ngAfterViewInit(){
 		var s = document.createElement('script');

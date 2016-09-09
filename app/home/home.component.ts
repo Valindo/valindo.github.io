@@ -66,6 +66,7 @@ export class HomeComponent{
 						this._ngZone.run(() => {
 							this.name = response.name;
 							this.isUser = true
+							console.log(response);
 						});
 					});
 				

@@ -65,6 +65,7 @@ var HomeComponent = (function () {
                 this._ngZone.run(function () {
                     _this.name = response.name;
                     _this.isUser = true;
+                    console.log(response);
                 });
             });
         });

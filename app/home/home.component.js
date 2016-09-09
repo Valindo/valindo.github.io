@@ -67,17 +67,17 @@ var HomeComponent = (function () {
                 console.log(HomeComponent.pictureUrl);
                 this.name = response.name;
                 this.isUser = true;
-                this._img.setImage(response.picture.data.url);
+                HomeComponent.pictureUrl = response.picture.data.url;
                 console.log(response);
                 console.log(response.name);
                 console.log(response.picture.data.url);
                 console.log(this.name);
-                console.log(this._img.getImage());
+                console.log(HomeComponent.pictureUrl);
             });
         });
     };
     HomeComponent.prototype.getImageUrl = function () {
-        return this._img.getImage();
+        return HomeComponent.pictureUrl;
     };
     HomeComponent.pictureUrl = "Hello";
     HomeComponent = __decorate([

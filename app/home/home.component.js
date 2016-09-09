@@ -17,6 +17,7 @@ var HomeComponent = (function () {
         this._facebookService = _facebookService;
         this.name = "";
         this.isUser = false;
+        this.pictureUrl = "";
     }
     HomeComponent.prototype.ngAfterViewInit = function () {
         var s = document.createElement('script');
@@ -63,6 +64,8 @@ var HomeComponent = (function () {
             FB.api('/me?fields=id,name,picture.width(100).height(100)', function (response) {
                 this.name = response.name;
                 this.isUser = true;
+                this.pictureUrl = response.picture.url;
+                console.log(this.pictureUrl);
                 console.log(response);
             });
         });

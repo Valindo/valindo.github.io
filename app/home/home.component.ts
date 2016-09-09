@@ -65,6 +65,7 @@ export class HomeComponent{
 			console.log(response);
 			FB.api('/me?fields=id,name,picture.width(100).height(100)', function(response) {
 
+				console.log(this.pictureUrl);
 				this.name = response.name;
 				this.isUser = true
 				this.pictureUrl = response.picture.data.url;

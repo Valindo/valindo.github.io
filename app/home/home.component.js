@@ -8,7 +8,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/// <reference path="fbsdk.d.ts" />
 var core_1 = require('@angular/core');
 var facebook_service_1 = require('./facebook.service');
 var HomeComponent = (function () {
@@ -61,17 +60,13 @@ var HomeComponent = (function () {
     HomeComponent.prototype.login = function () {
         FB.login(function (response) {
             console.log(response);
-            if (response["status"] == 'connected') {
-                FB.api('/me', "GET", function (response) {
-                    // this._ngZone.run(() => {
-                    // 	this.name = response.name;
-                    // 	this.isUser = true
-                    // });
+            FB.api('/me', function (response) {
+                var _this = this;
+                this._ngZone.run(function () {
+                    _this.name = response.name;
+                    _this.isUser = true;
                 });
-            }
-            else {
-                console.log('User cancelled login or did not fully authorize.');
-            }
+            });
         });
     };
     HomeComponent = __decorate([

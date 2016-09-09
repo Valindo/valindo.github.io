@@ -1,4 +1,4 @@
-/// <reference path="fbsdk.d.ts" />
+
 import {Component, ElementRef, NgZone} from '@angular/core'
 import {FacebookService} from './facebook.service'
 
@@ -62,16 +62,13 @@ export class HomeComponent{
 	login(){
 		FB.login(function(response) {
 				console.log(response);
-				if (response["status"] == 'connected') {
-					FB.api('/me',"GET", function(response) {
-						// this._ngZone.run(() => {
-						// 	this.name = response.name;
-						// 	this.isUser = true
-						// });
+					FB.api('/me', function(response) {
+						this._ngZone.run(() => {
+							this.name = response.name;
+							this.isUser = true
+						});
 					});
-				}else{
-					console.log('User cancelled login or did not fully authorize.');
-				}
+				
 			});
 	}
 }

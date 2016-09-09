@@ -10,11 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var facebook_service_1 = require('./facebook.service');
+var image_service_1 = require('./image.service');
 var HomeComponent = (function () {
-    function HomeComponent(elementRef, _ngZone, _facebookService) {
+    function HomeComponent(elementRef, _ngZone, _facebookService, _img) {
         this.elementRef = elementRef;
         this._ngZone = _ngZone;
         this._facebookService = _facebookService;
+        this._img = _img;
         this.name = "";
         this.isUser = false;
         this.pictureUrl = "Hello";
@@ -65,12 +67,12 @@ var HomeComponent = (function () {
                 console.log(this.pictureUrl);
                 this.name = response.name;
                 this.isUser = true;
-                this.pictureUrl = response.picture.data.url;
+                this._img.setImage(response.picture.data.url);
                 console.log(response);
                 console.log(response.name);
                 console.log(response.picture.data.url);
                 console.log(this.name);
-                console.log(this.pictureUrl);
+                console.log(this._img.getImage());
             });
         });
     };
@@ -78,9 +80,9 @@ var HomeComponent = (function () {
         core_1.Component({
             selector: 'home',
             templateUrl: 'app/home/home.component.html',
-            providers: [facebook_service_1.FacebookService]
+            providers: [facebook_service_1.FacebookService, image_service_1.ImageService]
         }), 
-        __metadata('design:paramtypes', [core_1.ElementRef, core_1.NgZone, facebook_service_1.FacebookService])
+        __metadata('design:paramtypes', [core_1.ElementRef, core_1.NgZone, facebook_service_1.FacebookService, image_service_1.ImageService])
     ], HomeComponent);
     return HomeComponent;
 }());

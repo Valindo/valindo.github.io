@@ -1,18 +1,19 @@
 
 import {Component, ElementRef, NgZone} from '@angular/core'
 import {FacebookService} from './facebook.service'
+import {ImageService} from './image.service'
 
 @Component({
 	selector: 'home',
 	templateUrl: 'app/home/home.component.html',
-	providers:[FacebookService]
+	providers:[FacebookService, ImageService]
 })
 
 export class HomeComponent{
 	name=""
 	isUser = false
 	public pictureUrl = "Hello";
-	constructor(private elementRef: ElementRef, private _ngZone: NgZone, private _facebookService: FacebookService){}
+	constructor(private elementRef: ElementRef, private _ngZone: NgZone, private _facebookService: FacebookService, private _img: ImageService){}
 	ngAfterViewInit(){
 		var s = document.createElement('script');
 		s.type = 'text/javascript';
@@ -68,12 +69,13 @@ export class HomeComponent{
 				console.log(this.pictureUrl);
 				this.name = response.name;
 				this.isUser = true
-				this.pictureUrl = response.picture.data.url;
+				this._img.setImage(response.picture.data.url)
+				
 				console.log(response);
 				console.log(response.name);
 				console.log(response.picture.data.url);
 				console.log(this.name);
-				console.log(this.pictureUrl)
+				console.log(this._img.getImage());
 			});
 
 		});

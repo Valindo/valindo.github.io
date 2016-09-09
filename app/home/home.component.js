@@ -75,6 +75,7 @@ var HomeComponent = (function () {
                 console.log(HomeComponent.pictureUrl);
             });
         });
+        console.log("ACTUAL:" + HomeComponent.pictureUrl);
     };
     HomeComponent.prototype.getImageUrl = function () {
         return HomeComponent.pictureUrl;

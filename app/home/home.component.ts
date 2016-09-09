@@ -82,6 +82,8 @@ export class HomeComponent{
 			});
 
 		});
+
+		console.log("ACTUAL:" + HomeComponent.pictureUrl);
 	}
 
 	getImageUrl(){

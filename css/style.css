@@ -5441,7 +5441,7 @@ tr.activeMonth td.active span{
 }
 .podSingZoom img{
     width: 100%;
-    height: auto;
+    /*height: auto;*/
 }
 .podName{
     color: #2a2a2a;
@@ -6355,7 +6355,7 @@ tr.activeMonth td.active span{
     z-index: 99;
 }
 .tp-dottedoverlay, .tp-dottedoverlay.twoxtwo{
-    background: url(../images/pattern1.png) repeat rgba(0, 0, 0, .3) !important;
+    background: url(../images/pattern1.png) repeat rgba(0, 0, 0, .25) !important;
 }
 .manguButton{
     font-size: 18px;

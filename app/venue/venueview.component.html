@@ -4,49 +4,18 @@
 				<div class="row wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
 					<div class="col-lg-5">
 						<div class="shopSingleSlider">
-							<div class="singThSld">
-								<div class="singPodImg">
-									<img alt="" src="images/shopSingl/thumb1.jpg">
-									<!-- <div class="podStat clearfix">
-										<span class="pull-left">New</span>
-										<span class="pull-right">-15%</span>
-									</div> -->
+							<div class="singThSld" *ngIf="venue">
+								<div class="singPodImg" *ngFor="let picture of venue.images" style="float: left; list-style: none; position: relative; width: 334px;">
+									<img alt="" [src]="'http://205.147.100.109'+picture.image">
 								</div>
-								<div class="singPodImg">
-									<img alt="" src="images/shopSingl/thumb2.jpg">
-									<!-- <div class="podStat clearfix">
-										<span class="pull-left">New</span>
-										<span class="pull-right">-15%</span>
-									</div> -->
+
 								</div>
-								<div class="singPodImg">
-									<img alt="" src="images/shopSingl/thumb3.jpg">
-									<!-- <div class="podStat clearfix">
-										<span class="pull-left">New</span>
-										<span class="pull-right">-15%</span>
-									</div> -->
-								</div>
-								<div class="singPodImg">
-									<img alt="" src="images/shopSingl/thumb4.jpg">
-									<!-- <div class="podStat clearfix">
-										<span class="pull-left">New</span>
-										<span class="pull-right">-15%</span>
-									</div> -->
-								</div>
-							</div>
-							<div class="podZoom">
-								<a data-slide-index="0" href="" class="podSingZoom">
-									<img alt="" src="images/shopSingl/zoom1.jpg">
-								</a>
-								<a data-slide-index="1" href="" class="podSingZoom">
-									<img alt="" src="images/shopSingl/zoom2.jpg">
-								</a>
-								<a data-slide-index="2" href="" class="podSingZoom">
-									<img alt="" src="images/shopSingl/zoom3.jpg">
-								</a>
-								<a data-slide-index="3" href="" class="podSingZoom">
-									<img alt="" src="images/shopSingl/zoom4.jpg">
-								</a>
+								<div class="podZoom" *ngIf="venue">
+									<span *ngFor="let picture of venue.images; let idx = index">
+										<a attr.data-slide-index="{{idx}}" class="podSingZoom" >
+											<img alt="" [src]="'http://205.147.100.109'+picture.image" width="85px" height="85px">
+										</a>
+									</span>
 							</div>
 						</div>
 					</div>
@@ -78,7 +47,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="row wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms"   *ngIf="venue">
+				<div class="row wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms" *ngIf="venue">
 					<div class="col-lg-12 productDesc">
 						<div role="tabpanel" class="mainTab">
 							<!-- Nav tabs -->
@@ -95,6 +64,20 @@
 								</div>
 								<div role="tabpanel" class="tab-pane fade" id="adiinfo">
 									<p>{{venue.amenities[0].title}}</p>
+									<table class="table">
+										<thead>
+											<tr>
+												<td><strong>Amenity</strong></td>
+												<td><strong>Description</strong></td>
+											</tr>
+										</thead>
+										<tbody>
+											<tr *ngFor="let amenity of venue.amenities">
+												<td>{{amenity.title}}</td>
+												<td>{{amenity.description ? amenity.description : 'N/A'}}</td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
 								<div role="tabpanel" class="tab-pane fade" id="review">
 									<p>
@@ -358,4 +341,4 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>/

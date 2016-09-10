@@ -18,16 +18,6 @@ var CatererViewComponent = (function () {
         this.route = route;
         this.catererService = catererService;
     }
-    CatererViewComponent.prototype.ngAfterViewInit = function () {
-        var s = document.createElement('script');
-        s.type = 'text/javascript';
-        s.src = 'js/theme.js';
-        this.elementRef.nativeElement.appendChild(s);
-        var t = document.createElement('script');
-        t.type = 'text/javascript';
-        t.src = 'js/wow.min.js';
-        this.elementRef.nativeElement.appendChild(t);
-    };
     CatererViewComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.sub = this.route.params.subscribe(function (params) {
@@ -38,6 +28,23 @@ var CatererViewComponent = (function () {
     };
     CatererViewComponent.prototype.ngOnDestroy = function () {
         this.sub.unsubscribe();
+    };
+    CatererViewComponent.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        setTimeout(function () {
+            var t = document.createElement('script');
+            t.type = 'text/javascript';
+            t.src = 'js/img-carousel-fix.js';
+            _this.elementRef.nativeElement.appendChild(t);
+        }, 100);
+    };
+    CatererViewComponent.prototype.typeColor = function (dish_type) {
+        if (dish_type == "Veg") {
+            return "text-success";
+        }
+        else {
+            return "text-danger";
+        }
     };
     CatererViewComponent = __decorate([
         core_1.Component({

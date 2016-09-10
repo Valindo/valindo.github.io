@@ -30,7 +30,7 @@ export class HomeComponent{
 	}
 
 	ngOnInit(){
-		this._facebookService.loadAndInitFBSDK();
+		// this._facebookService.loadAndInitFBSDK();
 		// console.log("I reach here")
 		// window.fbAsyncInit = function() {
 		// 	FB.init(
@@ -63,30 +63,30 @@ export class HomeComponent{
 		// };
 	}
 
-	login(){
-		FB.login(function(response) {
-			console.log(response);
-			console.log(HomeComponent.pictureUrl);
-			FB.api('/me?fields=id,name,picture.width(100).height(100)', function(response) {
+	// login(){
+	// 	FB.login(function(response) {
+	// 		console.log(response);
+	// 		console.log(HomeComponent.pictureUrl);
+	// 		FB.api('/me?fields=id,name,picture.width(100).height(100)', function(response) {
 
-				console.log(HomeComponent.pictureUrl);
-				this.name = response.name;
-				this.isUser = true;
-				HomeComponent.pictureUrl = response.picture.data.url;
+	// 			console.log(HomeComponent.pictureUrl);
+	// 			this.name = response.name;
+	// 			this.isUser = true;
+	// 			HomeComponent.pictureUrl = response.picture.data.url;
 				
-				console.log(response);
-				console.log(response.name);
-				console.log(response.picture.data.url);
-				console.log(this.name);
-				console.log(HomeComponent.pictureUrl);
-			});
+	// 			console.log(response);
+	// 			console.log(response.name);
+	// 			console.log(response.picture.data.url);
+	// 			console.log(this.name);
+	// 			console.log(HomeComponent.pictureUrl);
+	// 		});
 
-		});
+	// 	});
 
-		console.log("ACTUAL:" + HomeComponent.pictureUrl);
-	}
+	// 	console.log("ACTUAL:" + HomeComponent.pictureUrl);
+	// }
 
-	getImageUrl(){
-		return HomeComponent.pictureUrl;
-	}
+	// getImageUrl(){
+	// 	return HomeComponent.pictureUrl;
+	// }
 }

@@ -4,6 +4,7 @@ import {Subscription} from 'rxjs/Subscription'
 import {VenueService} from './venue.service'
 import {Venue} from './venue'
 
+
 @Component({
 	selector: 'venue-view',
 	templateUrl: 'app/venue/venueview.component.html'
@@ -14,20 +15,9 @@ export class VenueviewComponent implements OnInit, OnDestroy{
 	private sub: Subscription;
 
 	constructor(private elementRef: ElementRef,
-				private router: Router,
-				private venueService: VenueService,
-				private route: ActivatedRoute){}
-
-	ngAfterViewInit(){
-		var s = document.createElement('script');
-		s.type = 'text/javascript';
-		s.src = 'js/theme.js';
-		this.elementRef.nativeElement.appendChild(s);
-
-		var t = document.createElement('script');
-		t.type = 'text/javascript';
-		t.src = 'js/wow.min.js';
-		this.elementRef.nativeElement.appendChild(t);
+		private router: Router,
+		private venueService: VenueService,
+		private route: ActivatedRoute){
 	}
 
 	ngOnInit(){
@@ -35,12 +25,21 @@ export class VenueviewComponent implements OnInit, OnDestroy{
 			console.log("i reacher here");
 			let id = +params['id'];
 			this.venueService.getVenue(id)
-							.subscribe(
-								venue => this.venue = venue,
-								error => console.log(error),
-								() => console.log("venue is " + this.venue)
-							);
+			.subscribe(
+				venue => this.venue = venue,
+				error => console.log(error),
+				() => console.log("venue is " + this.venue)
+				);
 		});
+	}
+
+	ngAfterViewInit(){
+		setTimeout(()=>{
+			var t = document.createElement('script');
+			t.type = 'text/javascript';
+			t.src = 'js/img-carousel-fix.js';
+			this.elementRef.nativeElement.appendChild(t);	
+		},100)
 	}
 
 	ngOnDestroy(){

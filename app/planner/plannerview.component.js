@@ -19,14 +19,13 @@ var PlannerViewComponent = (function () {
         this.plannerService = plannerService;
     }
     PlannerViewComponent.prototype.ngAfterViewInit = function () {
-        var s = document.createElement('script');
-        s.type = 'text/javascript';
-        s.src = 'js/theme.js';
-        this.elementRef.nativeElement.appendChild(s);
-        var t = document.createElement('script');
-        t.type = 'text/javascript';
-        t.src = 'js/wow.min.js';
-        this.elementRef.nativeElement.appendChild(t);
+        var _this = this;
+        setTimeout(function () {
+            var t = document.createElement('script');
+            t.type = 'text/javascript';
+            t.src = 'js/img-carousel-fix.js';
+            _this.elementRef.nativeElement.appendChild(t);
+        }, 100);
     };
     PlannerViewComponent.prototype.ngOnInit = function () {
         var _this = this;

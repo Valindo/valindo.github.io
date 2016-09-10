@@ -14,34 +14,39 @@ export class CatererViewComponent implements OnInit, OnDestroy{
 	private sub: Subscription;
 
 	constructor(private elementRef: ElementRef,
-				private router: Router,
-				private route: ActivatedRoute,
-				private catererService: CatererService){}
-
-	ngAfterViewInit(){
-		var s = document.createElement('script');
-		s.type = 'text/javascript';
-		s.src = 'js/theme.js';
-		this.elementRef.nativeElement.appendChild(s);
-
-		var t = document.createElement('script');
-		t.type = 'text/javascript';
-		t.src = 'js/wow.min.js';
-		this.elementRef.nativeElement.appendChild(t);
-	}
+		private router: Router,
+		private route: ActivatedRoute,
+		private catererService: CatererService){}
 
 	ngOnInit(){
 		this.sub = this.route.params.subscribe(params =>{
 			let id = +params['id'];
 			this.catererService.getCaterer(id)
-							   .subscribe(
-							   		caterer => this.caterer = caterer,
-							   		error => console.log(error)
-							   	);
+			.subscribe(
+				caterer => this.caterer = caterer,
+				error => console.log(error)
+				);
 		});
 	}
 
 	ngOnDestroy(){
 		this.sub.unsubscribe();
+	}
+
+	ngAfterViewInit(){
+		setTimeout(()=>{
+			var t = document.createElement('script');
+			t.type = 'text/javascript';
+			t.src = 'js/img-carousel-fix.js';
+			this.elementRef.nativeElement.appendChild(t);	
+		},100)
+	}
+
+	typeColor(dish_type: string){
+		if(dish_type == "Veg"){
+			return "text-success";
+		} else {
+			return "text-danger";
+		}
 	}
 }

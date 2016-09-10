@@ -18,16 +18,6 @@ var VenueviewComponent = (function () {
         this.venueService = venueService;
         this.route = route;
     }
-    VenueviewComponent.prototype.ngAfterViewInit = function () {
-        var s = document.createElement('script');
-        s.type = 'text/javascript';
-        s.src = 'js/theme.js';
-        this.elementRef.nativeElement.appendChild(s);
-        var t = document.createElement('script');
-        t.type = 'text/javascript';
-        t.src = 'js/wow.min.js';
-        this.elementRef.nativeElement.appendChild(t);
-    };
     VenueviewComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.sub = this.route.params.subscribe(function (params) {
@@ -36,6 +26,15 @@ var VenueviewComponent = (function () {
             _this.venueService.getVenue(id)
                 .subscribe(function (venue) { return _this.venue = venue; }, function (error) { return console.log(error); }, function () { return console.log("venue is " + _this.venue); });
         });
+    };
+    VenueviewComponent.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        setTimeout(function () {
+            var t = document.createElement('script');
+            t.type = 'text/javascript';
+            t.src = 'js/img-carousel-fix.js';
+            _this.elementRef.nativeElement.appendChild(t);
+        }, 100);
     };
     VenueviewComponent.prototype.ngOnDestroy = function () {
         this.sub.unsubscribe();

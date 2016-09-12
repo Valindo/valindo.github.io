@@ -63,20 +63,20 @@ var HomeComponent = (function () {
         FB.login(function (response) {
             console.log(response);
             console.log(this);
+            FB.api('/me?fields=id,name,picture.width(100).height(100)', function (response) {
+                console.log("I reach in Get Data of User");
+                this.name = response.name;
+                this.isUser = true;
+                HomeComponent.pictureUrl = response.picture.data.url;
+                console.log(response);
+                console.log(response.name);
+                console.log(response.picture.data.url);
+                console.log(this.name);
+                console.log(HomeComponent.pictureUrl);
+            });
         });
     };
     HomeComponent.prototype.getDataofUser = function () {
-        FB.api('/me?fields=id,name,picture.width(100).height(100)', function (response) {
-            console.log("I reach in Get Data of User");
-            this.name = response.name;
-            this.isUser = true;
-            HomeComponent.pictureUrl = response.picture.data.url;
-            console.log(response);
-            console.log(response.name);
-            console.log(response.picture.data.url);
-            console.log(this.name);
-            console.log(HomeComponent.pictureUrl);
-        });
     };
     HomeComponent.prototype.printDataOfuser = function () {
         console.log("User Data Print");

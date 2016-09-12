@@ -68,11 +68,7 @@ export class HomeComponent{
 		FB.login(function(response){
 			console.log(response);
 			console.log(this);
-		});
-	}
-
-	getDataofUser(){
-		FB.api('/me?fields=id,name,picture.width(100).height(100)', function(response) {
+			FB.api('/me?fields=id,name,picture.width(100).height(100)', function(response) {
 				console.log("I reach in Get Data of User")
 				this.name = response.name;
 				this.isUser = true;
@@ -84,6 +80,12 @@ export class HomeComponent{
 				console.log(this.name);
 				console.log(HomeComponent.pictureUrl);
 			});
+		});
+
+	}
+
+	getDataofUser(){
+		
 	}
 
 	printDataOfuser(){

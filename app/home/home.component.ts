@@ -15,6 +15,7 @@ export class HomeComponent{
 	name=""
 	isUser = false
 	pictureUrl:string;
+	test:any;
 	constructor(private elementRef: ElementRef, private _ngZone: NgZone, private _facebookService: FacebookService, private _img: ImageService){}
 	
 	ngAfterViewInit(){
@@ -65,25 +66,29 @@ export class HomeComponent{
 	}
 
 	login(){
-		FB.login(function(response){
+		this.test = FB.login(function(response){
 			console.log(response);
 			console.log(HomeComponent);
 			FB.api('/me?fields=id,name,picture.width(100).height(100)', function(response) {
 				console.log("I reach in Get Data of User")
-				HomeComponent.name = response.name;
+				// HomeComponent.name = response.name;
 				this.isUser = true;
-				HomeComponent.pictureUrl = response.picture.data.url;
+				// HomeComponent.pictureUrl = response.picture.data.url;
 				
 				console.log(response);
 				console.log(response.name);
 				console.log(response.picture.data.url);
 				console.log(this.name);
 				console.log(HomeComponent.pictureUrl);
-				console.log(HomeComponent)
+				// console.log(HomeComponent)
 			});
 
 		});
 
+	}
+
+	printTest(){
+		console.log(this.test);
 	}
 
 	getDataofUser(){

@@ -31,7 +31,7 @@ var HomeComponent = (function () {
         this.elementRef.nativeElement.appendChild(t);
     };
     HomeComponent.prototype.ngOnInit = function () {
-        // this._facebookService.loadAndInitFBSDK();
+        this._facebookService.loadAndInitFBSDK();
         // console.log("I reach here")
         // window.fbAsyncInit = function() {
         // 	FB.init(
@@ -59,7 +59,27 @@ var HomeComponent = (function () {
         // 	// 	);
         // };
     };
-    HomeComponent.pictureUrl = "Hello";
+    HomeComponent.prototype.login = function () {
+        FB.login(function (response) { });
+    };
+    HomeComponent.prototype.getDataofUser = function () {
+        FB.api('/me?fields=id,name,picture.width(100).height(100)', function (response) {
+            console.log("I reach in Get Data of User");
+            this.name = response.name;
+            this.isUser = true;
+            HomeComponent.pictureUrl = response.picture.data.url;
+            console.log(response);
+            console.log(response.name);
+            console.log(response.picture.data.url);
+            console.log(this.name);
+            console.log(HomeComponent.pictureUrl);
+        });
+    };
+    HomeComponent.prototype.printDataOfuser = function () {
+        console.log("User Data Print");
+        console.log(this.name);
+        console.log("");
+    };
     HomeComponent = __decorate([
         core_1.Component({
             selector: 'home',

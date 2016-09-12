@@ -20,6 +20,14 @@ var PlannerViewComponent = (function () {
     }
     PlannerViewComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.src = 'js/theme.js';
+        this.elementRef.nativeElement.appendChild(s);
+        var t = document.createElement('script');
+        t.type = 'text/javascript';
+        t.src = 'js/wow.min.js';
+        this.elementRef.nativeElement.appendChild(t);
         setTimeout(function () {
             var t = document.createElement('script');
             t.type = 'text/javascript';

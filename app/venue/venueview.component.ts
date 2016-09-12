@@ -34,12 +34,22 @@ export class VenueviewComponent implements OnInit, OnDestroy{
 	}
 
 	ngAfterViewInit(){
+		var s = document.createElement('script');
+		s.type = 'text/javascript';
+		s.src = 'js/theme.js';
+		this.elementRef.nativeElement.appendChild(s);
+
+		var t = document.createElement('script');
+		t.type = 'text/javascript';
+		t.src = 'js/wow.min.js';
+		this.elementRef.nativeElement.appendChild(t);
+		
 		setTimeout(()=>{
 			var t = document.createElement('script');
 			t.type = 'text/javascript';
 			t.src = 'js/img-carousel-fix.js';
 			this.elementRef.nativeElement.appendChild(t);	
-		},100)
+		},1000)
 	}
 
 	ngOnDestroy(){

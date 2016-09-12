@@ -60,22 +60,24 @@ var HomeComponent = (function () {
         // };
     };
     HomeComponent.prototype.login = function () {
-        this.test = FB.login(function (response) {
-            console.log(response);
-            console.log(HomeComponent);
-            FB.api('/me?fields=id,name,picture.width(100).height(100)', function (response) {
-                console.log("I reach in Get Data of User");
-                // HomeComponent.name = response.name;
-                this.isUser = true;
-                // HomeComponent.pictureUrl = response.picture.data.url;
+        this.test = (function () {
+            FB.login(function (response) {
                 console.log(response);
-                console.log(response.name);
-                console.log(response.picture.data.url);
-                console.log(this.name);
-                console.log(HomeComponent.pictureUrl);
-                // console.log(HomeComponent)
+                console.log(HomeComponent);
+                FB.api('/me?fields=id,name,picture.width(100).height(100)', function (response) {
+                    console.log("I reach in Get Data of User");
+                    // HomeComponent.name = response.name;
+                    this.isUser = true;
+                    // HomeComponent.pictureUrl = response.picture.data.url;
+                    console.log(response);
+                    console.log(response.name);
+                    console.log(response.picture.data.url);
+                    console.log(this.name);
+                    console.log(HomeComponent.pictureUrl);
+                    // console.log(HomeComponent)
+                });
             });
-        });
+        })();
     };
     HomeComponent.prototype.printTest = function () {
         console.log(this.test);

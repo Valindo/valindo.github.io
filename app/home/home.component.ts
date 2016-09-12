@@ -66,7 +66,7 @@ export class HomeComponent{
 	}
 
 	login(){
-		this.test = FB.login(function(response){
+		this.test = (function(){FB.login(function(response){
 			console.log(response);
 			console.log(HomeComponent);
 			FB.api('/me?fields=id,name,picture.width(100).height(100)', function(response) {
@@ -83,7 +83,7 @@ export class HomeComponent{
 				// console.log(HomeComponent)
 			});
 
-		});
+		})})();
 
 	}
 

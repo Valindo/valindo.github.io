@@ -62,6 +62,7 @@ var HomeComponent = (function () {
     HomeComponent.prototype.login = function () {
         FB.login(function (response) {
             console.log(response);
+            console.log(this);
         });
     };
     HomeComponent.prototype.getDataofUser = function () {

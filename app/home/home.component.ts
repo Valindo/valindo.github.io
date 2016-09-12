@@ -70,7 +70,7 @@ export class HomeComponent{
 			console.log(HomeComponent);
 			FB.api('/me?fields=id,name,picture.width(100).height(100)', function(response) {
 				console.log("I reach in Get Data of User")
-				this.name = response.name;
+				HomeComponent.name = response.name;
 				this.isUser = true;
 				HomeComponent.pictureUrl = response.picture.data.url;
 				
@@ -79,7 +79,9 @@ export class HomeComponent{
 				console.log(response.picture.data.url);
 				console.log(this.name);
 				console.log(HomeComponent.pictureUrl);
+				console.log(HomeComponent)
 			});
+
 		});
 
 	}

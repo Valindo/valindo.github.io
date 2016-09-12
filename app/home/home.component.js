@@ -61,6 +61,7 @@ var HomeComponent = (function () {
     };
     HomeComponent.prototype.login = function () {
         FB.login(function (response) { });
+        console.log(response);
     };
     HomeComponent.prototype.getDataofUser = function () {
         FB.api('/me?fields=id,name,picture.width(100).height(100)', function (response) {

@@ -66,7 +66,7 @@ export class HomeComponent{
 
 	login(){
 		FB.login((response)=>{})
-
+		console.log(response)
 	}
 
 	getDataofUser(){

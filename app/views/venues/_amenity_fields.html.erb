@@ -1,0 +1,28 @@
+<div class="row nested-fields">
+	<div class="col-md-4">
+		<div class="form-group">
+			<label for="title">Title</label>
+			<%=f.text_field :title, class: 'form-control'%>
+		</div>
+	</div>
+
+	<div class="col-md-5">
+		<div class="form-group">
+			<label for="description">Description</label>
+			<%=f.text_field :description, class: 'form-control'%>
+		</div>
+	</div>
+
+	<div class="col-md-2">
+		<div class="form-group">
+			<label for="quantity">Quantity</label>
+			<%=f.number_field :quantity, class: 'form-control'%>
+		</div>
+	</div>
+
+	<div class="col-md-1">
+		<div class="form-actions">
+			<%= link_to_remove_association '<i class="icmn-bin"></i>'.html_safe, f, data: {confirm: "Are you sure you want to remove this?"} %>
+		</div>	
+	</div>
+</div>

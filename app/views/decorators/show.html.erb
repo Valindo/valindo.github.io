@@ -1,0 +1,98 @@
+<section class="page-content">
+	<div class="page-content-inner">
+		<div class="row">
+			<div class="col-lg-8">
+				<section class="panel">
+					<div class="panel-heading">
+						<div class="pull-right">
+							<%= link_to '<i class="icmn-pencil3"></i> <b>Edit</b>'.html_safe, edit_decorator_path , class: 'btn btn-squared btn-primary' %>	
+						</div>
+						<h1><%= @decorator.title %></h1>
+					</div>
+					<div class="panel-body">
+						<p><%= @decorator.description %></p>
+					</div>
+				</section>
+			</div>
+
+			<div class="col-lg-4">
+				<section class="panel">
+					<div class="panel-heading">
+						<h3>Address</h3>
+					</div>
+					<div class="panel-body">
+						<p><%= @decorator.address.location %></p>
+					</div>
+				</section>	
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-12">
+				<section class="panel">
+					<div class="panel-heading">
+						<h1>Contact Information</h1>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-4">
+								<h5>Mobile</h5>
+							</div>
+							<div class="col-lg-4">
+							<%= @decorator.contact.mobile %>
+							</div>
+							<div class="col-lg-4">
+								<%= @decorator.contact.mobile_alt %>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-lg-4">
+								<h5>Landline</h5>
+							</div>
+							<div class="col-lg-4">
+								<%= @decorator.contact.landline %>
+							</div>
+							<div class="col-lg-4">
+								<%= @decorator.contact.landline_alt %>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-12">
+				<section class="panel">
+					<div class="panel-heading">
+						<h1>Images</h1>
+					</div>
+					<div class="panel-body">
+						<div class="app-gallery clearfix">
+							<% @decorator.images.each do |image| %>
+							<div class="app-gallery-item" style="background-image:url(<%= image.picture.url %>)">
+								<div class="app-gallery-item-hover">
+									<p style="color: white !important"><%= image.caption %></p>
+								</div>
+							</div>
+							<% end %>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<section class="panel">
+					<div class="panel-heading">
+						<h1>Terms &amp; Conditions</h1>
+					</div>
+					<div class="panel-body">
+						<%= @decorator.terms %>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</section>

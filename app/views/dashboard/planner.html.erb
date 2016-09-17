@@ -1,0 +1,41 @@
+<div class="page-content-inner">
+	<section class="panel">
+		<div class="panel-heading">
+			<h3>Planner Listing</h3>
+		</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-lg-12">
+					<table class="table">
+						<thead>
+							<tr>
+								<th><strong>#</strong></th>
+								<th><strong>Title</strong></th>
+								<th><strong>Description</strong></th>
+								<th><strong>Address</strong></th>
+							</tr>
+						</thead>
+						<tbody>
+							<% @planners.each_with_index do |planner, index| %>
+							<tr>
+								<td>
+									<%= index + 1 %>
+								</td>
+								<td>
+									<%= link_to "#{planner.title}", planner_path(planner)%>
+								</td>
+								<td>
+									<%= truncate(planner.description) %>
+								</td>
+								<td>
+									<%= planner.address.location %>
+								</td>
+							</tr>
+							<% end %>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

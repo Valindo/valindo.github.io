@@ -1,0 +1,33 @@
+
+	<div class="page-content-inner">
+		<section class="panel">
+			<div class="panel-heading">
+				<h3>Add Caterer</h3>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-lg-12">
+						<%= render 'form' %>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<script type="text/javascript">
+		$(function(){
+			$('textarea').each(function(){
+				autosize(this);
+			});
+			$.validate({
+				submit: {
+					settings:{
+						form: '.new_caterer',
+						inputContainer: '.form-group',
+						errorListClass: 'form-control-error',
+						errorClass: 'has-danger'
+					}
+				}
+			});
+		})
+	</script>

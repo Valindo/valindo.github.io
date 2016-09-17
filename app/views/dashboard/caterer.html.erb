@@ -1,0 +1,42 @@
+<div class="page-content-inner">
+	<section class="panel">
+		<div class="panel-heading">
+			<h3>Caterer Listing</h3>
+		</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-lg-12">
+					<table class="table">
+						<thead>
+							<tr>
+								<th><strong>#</strong></th>
+								<th><strong>Title</strong></th>
+								<th><strong>Description</strong></th>
+								<th><strong>Address</strong></th>
+							</tr>
+						</thead>
+						<tbody>
+							<% @caterers.each_with_index do |caterer, index| %>
+							<tr>
+								<td>
+									<%= index + 1 %>
+								</td>
+								<td>
+									<%= link_to caterer.title, caterer_path(caterer) %>
+								</td>
+								<td>
+									<%= truncate(caterer.description) %>
+								</td>
+								<td>
+									<%= caterer.address.location %>
+								</td>
+							</tr>
+							<% end %>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+

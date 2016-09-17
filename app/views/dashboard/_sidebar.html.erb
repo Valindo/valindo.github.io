@@ -1,0 +1,68 @@
+<nav class="left-menu" left-menu>
+    <div class="logo-container">
+
+        <%= link_to authenticated_root_path, class: 'logo' do %>
+        <img src="http://i.imgur.com/Clvxasr.png" alt="Do Tayaari logo" />
+        <% end %>
+
+    </div>
+    <div class="left-menu-inner scroll-pane">
+        <ul class="left-menu-list left-menu-list-root list-unstyled">
+            <% if current_user.admin? %>
+            <li>
+                <%= link_to raw('<i class="left-menu-link-icon icmn-home7"><!-- --></i> All Venues'), venues_path , class: 'left-menu-link'%>
+            </li>
+            <li>
+                <%= link_to raw('<i class="left-menu-link-icon icmn-plate"><!-- --></i> All Caterers'), caterers_path , class: 'left-menu-link'%>
+            </li>
+
+            <li>
+                <%= link_to raw('<i class="left-menu-link-icon icmn-vcard"><!-- --></i> All Planners'), planners_path , class: 'left-menu-link'%>
+            </li>
+            <li>
+                <%= link_to raw('<i class="left-menu-link-icon icmn-balloon"><!-- --></i> All Decorators'), decorators_path, class: 'left-menu-link' %>
+            </li>
+            <li>
+                <%= link_to raw('<i class="left-menu-link-icon icmn-user"><!-- --></i> All Users'), all_users_path, class: 'left-menu-link' %>
+            </li>
+            <% else %>
+            <li>
+                <%= link_to raw('<i class="left-menu-link-icon icmn-home7"><!-- --></i> Venues'), dashboard_venues_path , class: 'left-menu-link'%>
+            </li>
+            <li>
+                <%= link_to raw('<i class="left-menu-link-icon icmn-plate"><!-- --></i> Caterers'), dashboard_caterers_path , class: 'left-menu-link'%>
+            </li>
+
+            <li>
+                <%= link_to raw('<i class="left-menu-link-icon icmn-vcard"><!-- --></i> Planners'), dashboard_planners_path , class: 'left-menu-link'%>
+            </li>
+            <li>
+                <%= link_to raw('<i class="left-menu-link-icon icmn-balloon"><!-- --></i> Decorators'), dashboard_decorators_path, class: 'left-menu-link' %>
+            </li>
+            <% end %>
+            
+            <li class="left-menu-list-separator"><!-- --></li>
+            <li class="left-menu-list-submenu">
+                <a class="left-menu-link" href="javascript: void(0);" name="slideClick">
+                    <i class="left-menu-link-icon icmn-plus-circle2"><!-- --></i>
+                    Add new
+                </a>
+                <ul class="left-menu-list list-unstyled">
+                    <li>
+                        <%= link_to 'Venue', new_venue_path , class: 'left-menu-link'%>
+                    </li>
+                    <li>
+                        <%= link_to 'Caterer', new_caterer_path , class: 'left-menu-link'%>
+                    </li>
+                    <li>
+                        <%= link_to 'Planner', new_planner_path , class: 'left-menu-link'%>
+                    </li>
+                    <li>
+                        <%= link_to 'Decorator', new_decorator_path , class: 'left-menu-link'%>
+                    </li>
+                </ul>
+            </li>
+            <li class="left-menu-list-separator"><!-- --></li>
+        </ul>
+    </div>
+</nav>

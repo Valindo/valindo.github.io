@@ -1,0 +1,30 @@
+<a class="partibutton1" (click)="smModal.show()">
+	<i class="fa fa-phone"></i> Contact
+</a>
+
+<div bsModal #smModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm text-center">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" aria-label="Close" (click)="smModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">{{object.title}} Contact</h4>
+      </div>
+      <div class="modal-body">
+        <div class="well" *ngIf="object.mobile">
+        	<h5><i class="fa fa-mobile" aria-hidden="true"></i> - <a href="tel:{{object.mobile}}">{{object.mobile}}</a></h5>
+        </div>
+        <div class="well" *ngIf="object.mobile_alt">
+        	<h5><i class="fa fa-mobile" aria-hidden="true"></i> - <a href="tel:{{object.mobile_alt}}">{{object.mobile_alt}}</a></h5>
+        </div>
+        <div class="well" *ngIf="object.landline">
+        	<h5><i class="fa fa-phone" aria-hidden="true"></i> - <a href="tel:{{object.landline}}">{{object.landline}}</a></h5>
+        </div>
+        <div class="well" *ngIf="object.landline_alt">
+        	<h5><i class="fa fa-phone" aria-hidden="true"></i> - <a href="tel:{{object.landline_alt}}">{{object.landline_alt}}</a></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,313 @@
+<div class="container">
+	<div class="row">
+		<div class="col-lg-9 col-sm-8 col-xs-12 shopSidebar">
+			<div class="row wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms" *ngIf="venue">
+				<div class="col-lg-12">
+					<h3 class="podName">{{venue.title}}</h3>
+					<hr/>
+					
+					<carousel [interval]="myInterval" [noWrap]="noWrapSlides">
+						<slide *ngFor="let picture of venue.images; let index=index"
+						[active]="picture.active" >
+						<img [src]="'http://205.147.100.109'+picture.image" style="margin:auto;">
+
+						<div class="carousel-caption">
+							<h4>{{picture.caption}}</h4>
+						</div>
+					</slide>
+				</carousel>
+				<hr>
+				<div class="podDesc">
+					<div class="row text-center">
+						<div class="col-md-6">
+							<p>{{venue.address}}</p>
+						</div>
+						<div class="col-md-6">
+							<contact-button class='center-block' [object_type]="1" [object]="venue"></contact-button>
+						</div>
+					</div>
+				</div>
+				<br>
+			</div>
+		</div>
+		<div class="row wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms" *ngIf="venue">
+			<div class="col-lg-12 productDesc">
+				<div role="tabpanel" class="mainTab">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active"><a href="#dtails" aria-controls="dtails" role="tab" data-toggle="tab">Description</a></li>
+						<li role="presentation"><a href="#adiinfo" aria-controls="adiinfo" role="tab" data-toggle="tab">Amenities</a></li>
+						<li role="presentation"><a href="#review" aria-controls="review" role="tab" data-toggle="tab">Reviews</a></li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane fade in active" id="dtails">
+							<p>{{venue.description}}</p>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="adiinfo">
+							<p>{{venue.amenities[0].title}}</p>
+							<table class="table">
+								<thead>
+									<tr>
+										<td><strong>Amenity</strong></td>
+										<td><strong>Description</strong></td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr *ngFor="let amenity of venue.amenities">
+										<td>{{amenity.title}}</td>
+										<td>{{amenity.description ? amenity.description : 'N/A'}}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="review">
+							<review [object_type]="1" [object]="venue"></review>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="h3contTttl">
+					<h2>Venues Nearby</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+			<div id="fashionCarousel" class="owl-carousel btnDesign custoMr">
+				<div class="col-lg-4 col-sm-4 col-xs-12 text-center">
+					<div class="podContainer">
+						<div class="podImg">
+							<a href="shopSingle.html"><img src="images/shop/product/7.jpg" alt=""></a>
+							<div class="podStat clearfix">
+										<!-- <span class="pull-left">New</span>
+										<span class="pull-right">-15%</span> -->
+									</div>
+								</div>
+								<div class="podMeta">
+									<h5><a href="shopSingle.html">Cross shoulder bag</a></h5>
+									<p>Ut enim ad minim veniam, quis</p>
+									<!-- <ul>
+										<li><a href="#">56$</a></li>
+										<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+										<li><a href="#"><i class="fa fa-heart"></i></a></li>
+									</ul> -->
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-4 col-xs-12 text-center">
+							<div class="podContainer">
+								<div class="podImg">
+									<a href="shopSingle.html"><img src="images/shop/product/2.jpg" alt=""></a>
+									<div class="podStat clearfix">
+										<!-- <span class="pull-left">New</span>
+										<span class="pull-right">-15%</span> -->
+									</div>
+								</div>
+								<div class="podMeta">
+									<h5><a href="shopSingle.html">Cross shoulder bag</a></h5>
+									<p>Ut enim ad minim veniam, quis</p>
+									<!-- <ul>
+										<li><a href="#">56$</a></li>
+										<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+										<li><a href="#"><i class="fa fa-heart"></i></a></li>
+									</ul> -->
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-4 col-xs-12 text-center">
+							<div class="podContainer">
+								<div class="podImg">
+									<a href="shopSingle.html"><img src="images/shop/product/8.jpg" alt=""></a>
+									<div class="podStat clearfix">
+										<!-- <span class="pull-left">New</span>
+										<span class="pull-right">-15%</span> -->
+									</div>
+								</div>
+								<div class="podMeta">
+									<h5><a href="shopSingle.html">Cross shoulder bag</a></h5>
+									<p>Ut enim ad minim veniam, quis</p>
+								<!-- 	<ul>
+										<li><a href="#">56$</a></li>
+										<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+										<li><a href="#"><i class="fa fa-heart"></i></a></li>
+									</ul> -->
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-4 col-xs-12 text-center">
+							<div class="podContainer">
+								<div class="podImg">
+									<a href="shopSingle.html"><img src="images/shop/product/7.jpg" alt=""></a>
+									<div class="podStat clearfix">
+										<!-- <span class="pull-left">New</span>
+										<span class="pull-right">-15%</span> -->
+									</div>
+								</div>
+								<div class="podMeta">
+									<h5><a href="shopSingle.html">Cross shoulder bag</a></h5>
+									<p>Ut enim ad minim veniam, quis</p>
+									<!-- <ul>
+										<li><a href="#">56$</a></li>
+										<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+										<li><a href="#"><i class="fa fa-heart"></i></a></li>
+									</ul> -->
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-4 col-xs-12 text-center">
+							<div class="podContainer">
+								<div class="podImg">
+									<a href="shopSingle.html"><img src="images/shop/product/2.jpg" alt=""></a>
+									<div class="podStat clearfix">
+										<!-- <span class="pull-left">New</span>
+										<span class="pull-right">-15%</span> -->
+									</div>
+								</div>
+								<div class="podMeta">
+									<h5><a href="shopSingle.html">Cross shoulder bag</a></h5>
+									<p>Ut enim ad minim veniam, quis</p>
+									<!-- <ul>
+										<li><a href="#">56$</a></li>
+										<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+										<li><a href="#"><i class="fa fa-heart"></i></a></li>
+									</ul> -->
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-4 col-xs-12 text-center">
+							<div class="podContainer">
+								<div class="podImg">
+									<a href="shopSingle.html"><img src="images/shop/product/8.jpg" alt=""></a>
+									<div class="podStat clearfix">
+										<!-- <span class="pull-left">New</span>
+										<span class="pull-right">-15%</span> -->
+									</div>
+								</div>
+								<div class="podMeta">
+									<h5><a href="shopSingle.html">Cross shoulder bag</a></h5>
+									<p>Ut enim ad minim veniam, quis</p>
+									<!-- <ul>
+										<li><a href="#">56$</a></li>
+										<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+										<li><a href="#"><i class="fa fa-heart"></i></a></li>
+									</ul> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-4 col-xs-12">
+				<div class="sidebar">
+					<aside class="widget noBorderTop wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+						<h3 class="widgetTitle">Additional Services</h3>
+						<ul>
+							<li><a href="#">Decorators</a></li>
+						</ul>
+					</aside>
+					<!-- <aside class="widget noBorderBottom wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+						<h3 class="widgetTitle">Related</h3>
+						<a href="#" id="ui-carousel-next"><i class="fa fa-angle-left"></i></a>
+						<a href="#" id="ui-carousel-prev"><i class="fa fa-angle-right"></i></a>
+						<div id="ProVerCarousel">
+							<div id="carousel">
+								<div class="relPdt">
+									<div class="relPImg pull-left">
+										<a href="shopSingle.html"><img src="images/shopSingl/rel1.jpg" alt=""></a>
+									</div>
+									<div class="pull-left relPBtn">
+										<h5><a href="#">Nemo enim ipsam</a></h5>
+										<a href="#">56$</a>
+										<a href="#"><i class="fa fa-shopping-cart"></i></a>
+										<a href="#"><i class="fa fa-heart"></i></a>
+									</div>
+								</div>
+								<div class="relPdt">
+									<div class="relPImg pull-left">
+										<a href="shopSingle.html"><img src="images/shopSingl/rel2.jpg" alt=""></a>
+									</div>
+									<div class="pull-left relPBtn">
+										<h5><a href="#">Nemo enim ipsam </a></h5>
+										<a href="#">56$</a>
+										<a href="#"><i class="fa fa-shopping-cart"></i></a>
+										<a href="#"><i class="fa fa-heart"></i></a>
+									</div>
+								</div>
+								<div class="relPdt">
+									<div class="relPImg pull-left">
+										<a href="shopSingle.html"><img src="images/shopSingl/rel3.jpg" alt=""></a>
+									</div>
+									<div class="pull-left relPBtn">
+										<h5><a href="#">Nemo enim ipsam</a></h5>
+										<a href="#">56$</a>
+										<a href="#"><i class="fa fa-shopping-cart"></i></a>
+										<a href="#"><i class="fa fa-heart"></i></a>
+									</div>
+								</div>
+								<div class="relPdt">
+									<div class="relPImg pull-left">
+										<a href="shopSingle.html"><img src="images/shopSingl/rel4.jpg" alt=""></a>
+									</div>
+									<div class="pull-left relPBtn">
+										<h5><a href="#">Nemo enim ipsam</a></h5>
+										<a href="#">56$</a>
+										<a href="#"><i class="fa fa-shopping-cart"></i></a>
+										<a href="#"><i class="fa fa-heart"></i></a>
+									</div>
+								</div>
+								<div class="relPdt">
+									<div class="relPImg pull-left">
+										<a href="shopSingle.html"><img src="images/shopSingl/rel5.jpg" alt=""></a>
+									</div>
+									<div class="pull-left relPBtn">
+										<h5><a href="#">Nemo enim ipsam</a></h5>
+										<a href="#">56$</a>
+										<a href="#"><i class="fa fa-shopping-cart"></i></a>
+										<a href="#"><i class="fa fa-heart"></i></a>
+									</div>
+								</div>
+								<div class="relPdt">
+									<div class="relPImg pull-left">
+										<a href="shopSingle.html"><img src="images/shopSingl/rel3.jpg" alt=""></a>
+									</div>
+									<div class="pull-left relPBtn">
+										<h5><a href="#">Nemo enim ipsam</a></h5>
+										<a href="#">56$</a>
+										<a href="#"><i class="fa fa-shopping-cart"></i></a>
+										<a href="#"><i class="fa fa-heart"></i></a>
+									</div>
+								</div>
+								<div class="relPdt">
+									<div class="relPImg pull-left">
+										<a href="shopSingle.html"><img src="images/shopSingl/rel4.jpg" alt=""></a>
+									</div>
+									<div class="pull-left relPBtn">
+										<h5><a href="#">Nemo enim ipsam</a></h5>
+										<a href="#">56$</a>
+										<a href="#"><i class="fa fa-shopping-cart"></i></a>
+										<a href="#"><i class="fa fa-heart"></i></a>
+									</div>
+								</div>
+								<div class="relPdt">
+									<div class="relPImg pull-left">
+										<a href="shopSingle.html"><img src="images/shopSingl/rel5.jpg" alt=""></a>
+									</div>
+									<div class="pull-left relPBtn">
+										<h5><a href="#">Nemo enim ipsam</a></h5>
+										<a href="#">56$</a>
+										<a href="#"><i class="fa fa-shopping-cart"></i></a>
+										<a href="#"><i class="fa fa-heart"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</aside> -->
+				</div>
+			</div>
+		</div>
+	</div>

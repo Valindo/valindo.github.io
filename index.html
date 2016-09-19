@@ -1,122 +1,67 @@
+<!doctype html>
 <html>
 <head>
-  <base href="/">
-  <title>Do Tayaari</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>Do Tayaari</title>
+	<base href="/">
 
+	<!-- Including all CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-select.css"/>
+	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+	<link rel="stylesheet" type="text/css" href="css/fontello_1.css"/>
+	<link rel="stylesheet" type="text/css" href="css/flaticon.css"/>
+	<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bxslider.css"/>
+	<link rel="stylesheet" type="text/css" href="css/colorbox.css"/>
+	<link rel="stylesheet" type="text/css" href="css/datepicker.css"/>
+	<link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.css"/>
+	<link rel="stylesheet" type="text/css" href="css/mediaelementplayer.css"/>
+	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css"/>
+	<link rel="stylesheet" type="text/css" href="css/mejs-skins.css"/>
+	<link rel="stylesheet" type="text/css" href="css/settings.css"/>
+	<link rel="stylesheet" type="text/css" href="css/preset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+	<link id="colorPreset" rel="stylesheet" type="text/css" href="css/colorpreset/color11.css"/>
 
-  <!-- Including all CSS -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-  <link rel="stylesheet" type="text/css" href="css/bootstrap-select.css"/>
-  <link rel="stylesheet" type="text/css" href="css/animate.css"/>
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
-  <link rel="stylesheet" type="text/css" href="css/fontello_1.css"/>
-  <link rel="stylesheet" type="text/css" href="css/flaticon.css"/>
-  <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css"/>
-  <link rel="stylesheet" type="text/css" href="css/bxslider.css"/>
-  <link rel="stylesheet" type="text/css" href="css/colorbox.css"/>
-  <link rel="stylesheet" type="text/css" href="css/datepicker.css"/>
-  <link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.css"/>
-  <link rel="stylesheet" type="text/css" href="css/mediaelementplayer.css"/>
-  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css"/>
-  <link rel="stylesheet" type="text/css" href="css/mejs-skins.css"/>
-  <link rel="stylesheet" type="text/css" href="css/settings.css"/>
-  <link rel="stylesheet" type="text/css" href="css/preset.css"/>
-  <link rel="stylesheet" type="text/css" href="css/style.css"/>
-  <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
-  <link id="colorPreset" rel="stylesheet" type="text/css" href="css/colorpreset/color11.css"/>
+	<link rel="stylesheet" type="text/css" href="css/customCss.css"/>
 
-  <link rel="stylesheet" type="text/css" href="css/customCss.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="favicon.png">
 
-  <!-- 1. Load libraries -->
-  <!-- Polyfill(s) for older browsers -->
-  <script src="node_modules/core-js/client/shim.min.js"></script>
-  <script src="node_modules/zone.js/dist/zone.js"></script>
-  <script src="node_modules/reflect-metadata/Reflect.js"></script>
-  <script src="node_modules/systemjs/dist/system.src.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> -->
+	<!-- <script type="text/javascript" src="js/gmaps.js"></script> -->
+	<script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script type="text/javascript" src="js/datepicker.js"></script>
+	<script type="text/javascript" src="js/ion.rangeSlider.min.js"></script>
+	<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="js/jquery.colorbox.js"></script>
+	<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.rcarousel.js"></script>
+	<script type="text/javascript" src="js/jquerypp.custom.js"></script>
+	<script type="text/javascript" src="js/lightslider.min.js"></script>
+	<script type="text/javascript" src="js/mediaelement-and-player.min.js"></script>
+	<script type="text/javascript" src="js/mixer.js"></script>
+	<script type="text/javascript" src="js/modernizr.custom.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/parallax.js"></script>
+	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+	<script type="text/javascript" src="js/shareSwitch.js"></script>
+	<script type="text/javascript" src="js/wow.min.js"></script>
+	<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+	<script type="text/javascript" src="js/jquery.themepunch.tools.min.js"></script>
+	<script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="js/theme.js"></script>
+	<script src="http://cdn.auth0.com/js/lock/10.0.0/lock.min.js"></script>
+	<script src="//cdn.auth0.com/w2/auth0-7.0.3.min.js"></script>
 
-  <!-- 2. Configure SystemJS -->
-  <script src="systemjs.config.js"></script>
-
-  <script src="node_modules/ng2-bootstrap/bundles/ng2-bootstrap.min.js"></script>
-  <script>
-    System.import('app').catch(function(err){ console.error(err); });
-  </script>
-
-
-  <!-- Including all JS -->
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> -->
-  <!-- <script type="text/javascript" src="js/gmaps.js"></script> -->
-  <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
-  <script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
-  <script type="text/javascript" src="js/datepicker.js"></script>
-  <script type="text/javascript" src="js/ion.rangeSlider.min.js"></script>
-  <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
-  <script type="text/javascript" src="js/jquery.colorbox.js"></script>
-  <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-  <script type="text/javascript" src="js/jquery.ui.rcarousel.js"></script>
-  <script type="text/javascript" src="js/jquerypp.custom.js"></script>
-  <script type="text/javascript" src="js/lightslider.min.js"></script>
-  <script type="text/javascript" src="js/mediaelement-and-player.min.js"></script>
-  <script type="text/javascript" src="js/mixer.js"></script>
-  <script type="text/javascript" src="js/modernizr.custom.js"></script>
-  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-  <script type="text/javascript" src="js/parallax.js"></script>
-  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-  <script type="text/javascript" src="js/shareSwitch.js"></script>
-  <script type="text/javascript" src="js/wow.min.js"></script>
-  <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
-  <script type="text/javascript" src="js/jquery.themepunch.tools.min.js"></script>
-  <script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
-  <script type="text/javascript" src="js/theme.js"></script>
-  <script src="http://cdn.auth0.com/js/lock/10.0.0/lock.min.js"></script>
-  <script src="//cdn.auth0.com/w2/auth0-7.0.3.min.js"></script>
-
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-83865986-2', 'auto');
-    // ga('send', 'pageview');
-
-  </script>
 </head>
-<!-- 3. Display the application -->
 <body>
-  <my-app>
-    <div class="preLoader">
-      <div class="loaderContent">
-        <div class="preLoaderInner">
-          <div id="circularG">
-            <div id="circularG_1" class="circularG">
-            </div>
-            <div id="circularG_2" class="circularG">
-            </div>
-            <div id="circularG_3" class="circularG">
-            </div>
-            <div id="circularG_4" class="circularG">
-            </div>
-            <div id="circularG_5" class="circularG">
-            </div>
-            <div id="circularG_6" class="circularG">
-            </div>
-            <div id="circularG_7" class="circularG">
-            </div>
-            <div id="circularG_8" class="circularG">
-            </div>
-          </div>
-        </div>
-        <h3>Loading</h3>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-  </my-app>
-  
-</body>
+	<app-root>Loading...</app-root>
+<script type="text/javascript" src="inline.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
 </html>
-

@@ -18,9 +18,6 @@
 	width: 100%;
 }
 
-.lightSliderCap{
-	font-size: 50px;
-}
 
 .myrevslider.lightVersion{
 	overflow: scoll !important;
@@ -115,4 +112,15 @@
 
 .center-block{
     margin-left: 30%;
+}
+
+.router-link{
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .lightSliderCap{
+        font-size: 8em;
+    }
+
 }

@@ -11,6 +11,10 @@ body{
 	font-family: Ananda;
 }
 
+.fashImg img{
+    height: 230px !important;
+}
+
 
 .logoImg{
 	background: none !important;
@@ -120,6 +124,10 @@ body{
 
 .router-link{
     cursor: pointer;
+}
+
+.fashHover{
+    padding: 25px 20% 0px !important;
 }
 
 @media (max-width: 768px) {

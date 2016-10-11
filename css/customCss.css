@@ -130,9 +130,16 @@ body{
     padding: 25px 20% 0px !important;
 }
 
+.header{
+    z-index: 1 !important;
+}
+
 @media (max-width: 768px) {
     .lightSliderCap{
         font-size: 8em;
     }
 
+    .no-crop-mobile{
+        width: 100% !important
+    }
 }

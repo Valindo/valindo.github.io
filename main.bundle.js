@@ -50346,6 +50346,9 @@ var AppComponent = (function () {
             document.body.scrollTop = 0;
         });
     };
+    AppComponent.prototype.ngAfterViewInit = function () {
+        console.log("Hey");
+    };
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',

@@ -50939,7 +50939,7 @@ var HomeComponent = (function () {
             u.type = 'text/javascript';
             u.src = 'js/animatedModal.js';
             _this.elementRef.nativeElement.appendChild(u);
-        }, 1000);
+        }, 2000);
     };
     HomeComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({

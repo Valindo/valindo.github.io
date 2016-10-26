@@ -7,14 +7,52 @@ body{
     src: url("/fonts/AnandaNeptouch.ttf");
 }
 
+pre{
+    white-space: pre-line !important;
+    word-break: normal;
+    background-color: white;
+    border: #d94462 1px solid;
+}
+
+
+
+.sectionTitle h1{
+    line-height: normal;
+    color: black !important;
+}
+
+.sectionTitle h1 span:before, .sectionTitle h1 span:after{
+    border-top: 1px solid #d94462 !important;
+}
+
 .dotayaari{
 	font-family: Ananda;
+}
+
+.modal{
+    z-index: 10050 !important;
 }
 
 .fashImg{
     height: 230px !important;
 }
 
+.owl-theme .owl-controls .owl-buttons div{
+    background: none !important;
+}
+.owl-buttons .owl-prev{
+    left: auto;
+    position: absolute;
+    right: 35px;
+    top: -95px;
+}
+
+.owl-buttons .owl-next{
+    left: auto;
+    position: absolute;
+    right: 14px;
+    top:-95px;
+}
 
 .logoImg{
 	background: none !important;
@@ -113,6 +151,7 @@ body{
 
 .partibutton1, .partibutton2{
     background: #d94462 !important;
+    color: white !important;
 }
 .partibutton1 i, .partibutton2 i{
     background: #d94462 !important;
@@ -130,6 +169,11 @@ body{
     padding: 25px 20% 0px !important;
 }
 
+/*.no-crop-mobile{
+    
+    height: 500px !important;
+}*/
+
 .header{
     z-index: 1 !important;
 }
@@ -140,6 +184,24 @@ body{
     }
 
     .no-crop-mobile{
+        width: 100% !important;
+        height:auto !important;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+     .no-crop-mobile{
         width: 100% !important
     }
 }
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1){
+    .no-crop-mobile{
+        width: 100% !important
+    }
+}
+
+

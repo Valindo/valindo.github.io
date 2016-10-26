@@ -326,19 +326,19 @@ if ($('.preLoader').length > 0) {
     /**************************************
      *  Menu Mobile
      **************************************/
-     if ($(".mainMenu").length > 0)
-     {
-     	$(".menuToggle").on('click', function() {
-     		$(".mainMenu > ul").slideToggle('slow');
-     		$(this).toggleClass('active');
-     	});
-     	$(".mainMenu > ul li").has("ul.subMenu").prepend('<span class="subMenuKey"></span>');
+     // if ($(".mainMenu").length > 0)
+     // {
+     	// $(".menuToggle").on('click', function() {
+     	// 	$(".mainMenu > ul").slideToggle('slow');
+     	// 	$(this).toggleClass('active');
+     	// });
+     	// $(".mainMenu > ul li").has("ul.subMenu").prepend('<span class="subMenuKey"></span>');
 
-     	$(".mainMenu").on('click', '.subMenuKey', function() {
-     		$(this).toggleClass('mOpened');
-     		$(this).closest('li').children('ul.subMenu').slideToggle();
-     	});
-     }
+     	// $(".mainMenu").on('click', '.subMenuKey', function() {
+     	// 	$(this).toggleClass('mOpened');
+     	// 	$(this).closest('li').children('ul.subMenu').slideToggle();
+     	// });
+     // }
     /**************************************
      *  Fixed Header
      **************************************/
@@ -577,78 +577,78 @@ if($(".searchOpen").length > 0)
 
 if($(".myrevslider").length > 0)
 {
-	$('.tp-banner').revolution({
-		delay:9000,
-		startwidth:1140,
-		startheight:523,
-		startWithSlide:0,
+	// $('.tp-banner').revolution({
+	// 	delay:9000,
+	// 	startwidth:1140,
+	// 	startheight:523,
+	// 	startWithSlide:0,
 
-		fullScreenAlignForce:"off",
-		autoHeight:"off",
-		minHeight:"off",
+	// 	fullScreenAlignForce:"off",
+	// 	autoHeight:"off",
+	// 	minHeight:"off",
 
-		shuffle:"off",
+	// 	shuffle:"off",
 
-		onHoverStop:"on",
+	// 	onHoverStop:"on",
 
-		thumbWidth:100,
-		thumbHeight:50,
-		thumbAmount:3,
+	// 	thumbWidth:100,
+	// 	thumbHeight:50,
+	// 	thumbAmount:3,
 
-		hideThumbsOnMobile:"off",
-		hideNavDelayOnMobile:1500,
-		hideBulletsOnMobile:"off",
-		hideArrowsOnMobile:"off",
-		hideThumbsUnderResoluition:0,
+	// 	hideThumbsOnMobile:"off",
+	// 	hideNavDelayOnMobile:1500,
+	// 	hideBulletsOnMobile:"off",
+	// 	hideArrowsOnMobile:"off",
+	// 	hideThumbsUnderResoluition:0,
 
-		hideThumbs:0,
-		hideTimerBar:"off",
+	// 	hideThumbs:0,
+	// 	hideTimerBar:"off",
 
-		keyboardNavigation:"on",
+	// 	keyboardNavigation:"on",
 
-		navigationType:"bullet",
-		navigationArrows:"solo",
-		navigationStyle:"round",
+	// 	navigationType:"bullet",
+	// 	navigationArrows:"solo",
+	// 	navigationStyle:"round",
 
-		navigationHAlign:"center",
-		navigationVAlign:"bottom",
-		navigationHOffset:30,
-		navigationVOffset:30,
+	// 	navigationHAlign:"center",
+	// 	navigationVAlign:"bottom",
+	// 	navigationHOffset:30,
+	// 	navigationVOffset:30,
 
-		soloArrowLeftHalign:"left",
-		soloArrowLeftValign:"center",
-		soloArrowLeftHOffset:20,
-		soloArrowLeftVOffset:0,
+	// 	soloArrowLeftHalign:"left",
+	// 	soloArrowLeftValign:"center",
+	// 	soloArrowLeftHOffset:20,
+	// 	soloArrowLeftVOffset:0,
 
-		soloArrowRightHalign:"right",
-		soloArrowRightValign:"center",
-		soloArrowRightHOffset:20,
-		soloArrowRightVOffset:0,
+	// 	soloArrowRightHalign:"right",
+	// 	soloArrowRightValign:"center",
+	// 	soloArrowRightHOffset:20,
+	// 	soloArrowRightVOffset:0,
 
 
-		touchenabled:"on",
-		swipe_velocity:"0.7",
-		swipe_max_touches:"1",
-		swipe_min_touches:"1",
-		drag_block_vertical:"false",
+	// 	touchenabled:"on",
+	// 	swipe_velocity:"0.7",
+	// 	swipe_max_touches:"0",
+	// 	swipe_min_touches:"0",
+	// 	drag_block_vertical:"true",
 
-		dottedOverlay:"twoxtwo",
+	// 	dottedOverlay:"twoxtwo",
 
-		spinned:"spinner4",
+	// 	spinned:"spinner4",
 
-		fullWidth:"off",
-		forceFullWidth:"off",
-		fullScreen:"off",
-		fullScreenOffsetContainer:"#topheader-to-offset",
-		fullScreenOffset:"0px",
+	// 	fullWidth:"off",
+	// 	forceFullWidth:"off",
+	// 	fullScreen:"off",
+	// 	fullScreenOffsetContainer:"#topheader-to-offset",
+	// 	fullScreenOffset:"0px",
 
-		panZoomDisableOnMobile:"off",
+	// 	panZoomDisableOnMobile:"on",
 
-		simplifyAll:"off",
+	// 	simplifyAll:"on",
 
-		shadow:0
+	// 	shadow:0
 
-	});
+	// });
 }
 
 

@@ -3048,7 +3048,7 @@ input.failedSubscribe3{
 }
 .owl-buttons .owl-prev{
     position: absolute;
-    left: 15px;
+    /*left: 15px;*/
     top: -30%;
 }
 .owl-buttons .owl-prev:before{

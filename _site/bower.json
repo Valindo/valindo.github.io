@@ -1,0 +1,22 @@
+{
+  "name": "uniorg",
+  "authors": [
+    "Valindo <valindogodinho@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "owl.carousel": "^2.2.0",
+    "bootstrap": "^3.3.7"
+  }
+}

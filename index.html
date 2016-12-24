@@ -2,221 +2,207 @@
 <html>
 <head>
 	<title>Uniorg</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<!-- Bower Components -->
-	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
-	<link rel="stylesheet" type="text/css" href="bower_components/owl.carousel/dist/assets/owl.carousel.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-	<!-- Other Assets -->
-	<link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.css">
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- CSS Libraries -->
+	<link rel="stylesheet" type="text/css" href="bower_components/materialize/dist/css/materialize.css">
 
-	<!-- Custom Styles -->
+	<!-- Custom CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container-fluid">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Uniorg</a>
-			</div>
-
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">What is biodye?</a></li>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Contact Us</a></li>
-					<li><a href="#">Buy</a></li>
+	<!-- Home id here because of navigation alignment issues -->
+	<span id="home"></span>
+	<div class="navbar-fixed">
+		<nav class="grey lighten-5 ">
+			<div class="nav-wrapper ">
+				<a href="#!" class="brand-logo grey-text text-darken-4">UniOrg</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse grey-text text-darken-4"><i class="material-icons ">menu</i></a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="#home" class="grey-text text-darken-4">Home</a></li>
+					<li><a href="#biodye" class="grey-text text-darken-4">Biodye</a></li>
+					<li><a href="collapsible.html" class="grey-text text-darken-4">About</a></li>
+					<li><a href="mobile.html" class="grey-text text-darken-4">Contact</a></li>
+					<li><a href="mobile.html" class="grey-text text-darken-4">Buy</a></li>
 				</ul>
-			</div><!-- /.navbar-collapse -->
-		</div><!-- /.container-fluid -->
-	</nav>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a  class="sideNavButtons" href="#home">Home</a></li>
+					<li><a  class="sideNavButtons" href="#biodye">Biodye</a></li>
+					<li><a  class="sideNavButtons" href="collapsible.html">About</a></li>
+					<li><a  class="sideNavButtons" href="mobile.html">Contact</a></li>
+					<li><a  class="sideNavButtons" href="mobile.html">Buy</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
 
+	<section>
+		<div class="carousel carousel-slider center" data-indicators="true">
+			<div class="carousel-fixed-item center">
+				<a class="btn waves-effect white grey-text darken-text-2">Buy Now</a>
+			</div>
 
-	<section class="section">
-		<div class="owl-carousel">
-			<div style="background-color: #d35400" class="section"> 
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<div class="container text-center">
-					<div class="row">
-						<div class="col-md-6">
-							<h1>Pumpkin Orange</h1>
-							<p>Some explanation how the orange is made</p>
-						</div>
-						<div class="col-md-6" id="tshirt">
-							<img src="assets/images/tshirt.png" class="tshirt">
-						</div>
-					</div>
+			<div class="carousel-item red darken-3 white-text background-pattern" href="#one!">
+				<div class="container">
+					<h1 class="">Rubia Red</h1>
+					<p class="white-text">Derived from the plant Indian Madder</p>
+					<img class="responsive-img" src="assets/images/red.png">
 				</div>
 			</div>
-			<div style="background-color: black" class="section">
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<div class="container text-center">
-					<div class="row">
-						<div class="col-md-6">
-							<h1>Midnight Black</h1>
-							<p>Some explanation how the black is made</p>
-						</div>
-						<div class="col-md-6" id="tshirt">
-							<img src="assets/images/tshirt.png" class="tshirt">
-						</div>
-					</div>
+			<div class="carousel-item burgundy white-text background-pattern" href="#two!">
+				<div class="container ">
+					<h1>Burgundy Wine</h1>
+					<p class="white-text">A mix of Indian Madder and Iron Vinegar</p>
+					<img class="responsive-img" src="assets/images/burgundy.png">
 				</div>
 			</div>
-			<div style="background-color: #e74c3c" class="section">
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<div class="container text-center">
-					<div class="row">
-						<div class="col-md-6">
-							<h1>Alizarin Red</h1>
-							<p>Some explanation how the red is made</p>
-						</div>
-						<div class="col-md-6" id="tshirt">
-							<img src="assets/images/tshirt.png" class="tshirt">
-						</div>
-					</div>
+			<div class="carousel-item orange darken-4 white-text background-pattern" href="#three!">
+				<div class="container">
+					<h1>Pumpkin Orange</h1>
+					<p class="white-text">A mix of Indian Madder and Five leaf chaste tree
+					</p>
+					<img class="responsive-img" src="assets/images/orange.png">
 				</div>
 			</div>
-			<div style="background-color: #96281B" class="section">
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<div class="container text-center">
-					<div class="row">
-						<div class="col-md-6">
-							<h1>Old Brick Maroon</h1>
-							<p>Some explanation how the maroon is made</p>
-						</div>
-						<div class="col-md-6" id="tshirt">
-							<img src="assets/images/tshirt.png" class="tshirt">
-						</div>
-					</div>
+			<div class="carousel-item grey darken-5 white-text background-pattern" href="#four!">
+				<div class="container">
+					<h1>Midnight Black</h1>
+					<p class="white-text">Iron Vinegar</p>
+					<img class="responsive-img" src="assets/images/black.png">
 				</div>
 			</div>
-		</div>		
-	</section>
-
-	<section class="text-center" style="background-color: #3498db" height="100%">
-		<br/>
-		<br/>
-		<br/>
-		<div class="container">
-			<h1>What is bio dye?</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim ut nibh quis tincidunt. Aenean ullamcorper est eu dignissim condimentum. Integer faucibus condimentum ante, non posuere urna facilisis in. Morbi rhoncus ac magna id sodales. Pellentesque diam nisl, consequat dapibus consequat ac, porta a elit. Etiam fermentum quam eget ligula aliquam aliquam. Duis vitae scelerisque nunc, sit amet venenatis ipsum. Sed tincidunt vel magna sit amet pretium. Proin aliquam mauris quis mattis pellentesque. Donec pharetra, mi a ornare rutrum, nisi nunc porttitor augue, in varius nulla orci quis nunc. Aliquam blandit convallis urna sed iaculis. Morbi imperdiet ipsum in sodales molestie.</p>
-			<div class="row">
-				<div class="col-md-4 col-xs-4">
-					<h3>Feature 1</h3>
-					<span class="glyphicon glyphicon-leaf feature"></span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec ligula eu dui laoreet cursus. Vestibulum quis velit mi. Sed.</p>
-				</div>
-				<div class="col-md-4 col-xs-4">
-					<h3>Feature 2</h3>
-					<span class="glyphicon glyphicon-flash feature"></span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec ligula eu dui laoreet cursus. Vestibulum quis velit mi. Sed.</p>
-				</div>
-				<div class="col-md-4 col-xs-4">
-					<h3>Feature 3</h3>
-					<span class="glyphicon glyphicon-tree-conifer feature"></span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec ligula eu dui laoreet cursus. Vestibulum quis velit mi. Sed.</p>
+			<div class="carousel-item blue darken-3 white-text background-pattern" href="#five!">
+				<div class="container">
+					<h1>Cerulean Blue</h1>
+					<p class="white-text">Cerulean Blue</p>
+					<img class="responsive-img" src="assets/images/blue.png">
 				</div>
 			</div>
 		</div>
-		<br/>
-		<br/>
 	</section>
 
-	<section class="text-center" style="background-color: #8e44ad" height="100%">
-		<br/>
-		<br/>
-		<br/>
-		<div class="container">
-			<h1>Who are we?</h1>
-			<div class="row">
-				
+	<section id="biodye" class="blue lighten-1">
+		<br>
+		<br>
+		<div class="container white-text center">
+			<h1>What is bio Dye?</h1>
+			<p>Biodyes are dyes from nature itself.
+				Dyes created to eliminate the use of toxic dyes.
+				Dyes which are 100% natural.
+				100% natural better than eco friendly dyes.
+				Clean effluents with not only zero pollution to land and water but also waste  can be used as manure aswell
+				For more info visit <a href="http://www.biodye.in" target="_blank" class="white-text">www.biodye.in</a></p>
 			</div>
-		</div>
-		<br/>
-		<br/>
-	</section>
-
-	<footer class="text-center" style="background-color: #1abc9c">
-		<br/>
-		<br/>
-		<div class="container">
-			<h1>Contact Us</h1>
-			<div class="row">
-				<div class="col-md-4">
-					<i class="social-icons fa fa-facebook-official" aria-hidden="true"></i>
-					<i class="social-icons fa fa-twitter" aria-hidden="true"></i>
-					<i class="social-icons fa fa-instagram" aria-hidden="true"></i>
-
-				</div>
-				<div class="col-md-4">
-					<p>info@uniorg.com</p>
-				</div>
-				<div class="col-md-4">
-					<h4>Subscribe to Newsleter</h4>
-					<input type="text" class="form-control" name="email" placeholder="email">
-					<br/>
-					<button class="btn btn-success form-control">Subscribe</button>
+			<br>
+			<div class="container center">
+				<div class="row">
+					<div class="col s12 m4 l4">
+						<div class="card">
+							<div class="card-image waves-effect waves-block waves-light">
+								<img class="activator" src="assets/images/comfort.jpg">
+							</div>
+							<div class="card-content">
+								<span class="card-title activator grey-text text-darken-4">Comfort</span>
+								
+							</div>
+							<div class="card-reveal">
+								<span class="card-title grey-text text-darken-4">Comfort<i class="material-icons right">close</i></span>
+								<p>Comfort is one major factor as Biodyed fabrics are skin friendly and are comfortable to wear, due to lack of irritating dyes and toxic mordants the fabric is breathable which regulates body temperature and gives a cool feel as compared to synthetic dyed fabrics.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m4 l4">
+						<div class="card">
+							<div class="card-image waves-effect waves-block waves-light">
+								<img class="activator" src="assets/images/odor.jpg">
+							</div>
+							<div class="card-content">
+								<span class="card-title activator grey-text text-darken-4">Odour Lock</span>
+								
+							</div>
+							<div class="card-reveal">
+								<span class="card-title grey-text text-darken-4">Odour Lock<i class="material-icons right">close</i></span>
+								<p>Due to special Ayurvedic properties Yarn dyed with Biodyes absorb and locks the odour of the body. The clean mordant used is Alum which is known to reduce body odour.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m4 l4">
+						<div class="card">
+							<div class="card-image waves-effect waves-block waves-light">
+								<img class="activator" src="assets/images/uv.jpg">
+							</div>
+							<div class="card-content">
+								<span class="card-title activator grey-text text-darken-4">UV Protection</span>
+								
+							</div>
+							<div class="card-reveal">
+								<span class="card-title grey-text text-darken-4">UV Protection<i class="material-icons right">close</i></span>
+								<p>Dyed Yarn absorb UV-light and the inherent, lifelong UV protection of Biodyes greatly reduces the scorching effect of direct sunlight making it ideal for beachwear and daily sun protection. Colours don't fade and bleed when washed with neutral soaps or dried in the sun.</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<br/>
-			<br/>
-		</div>
-	</footer>
-	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-	<script type="text/javascript" src="bower_components/owl.carousel/dist/owl.carousel.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$(".owl-carousel").owlCarousel({
-				items: 1,
-				loop: true,
-				autoplay: true,
-				autoplayTimeout: 3000,
-				// autoplayHoverPause: true
-			});
-		});
-	</script>
-</body>
-</html>
+		</section>
+
+		<section >
+			<div class="container center">
+				<br>
+				<br>
+				<h1>About</h1>
+				<div class="row">
+					<div class="col s12">
+						<div class="card-panel grey lighten-5 z-depth-1">
+							<div class="row valign-wrapper">
+								<div class="col s2">
+									<img src="assets/images/gopal.jpg" alt="" class="circle responsive-img"> 
+									<p>Gopal Gaunker</p>
+									<img src="assets/images/dhiraj.jpg" class="responsive-img circle">
+									<p>Dhiraj Henriques</p>
+								</div>
+								<div class="col s10">
+									<p class="black-text">
+										Uniqorg is a private company owned by Dhiraj Henriques and Gopal Gaunker, Young entrepreneurs and mechanical engineers based in Goa. 
+										Our company offers wide range of organic dyed comfort tshirts of high quality.
+										Our core values are based on being completely natural and organic as well as being environmentally conscious.
+									</p>
+									<p class="black-text">
+										<strong>Why should I buy from you and not from your competitor?</strong>
+										<br>
+										There are many brands who claim to provide natural dyed wear, but in reality they end up using semi-syenthetic dyes and toxic mordants obtain their colours. 
+										Biodye offers a wide range of natural colourants of exceptionally high quality, the result of nine years of rigorous research and development.due to the absence of toxic metals , synthetic dyes and harmful chemicals, it is 100% eco friendly.
+										Biodye processes and materials adhere to recognized international organic standards and highest quality of dyeing is achieved.
+										The dye house provides safe and fairtrade conditions for employment of rural people and the waste products from dyeing of the yarn/fabric are non-polluting :the effluent is clear and can be released onto farmland while the solid waste can be composed to yield manure. (www.biodye.in).
+
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</section>
+
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="bower_components/materialize/dist/js/materialize.js"></script>
+		<script type="text/javascript">
+			$( document ).ready(function(){
+				$(".button-collapse").sideNav();
+				$('a.sideNavButtons').click(()=>{
+					$(".button-collapse").sideNav('hide');
+				})
+				$('.carousel.carousel-slider').carousel({full_width: true, time_constant: 10, indicators: true});
+				var carouselDelay = 10000;
+				var carouselInterval = setInterval(function() {
+					$('.carousel.carousel-slider').carousel('next');
+				}, carouselDelay);
+			})
+
+		</script>
+	</body>
+	</html>

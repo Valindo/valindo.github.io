@@ -1,52 +1,21 @@
-body{
-	color: white !important
-}
-.section{
-	height: 100vh;
-	width: 100%;
+.carousel{
+	height: 100vh !important;
 }
 
-.feature{
- font-size: 600%;
+.background-pattern{
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAP0lEQVQoU42Q0QoAIAgDz///aMPAKKeQb26HTg0tB6zKVUhI4Bus5tMn2K4Djh7gBGXM7Uvo5riQ/BfUNwwTWfn+Cgg4zkoRAAAAAElFTkSuQmCC);
 }
 
-.navbar-default{
-	background-image: none !important;
-	background-color: transparent !important;
-	border-color: transparent !important;
-	box-shadow: none !important;
-}
 
-.navbar-brand{
-	color: white !important;
-}
-
-.navbar-default .navbar-nav > li > a{
-	color: white !important;
-}
-
-.tshirt{
-	width: 50% !important;
+section{
 	height: auto;
-	margin-left: 25%;
-	/*display: grid !important;
-	padding-top: 25%;
-	padding-left: 25%;*/
+	overflow: auto;
 }
 
-.navbar-default .navbar-toggle .icon-bar{
-	background-color: white;
+.burgundy{
+	background-color: #96281B !important;
 }
 
-.navbar-default .navbar-toggle{
-	border-color: white;
+#sidenav-overlay{
+	z-index: 996;
 }
-
-.social-icons{
-	font-size: 300%;
-}
-
-/*#tshirt{
-	background:url(assets/images/tshirt.png) no - repeat center center;
-
-}*/
